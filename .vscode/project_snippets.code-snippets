@@ -1,0 +1,91 @@
+{
+	"responsivePage": {
+	  "prefix": "responsivePage",
+	  "body": [
+		"import 'package:core/core.dart';",
+		"import 'package:flutter/material.dart';",
+		"",
+		"",
+		"class ${1:PageName}Page extends StatelessWidget {",
+		"  static String get name => \"${1:PageName}Page\";",
+		"  static String get path => \"${1:PageName}Page\";",
+		"",
+		"  const ${1:PageName}Page({super.key});",
+		"",
+		"  @override",
+		"  Widget build(BuildContext context) {",
+		"    return AppScaffold(",
+		"      body: PageLayoutBuilder(",
+		"        mobile: (context) => const ${1:PageName}PageMobile(),",
+		"      ),",
+		"    );",
+		"  }",
+		"}"
+	  ],
+	  "description": "Responsive page snippet"
+	},
+  
+	"page": {
+	  "prefix": "page",
+	  "body": [
+		"import 'package:flutter/material.dart';",
+		"import 'package:core/core.dart';",
+		"",
+		"class ${1:PageName}Page extends StatelessWidget {",
+		"  static String get name => \"${1:PageName}Page\";",
+		"  static String get path => \"${1:PageName}Page\";",
+		"",
+		"  const ${1:PageName}Page({super.key});",
+		"",
+		"  @override",
+		"  Widget build(BuildContext context) {",
+		"    return AppScaffold();",
+		"  }",
+		"}"
+	  ],
+	  "description": "page snippet"
+	},
+	"commonCubit": {
+	  "prefix": "commonCubit",
+	  "body": [
+		"import 'package:common_state/common_state.dart';",
+		"import 'package:flutter_bloc/flutter_bloc.dart';",
+		"import 'package:injectable/injectable.dart';",
+		"",
+		"@injectable",
+		"class ${TM_FILENAME_BASE/^(.*)/${1:/pascalcase}/} extends Cubit<CommonState<${1:returnType}>> {",
+		"final ${2:repository} _${TM_FILENAME_BASE/^(.+)_cubit/${1:/camelcase}/}UseCase;",
+		"  ${TM_FILENAME_BASE/^(.*)/${1:/pascalcase}/}(this._${TM_FILENAME_BASE/^(.+)_cubit/${1:/camelcase}/}UseCase) : super(InitialState());",
+		"",
+		"  void ${TM_FILENAME_BASE/^(.+)_cubit/${1:/camelcase}/}(${TM_FILENAME_BASE/^(.+)_cubit/${1:/pascalcase}/}Params params) async =>",
+		"  apiCall<${1:returnType}>(() async => _${TM_FILENAME_BASE/^(.+)_cubit/${1:/camelcase}/}UseCase(params));",
+		"}"
+	  ],
+	  "description": "Generate common Cubit"
+	},
+	"usecase": {
+	  "prefix": "usecase",
+	  "body": [
+		"import 'package:core/core.dart';",
+		"import 'package:injectable/injectable.dart';",
+		"import 'package:common_state/common_state.dart';",
+		"",
+		"@injectable",
+		"class ${TM_FILENAME_BASE/^(.*)/${1:/pascalcase}/} extends UseCase<${1:returnType}, ${2:paramType}> {",
+		"final ${3:repositoryType} _repository;",
+		"  ${TM_FILENAME_BASE/^(.*)/${1:/pascalcase}/}(this._repository);",
+		"",
+		"@override",
+		"FutureResult<${1:returnType}> call(${2:paramType} params) => _repository.${TM_FILENAME_BASE/^(.+)_usecase/${1:/camelcase}/}(params);",
+		"}"
+	  ],
+	  "description": "Generate a usecase"
+	},
+	"pageRoute": {
+	  "prefix": "pageRoute",
+	  "body": [
+		"GoRoute(path: ${1:PageName}Page.path, name: ${1:PageName}Page.name, builder: (context, state) => const ${1:PageName}Page()),"
+	  ]
+	}
+  }
+  
