@@ -11,10 +11,11 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i3;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:magenta/core/di/di_container.dart' as _i8;
-import 'package:magenta/core/network/client/client.dart' as _i5;
-import 'package:magenta/core/repositories/local_storage.dart' as _i7;
-import 'package:magenta/core/repositories/token_repository.dart' as _i6;
+import 'package:magenta/core/di/di_container.dart' as _i9;
+import 'package:magenta/core/network/client/client.dart' as _i6;
+import 'package:magenta/core/repositories/local_storage.dart' as _i8;
+import 'package:magenta/core/repositories/token_repository.dart' as _i7;
+import 'package:magenta/services/router/router.dart' as _i5;
 import 'package:shared_preferences/shared_preferences.dart' as _i4;
 
 extension GetItInjectableX on _i1.GetIt {
@@ -34,12 +35,13 @@ extension GetItInjectableX on _i1.GetIt {
       preResolve: true,
     );
     gh.singletonAsync<_i4.SharedPreferences>(() => appModule.sharedPreferences);
-    gh.lazySingleton<_i5.Client>(() => appModule.client);
-    gh.factory<_i6.TokenRepository>(() => _i6.TokenRepositoryImp());
-    gh.singletonAsync<_i7.LocalStorage>(
-        () async => _i7.LocalStorage(await getAsync<_i4.SharedPreferences>()));
+    gh.singleton<_i5.AppRouter>(() => appModule.router);
+    gh.lazySingleton<_i6.Client>(() => appModule.client);
+    gh.factory<_i7.TokenRepository>(() => _i7.TokenRepositoryImp());
+    gh.singletonAsync<_i8.LocalStorage>(
+        () async => _i8.LocalStorage(await getAsync<_i4.SharedPreferences>()));
     return this;
   }
 }
 
-class _$AppModule extends _i8.AppModule {}
+class _$AppModule extends _i9.AppModule {}

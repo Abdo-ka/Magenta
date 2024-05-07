@@ -12,7 +12,7 @@ class AppTypography {
         headlineLarge: TextStyle(fontSize: 25.sp),
         headlineMedium: TextStyle(fontSize: 22.sp),
         headlineSmall: TextStyle(fontSize: 18.sp),
-        titleLarge: TextStyle(fontSize: 16.sp, fontFamily: almaraiFamily),
+        titleLarge: TextStyle(fontSize: 16.sp, fontFamily: poppinsFamily),
         titleMedium: TextStyle(fontSize: 14.sp),
         titleSmall: TextStyle(fontSize: 12.sp),
         bodyLarge: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
@@ -24,5 +24,5 @@ class AppTypography {
       );
 
   static const String ibmxFamily = 'IBMPlexSans';
-  static const String almaraiFamily = 'Almarai';
+  static const String poppinsFamily = 'Poppins';
 }

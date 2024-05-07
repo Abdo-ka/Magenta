@@ -29,8 +29,8 @@ abstract class AppModule {
   @singleton
   Future<SharedPreferences> get sharedPreferences => SharedPreferences.getInstance();
 
-  // @singleton
-  // AppRouter get router => AppRouter();
+  @singleton
+  AppRouter get router => AppRouter();
 
   @lazySingleton
   Client get client => Client(

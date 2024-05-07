@@ -80,3 +80,16 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/translations/
+    - assets/fonts/
+fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
+          weight: 400
