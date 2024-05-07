@@ -9,8 +9,16 @@ class AppTypography {
         displayLarge: TextStyle(fontSize: 57.sp, fontWeight: FontWeight.bold),
         displayMedium: TextStyle(fontSize: 42.sp),
         displaySmall: TextStyle(fontSize: 36.sp),
-        headlineLarge: TextStyle(fontSize: 25.sp),
-        headlineMedium: TextStyle(fontSize: 22.sp),
+        headlineLarge: TextStyle(
+          fontSize: 25.sp,
+          fontFamily: poppinsFamily,
+          fontWeight: FontWeight.w700,
+        ),
+        headlineMedium: TextStyle(
+          fontSize: 22.sp,
+          fontFamily: poppinsFamily,
+          fontWeight: FontWeight.w700,
+        ),
         headlineSmall: TextStyle(fontSize: 18.sp),
         titleLarge: TextStyle(fontSize: 16.sp, fontFamily: poppinsFamily),
         titleMedium: TextStyle(fontSize: 14.sp),

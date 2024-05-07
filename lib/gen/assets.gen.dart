@@ -26,20 +26,81 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/Vector.svg
+  String get vector => 'assets/icons/Vector.svg';
+
+  /// File path: assets/icons/arrow-left.svg
+  String get arrowLeft => 'assets/icons/arrow-left.svg';
+
+  /// File path: assets/icons/arrow-right.svg
+  String get arrowRight => 'assets/icons/arrow-right.svg';
+
+  /// File path: assets/icons/back_button.svg
+  String get backButton => 'assets/icons/back_button.svg';
+
+  /// File path: assets/icons/favourite.svg
+  String get favourite => 'assets/icons/favourite.svg';
+
   /// File path: assets/icons/flower_vector.svg
   String get flowerVector => 'assets/icons/flower_vector.svg';
+
+  /// File path: assets/icons/home.svg
+  String get home => 'assets/icons/home.svg';
 
   /// File path: assets/icons/intro_vector.svg
   String get introVector => 'assets/icons/intro_vector.svg';
 
+  /// File path: assets/icons/invisible.svg
+  String get invisible => 'assets/icons/invisible.svg';
+
+  /// File path: assets/icons/lock.svg
+  String get lock => 'assets/icons/lock.svg';
+
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
+
+  /// File path: assets/icons/mail.svg
+  String get mail => 'assets/icons/mail.svg';
+
+  /// File path: assets/icons/phone.svg
+  String get phone => 'assets/icons/phone.svg';
+
+  /// File path: assets/icons/profile.svg
+  String get profile => 'assets/icons/profile.svg';
+
+  /// File path: assets/icons/remove_obscure.svg
+  String get removeObscure => 'assets/icons/remove_obscure.svg';
+
+  /// File path: assets/icons/rose.svg
+  String get rose => 'assets/icons/rose.svg';
+
+  /// File path: assets/icons/user.svg
+  String get user => 'assets/icons/user.svg';
 
   /// File path: assets/icons/vector_splash.svg
   String get vectorSplash => 'assets/icons/vector_splash.svg';
 
   /// List of all assets
-  List<String> get values => [flowerVector, introVector, logo, vectorSplash];
+  List<String> get values => [
+        vector,
+        arrowLeft,
+        arrowRight,
+        backButton,
+        favourite,
+        flowerVector,
+        home,
+        introVector,
+        invisible,
+        lock,
+        logo,
+        mail,
+        phone,
+        profile,
+        removeObscure,
+        rose,
+        user,
+        vectorSplash
+      ];
 }
 
 class $AssetsTranslationsGen {

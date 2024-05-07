@@ -10,6 +10,7 @@ import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/button_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
+import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
 class IntroPage extends StatefulWidget {
@@ -103,7 +104,7 @@ class _IntroPageState extends State<IntroPage> {
             valueListenable: values,
             builder: (BuildContext context, _, Widget? child) => Positioned(
               bottom: 100,
-              right: context.width / 2.8.w,
+              right: context.width / 2.75.w,
               child: Row(
                 children: List.generate(
                   3,
@@ -138,7 +139,9 @@ class _IntroPageState extends State<IntroPage> {
                       child: ButtonWidget(
                         width: 215.w,
                         height: 50.h,
-                        onPressed: () {},
+                        onPressed: () {
+                          context.replaceRoute(SignInRoute());
+                        },
                         backgroundColor: context.colorScheme.primary,
                         textStyle: context.textTheme.titleMedium
                             ?.copyWith(color: context.colorScheme.onPrimary),

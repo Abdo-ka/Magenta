@@ -4,14 +4,29 @@ import 'package:magenta/services/router/router.gr.dart';
 
 // 🌎 Project imports:
 
-
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: SplashRoute.page, initial: true),
-        AutoRoute(page: HomeRoute.page),
-        AutoRoute(page: IntroRoute.page),
+        CustomRoute(page: SplashRoute.page, initial: true),
+        CustomRoute(
+            page: HomeRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+        CustomRoute(
+            page: IntroRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+        CustomRoute(
+            page: SignInRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+        CustomRoute(
+            page: SignUpRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+        CustomRoute(
+            page: ResetPasswordRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+            CustomRoute(
+            page: VerifyNumberRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
         // AutoRoute(
         //   page: BaseRoute.page,
         //   children: [
@@ -21,7 +36,7 @@ class AppRouter extends $AppRouter {
         //     AutoRoute(page: CompaniesRoute.page),
         //   ],
         // ),
-       
+
         // AutoRoute(
         //   page: ChatWrapper.page,
         //   children: [

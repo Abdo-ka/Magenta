@@ -72,7 +72,7 @@ class ButtonWidget extends StatelessWidget {
         maximumSize: getFixedSize,
         padding: padding ?? EdgeInsets.zero,
         shape: ContinuousRectangleBorder(
-          borderRadius: BorderRadius.circular(radius ?? 24),
+          borderRadius: BorderRadius.circular(radius ?? 36),
           side: BorderSide(
             color: isOutlined
                 ? (borderColor ?? Theme.of(context).colorScheme.outline)
