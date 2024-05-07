@@ -8,8 +8,14 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i8;
+
+// 🐦 Flutter imports:
 import 'package:flutter/cupertino.dart' as _i9;
+
+// 📦 Package imports:
+import 'package:auto_route/auto_route.dart' as _i8;
+
+// 🌎 Project imports:
 import 'package:magenta/features/auth/view/reset_password_page.dart' as _i3;
 import 'package:magenta/features/auth/view/sign_in_page.dart' as _i4;
 import 'package:magenta/features/auth/view/sign_up_page.dart' as _i5;

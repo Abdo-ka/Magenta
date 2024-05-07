@@ -1,13 +1,14 @@
-import 'package:auto_route/auto_route.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 📦 Package imports:
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/context_ext.dart';
-import 'package:magenta/features/app/components_overrides/app_image.dart';
-import 'package:magenta/gen/assets.gen.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({
-    Key? key,
+    super.key,
     this.backgroundColor,
     this.leading,
     this.actions,
@@ -16,7 +17,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     this.shadowColor,
     this.surfaceTintColor,
     this.title,
-  }) : super(key: key);
+  });
 
   final Color? backgroundColor;
   final Widget? leading;
@@ -34,7 +35,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: backgroundColor ?? context.colorScheme.surface,
       leading: leading ??
          IconButton(
-          key: Key('backButton'),
+          key: const Key('backButton'),
           icon: Icon(
             Icons.arrow_back_ios_rounded,
             color: context.colorScheme.primary,

@@ -2,6 +2,8 @@
 
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/theme/app_typography.dart';
 import 'package:magenta/config/theme/color_scheme.dart';
 

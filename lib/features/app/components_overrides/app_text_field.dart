@@ -1,15 +1,16 @@
 // 🐦 Flutter imports:
 
-// 🌎 Project imports:
-import 'package:magenta/core/extension/extensions.dart';
-
 // 🐦 Flutter imports:
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 // 📦 Package imports:
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
+import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 
 // 🌎 Project imports:

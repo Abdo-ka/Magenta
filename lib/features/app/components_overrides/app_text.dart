@@ -1,5 +1,7 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/theme/app_typography.dart';
 
 // 🌎 Project imports:

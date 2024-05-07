@@ -1,9 +1,14 @@
-import 'package:magenta/config/theme/color_scheme.dart';
-import 'package:magenta/core/extension/context_ext.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 import 'package:sms_autofill/sms_autofill.dart';
+
+// 🌎 Project imports:
+import 'package:magenta/config/theme/color_scheme.dart';
+import 'package:magenta/core/extension/context_ext.dart';
 
 class VerificationField extends StatefulWidget {
   const VerificationField({super.key, required this.otpController});

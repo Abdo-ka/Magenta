@@ -5,12 +5,13 @@ import 'dart:io';
 // 📦 Package imports:
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
-import 'package:magenta/config/types/app_exception.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/types/types.dart';
+import '../interceptors/dio_log_interceptor.dart';
 
 // 🌎 Project imports:
 
-import '../interceptors/dio_log_interceptor.dart';
 
 class DioClient with DioMixin implements Dio {
   final BaseOptions? baseOptions;

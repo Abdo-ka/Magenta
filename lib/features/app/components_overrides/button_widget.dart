@@ -2,7 +2,8 @@
 
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:magenta/core/extension/context_ext.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 

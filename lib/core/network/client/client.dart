@@ -3,15 +3,18 @@ import 'dart:async';
 import 'dart:developer';
 
 // 📦 Package imports:
-
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:magenta/core/utils/app_toast.dart';
 
 // 🌎 Project imports:
+import 'package:magenta/core/utils/app_toast.dart';
 import '../../../config/types/types.dart';
 import 'dio_override.dart';
+
+// 📦 Package imports:
+
+
+
 
 class Client {
   final String baseUrl;

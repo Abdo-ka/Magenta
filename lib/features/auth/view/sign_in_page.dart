@@ -1,8 +1,11 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
+// 📦 Package imports:
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/theme/theme.dart';
 import 'package:magenta/core/extension/context_ext.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
@@ -79,7 +82,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  context.router.push(ResetPasswordRoute());
+                  context.router.push(const ResetPasswordRoute());
                 },
                 child: AppText('Forgot Password ?'),
               ),
@@ -92,14 +95,14 @@ class _SignInPageState extends State<SignInPage> {
                 color: context.colorScheme.primary.lighten(0.4),
                 spreadRadius: 4,
                 blurRadius: 10,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               )
             ]),
             child: ButtonWidget(
               height: 50.h,
               radius: 32,
               onPressed: () {
-                context.router.push(VerifyNumberRoute());
+                context.router.push(const VerifyNumberRoute());
               },
               backgroundColor: context.colorScheme.primary,
               textStyle: context.textTheme.titleMedium
@@ -114,7 +117,7 @@ class _SignInPageState extends State<SignInPage> {
               AppText('If you don\'t have an account '),
               GestureDetector(
                 onTap: () {
-                  context.router.push(SignUpRoute());
+                  context.router.push(const SignUpRoute());
                 },
                 child: AppText(
                   'Sign up here!',

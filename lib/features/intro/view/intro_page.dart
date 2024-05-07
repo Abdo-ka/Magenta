@@ -1,9 +1,11 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
+// 📦 Package imports:
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/theme/theme.dart';
 import 'package:magenta/core/extension/context_ext.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
@@ -14,7 +16,7 @@ import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
 class IntroPage extends StatefulWidget {
-  IntroPage({super.key});
+  const IntroPage({super.key});
 
   @override
   State<IntroPage> createState() => _IntroPageState();
@@ -133,14 +135,14 @@ class _IntroPageState extends State<IntroPage> {
                           color: context.colorScheme.primary.lighten(0.4),
                           spreadRadius: 4,
                           blurRadius: 10,
-                          offset: Offset(0, 3),
+                          offset: const Offset(0, 3),
                         )
                       ]),
                       child: ButtonWidget(
                         width: 215.w,
                         height: 50.h,
                         onPressed: () {
-                          context.replaceRoute(SignInRoute());
+                          context.replaceRoute(const SignInRoute());
                         },
                         backgroundColor: context.colorScheme.primary,
                         textStyle: context.textTheme.titleMedium

@@ -6,10 +6,10 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/core/di/di_container.config.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../config/api_routes.dart';
 import '../../services/router/router.dart';
 import '../network/client/client.dart';

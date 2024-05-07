@@ -1,5 +1,7 @@
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/services/router/router.gr.dart';
 
 // 🌎 Project imports:
