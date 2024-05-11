@@ -62,6 +62,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/mail.svg
   String get mail => 'assets/icons/mail.svg';
 
+  /// File path: assets/icons/notification.svg
+  String get notification => 'assets/icons/notification.svg';
+
   /// File path: assets/icons/phone.svg
   String get phone => 'assets/icons/phone.svg';
 
@@ -94,6 +97,7 @@ class $AssetsIconsGen {
         lock,
         logo,
         mail,
+        notification,
         phone,
         profile,
         removeObscure,

@@ -1,10 +1,11 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
-
 // 🌎 Project imports:
 import 'package:magenta/core/extension/context_ext.dart';
+
+// 📦 Package imports:
+
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({

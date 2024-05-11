@@ -29,15 +29,15 @@ class AppRouter extends $AppRouter {
             CustomRoute(
             page: VerifyNumberRoute.page,
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
-        // AutoRoute(
-        //   page: BaseRoute.page,
-        //   children: [
-        //     AutoRoute(page: HomeRoute.page),
-        //     AutoRoute(page: CarParkRoute.page),
-        //     AutoRoute(page: ChatsRoute.page),
-        //     AutoRoute(page: CompaniesRoute.page),
-        //   ],
-        // ),
+        AutoRoute(
+          page: BaseRoute.page,
+          children: [
+            AutoRoute(page: HomeRoute.page),
+            AutoRoute(page: ProfileRoute.page),
+            AutoRoute(page: NotificationRoute.page),
+            AutoRoute(page: FavoriteRoute.page),
+          ],
+        ),
 
         // AutoRoute(
         //   page: ChatWrapper.page,

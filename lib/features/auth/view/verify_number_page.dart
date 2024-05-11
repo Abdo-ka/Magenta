@@ -12,6 +12,7 @@ import 'package:magenta/features/app/components_overrides/app_bar_widget.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/button_widget.dart';
 import 'package:magenta/features/auth/widget/verification_field.dart';
+import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
 class VerifyNumberPage extends StatefulWidget {
@@ -64,7 +65,9 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
             child: ButtonWidget(
               height: 50.h,
               radius: 32,
-              onPressed: () {},
+              onPressed: () {
+                context.router.push( BaseRoute());
+              },
               backgroundColor: context.colorScheme.primary,
               textStyle: context.textTheme.titleMedium
                   ?.copyWith(color: context.colorScheme.onPrimary),
