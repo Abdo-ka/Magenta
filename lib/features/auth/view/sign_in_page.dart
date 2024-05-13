@@ -13,6 +13,7 @@ import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/app_text_field.dart';
 import 'package:magenta/features/app/components_overrides/button_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
+import 'package:magenta/services/drawing/draw_line.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
@@ -59,11 +60,29 @@ class _SignInPageState extends State<SignInPage> {
               hintText: 'Enter your Password',
               textAlign: TextAlign.end,
               suffixIcon: AppImage.asset(Assets.icons.lock),
-              prefixIcon: GestureDetector(
-                onTap: () {
-                  isHidden.value = !isHidden.value;
-                },
-                child: const Icon(Icons.remove_red_eye_outlined),
+              prefixIcon: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  8.horizontalSpace,
+                  GestureDetector(
+                    onTap: () {
+                      isHidden.value = !isHidden.value;
+                    },
+                    child: Stack(children: [
+                      Icon(
+                        Icons.remove_red_eye_outlined,
+                        color: context.colorScheme.primary,
+                      ),
+                      isHidden.value == false
+                          ? const SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: Line(),
+                            )
+                          : const SizedBox.shrink(),
+                    ]),
+                  ),
+                ],
               ),
               obscureText: isHidden.value,
             ),
