@@ -18,7 +18,7 @@ class _LineState extends State<Line> with SingleTickerProviderStateMixin {
     controller = AnimationController(
         duration: const Duration(milliseconds: 400), vsync: this);
 
-    animation = Tween(begin: 1.0, end: 0.0).animate(controller)
+    animation = Tween(begin: 0.7, end: 0.0).animate(controller)
       ..addListener(() {
         setState(() {
           _progress = animation!.value;

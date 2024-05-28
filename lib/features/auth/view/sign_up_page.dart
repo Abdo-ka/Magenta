@@ -13,6 +13,7 @@ import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/app_text_field.dart';
 import 'package:magenta/features/app/components_overrides/button_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
+import 'package:magenta/services/drawing/draw_line.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
@@ -89,13 +90,29 @@ class _SignUpPageState extends State<SignUpPage> {
                   textAlign: TextAlign.left,
                   obscureText: isHidden.value,
                   suffixIcon: AppImage.asset(Assets.icons.lock),
-                  prefixIcon: GestureDetector(
-                    child: isHidden.value == true
-                        ? const Icon(Icons.remove_red_eye_outlined)
-                        : AppImage.asset(Assets.icons.invisible),
-                    onTap: () {
-                      isHidden.value = !isHidden.value;
-                    },
+                  prefixIcon: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      8.horizontalSpace,
+                      GestureDetector(
+                        onTap: () {
+                          isHidden.value = !isHidden.value;
+                        },
+                        child: Stack(children: [
+                          Icon(
+                            Icons.remove_red_eye_outlined,
+                            color: context.colorScheme.primary,
+                          ),
+                          isHidden.value == false
+                              ? const SizedBox(
+                                  width: 20,
+                                  height: 20,
+                                  child: Line(),
+                                )
+                              : const SizedBox.shrink(),
+                        ]),
+                      ),
+                    ],
                   ),
                 ),
                 26.verticalSpace,
@@ -105,14 +122,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   textAlign: TextAlign.left,
                   obscureText: isHidden.value,
                   suffixIcon: AppImage.asset(Assets.icons.lock),
-                  prefixIcon: GestureDetector(
-                    child: isHidden.value == true
-                        ? const Icon(Icons.remove_red_eye_outlined)
-                        : AppImage.asset(Assets.icons.invisible),
-                    onTap: () {
-                      isHidden.value = !isHidden.value;
-                    },
-                  ),
                 ),
               ],
             ),

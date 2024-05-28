@@ -26,6 +26,7 @@ class _BasePageState extends State<BasePage> {
     return ValueListenableBuilder(
       valueListenable: isActive,
       builder: (BuildContext context, value, Widget? child) => AutoTabsScaffold(
+        resizeToAvoidBottomInset: false,
         routes: const [
           HomeRoute(),
           ProfileRoute(),

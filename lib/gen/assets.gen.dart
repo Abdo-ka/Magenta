@@ -38,11 +38,17 @@ class $AssetsIconsGen {
   /// File path: assets/icons/back_button.svg
   String get backButton => 'assets/icons/back_button.svg';
 
+  /// File path: assets/icons/drawer.svg
+  String get drawer => 'assets/icons/drawer.svg';
+
   /// File path: assets/icons/favourite.svg
   String get favourite => 'assets/icons/favourite.svg';
 
   /// File path: assets/icons/flower_vector.svg
   String get flowerVector => 'assets/icons/flower_vector.svg';
+
+  /// File path: assets/icons/hand-bag.svg
+  String get handBag => 'assets/icons/hand-bag.svg';
 
   /// File path: assets/icons/home.svg
   String get home => 'assets/icons/home.svg';
@@ -77,6 +83,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/rose.svg
   String get rose => 'assets/icons/rose.svg';
 
+  /// File path: assets/icons/search.svg
+  String get search => 'assets/icons/search.svg';
+
   /// File path: assets/icons/user.svg
   String get user => 'assets/icons/user.svg';
 
@@ -89,8 +98,10 @@ class $AssetsIconsGen {
         arrowLeft,
         arrowRight,
         backButton,
+        drawer,
         favourite,
         flowerVector,
+        handBag,
         home,
         introVector,
         invisible,
@@ -102,6 +113,7 @@ class $AssetsIconsGen {
         profile,
         removeObscure,
         rose,
+        search,
         user,
         vectorSplash
       ];
