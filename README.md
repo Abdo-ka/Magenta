@@ -1,12 +1,12 @@
 
 ## Main photo
-![](/images/logo.svg)
+<div align="center">
+  <img src="/images/logo.svg" alt="Abdo_ka" width="100%">
+</div>
+
 # Magenta
-Magenta is app build on flutter 
-Used Clean architecture and clean code 
-
-
-
+Magenta is app build on flutter
+Used Clean architecture and clean code
 
 
 ## Authors
@@ -16,8 +16,8 @@ Used Clean architecture and clean code
 
 
 ## 🚀 About Me
-I'm a software Engineering specialist on Android and IOS app developer Using Flutter Freamwork 
-Have over 4 years of expreiance and also have more than 5 apps on google play 
+I'm a software Engineering specialist on Android and IOS app developer Using Flutter Freamwork
+Have over 4 years of expreiance and also have more than 5 apps on google play
 
 
 
@@ -41,17 +41,11 @@ Install dependencies
   flutter pub get
 ```
 
-
-
-![Logo](/images/appstore.png)
-
-
 ## Screenshots
 
 ![App Screenshot](/images/Home_complete.png)
 
 ![App Screenshot](/images/login_magenta.png)
-
 
 ![App Screenshot](/images/Prodact_view.png)
 
