@@ -103,7 +103,6 @@ class HomePage extends StatelessWidget {
               AppText.titleMedium(
                 'Get Coupon',
                 color: context.colorScheme.primary,
-                fontWeight: FontWeight.bold,
               ),
             ],
           ),

@@ -7,6 +7,8 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
+import 'package:flutter/widgets.dart';
+
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
@@ -19,8 +21,12 @@ class $AssetsFontsGen {
   /// File path: assets/fonts/Poppins-Regular.ttf
   String get poppinsRegular => 'assets/fonts/Poppins-Regular.ttf';
 
+  /// File path: assets/fonts/Praise-Regular.ttf
+  String get praiseRegular => 'assets/fonts/Praise-Regular.ttf';
+
   /// List of all assets
-  List<String> get values => [poppinsBold, poppinsExtraLight, poppinsRegular];
+  List<String> get values =>
+      [poppinsBold, poppinsExtraLight, poppinsRegular, praiseRegular];
 }
 
 class $AssetsIconsGen {
@@ -28,6 +34,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/Vector.svg
   String get vector => 'assets/icons/Vector.svg';
+
+  /// File path: assets/icons/add.svg
+  String get add => 'assets/icons/add.svg';
 
   /// File path: assets/icons/arrow-left.svg
   String get arrowLeft => 'assets/icons/arrow-left.svg';
@@ -86,6 +95,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/search.svg
   String get search => 'assets/icons/search.svg';
 
+  /// File path: assets/icons/test.png
+  AssetGenImage get test => const AssetGenImage('assets/icons/test.png');
+
   /// File path: assets/icons/user.svg
   String get user => 'assets/icons/user.svg';
 
@@ -93,8 +105,9 @@ class $AssetsIconsGen {
   String get vectorSplash => 'assets/icons/vector_splash.svg';
 
   /// List of all assets
-  List<String> get values => [
+  List<dynamic> get values => [
         vector,
+        add,
         arrowLeft,
         arrowRight,
         backButton,
@@ -114,6 +127,7 @@ class $AssetsIconsGen {
         removeObscure,
         rose,
         search,
+        test,
         user,
         vectorSplash
       ];
@@ -138,4 +152,80 @@ class Assets {
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();
+}
+
+class AssetGenImage {
+  const AssetGenImage(this._assetName, {this.size = null});
+
+  final String _assetName;
+
+  final Size? size;
+
+  Image image({
+    Key? key,
+    AssetBundle? bundle,
+    ImageFrameBuilder? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    String? semanticLabel,
+    bool excludeFromSemantics = false,
+    double? scale,
+    double? width,
+    double? height,
+    Color? color,
+    Animation<double>? opacity,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    AlignmentGeometry alignment = Alignment.center,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    Rect? centerSlice,
+    bool matchTextDirection = false,
+    bool gaplessPlayback = false,
+    bool isAntiAlias = false,
+    String? package,
+    FilterQuality filterQuality = FilterQuality.low,
+    int? cacheWidth,
+    int? cacheHeight,
+  }) {
+    return Image.asset(
+      _assetName,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      semanticLabel: semanticLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
+      width: width,
+      height: height,
+      color: color,
+      opacity: opacity,
+      colorBlendMode: colorBlendMode,
+      fit: fit,
+      alignment: alignment,
+      repeat: repeat,
+      centerSlice: centerSlice,
+      matchTextDirection: matchTextDirection,
+      gaplessPlayback: gaplessPlayback,
+      isAntiAlias: isAntiAlias,
+      package: package,
+      filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
+    );
+  }
+
+  ImageProvider provider({
+    AssetBundle? bundle,
+    String? package,
+  }) {
+    return AssetImage(
+      _assetName,
+      bundle: bundle,
+      package: package,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
 }

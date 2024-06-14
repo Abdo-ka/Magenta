@@ -75,7 +75,7 @@ class _IntroPageState extends State<IntroPage> {
                             width: 200.w,
                             child: AppText(
                               title[index],
-                              style: context.textTheme.headlineLarge?.copyWith(
+                              style: context.textTheme.titleLarge?.copyWith(
                                 fontWeight: FontWeight.w700,
                               ),
                               textAlign: TextAlign.center,
@@ -89,7 +89,7 @@ class _IntroPageState extends State<IntroPage> {
                               body[index],
                               overflow: TextOverflow.visible,
                               textAlign: TextAlign.center,
-                              style: context.textTheme.titleLarge?.copyWith(
+                              style: context.textTheme.titleMedium?.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -127,7 +127,7 @@ class _IntroPageState extends State<IntroPage> {
             valueListenable: values,
             builder: (context, value, child) => values.value == 2
                 ? Positioned(
-                    bottom: 180,
+                    bottom: 140.w,
                     left: context.width / 4.5.w,
                     child: Container(
                       decoration: BoxDecoration(boxShadow: [
@@ -151,7 +151,7 @@ class _IntroPageState extends State<IntroPage> {
                       ),
                     ))
                 : Positioned(
-                    bottom: 180,
+                    bottom: 140.w,
                     right: context.width / 2.3.w,
                     child: ButtonWidget(
                       width: 70.w,

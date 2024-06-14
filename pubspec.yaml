@@ -84,7 +84,11 @@ flutter:
     - assets/icons/
     - assets/translations/
     - assets/fonts/
-fonts:
+
+  fonts:
+    - family: Praise
+      fonts:
+        - asset: assets/fonts/Praise.ttf
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Bold.ttf
@@ -93,3 +97,5 @@ fonts:
           weight: 600
         - asset: assets/fonts/Poppins-ExtraLight.ttf
           weight: 400
+
+

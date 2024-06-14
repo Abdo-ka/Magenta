@@ -38,6 +38,7 @@ class _MagentaAppState extends State<MagentaApp> {
               debugShowCheckedModeBanner: false,
               localizationsDelegates: context.localizationDelegates,
               supportedLocales: context.supportedLocales,
+              
               locale: context.locale,
               routerConfig: router.config(),
               theme: AppTheme.light,

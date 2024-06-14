@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
@@ -14,7 +13,7 @@ class CategoryItem extends StatelessWidget {
       padding: const EdgeInsets.only(right: 10),
       child: ButtonWidget(
         onPressed: () {},
-        height: 40.h,
+        height: 45.h,
         text: text,
         childPadding: const EdgeInsets.all(10),
         prefixIcon: AppImage.asset(imagePath),

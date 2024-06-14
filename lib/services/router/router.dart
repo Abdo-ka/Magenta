@@ -26,9 +26,14 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             page: ResetPasswordRoute.page,
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
-            CustomRoute(
+        CustomRoute(
             page: VerifyNumberRoute.page,
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+
+        CustomRoute(
+            page: DetailsItemRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+
         AutoRoute(
           page: BaseRoute.page,
           children: [

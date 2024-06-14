@@ -33,4 +33,5 @@ class AppTypography {
 
   static const String ibmxFamily = 'IBMPlexSans';
   static const String poppinsFamily = 'Poppins';
+  static const String Praise = 'Praise';
 }
