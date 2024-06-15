@@ -10,7 +10,7 @@ import 'package:magenta/services/router/router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
-        CustomRoute(page: SplashRoute.page, initial: true),
+        CustomRoute(page: SplashRoute.page),
         CustomRoute(
             page: HomeRoute.page,
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
@@ -35,6 +35,7 @@ class AppRouter extends $AppRouter {
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
 
         AutoRoute(
+           initial: true,
           page: BaseRoute.page,
           children: [
             AutoRoute(page: HomeRoute.page),

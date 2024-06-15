@@ -38,7 +38,7 @@ class DetailsItemPage extends StatelessWidget {
             width: 335.w,
             height: 670.h,
             decoration: BoxDecoration(
-              color: context.colorScheme.onPrimary,
+              color: context.colorScheme.gray,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: context.colorScheme.primary),
               boxShadow: [
@@ -82,7 +82,7 @@ class DetailsItemPage extends StatelessWidget {
                     child: AppImage.asset(
                       Assets.icons.test.path,
                       fit: BoxFit.fill,
-                      width: 208.w,
+                      width: 250.w,
                       height: 215.h,
                     ),
                   ),

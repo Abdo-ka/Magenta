@@ -41,7 +41,8 @@ class _VerificationFieldState extends State<VerificationField>
       length: 6,
       controller: widget.otpController,
       animationCurve: Curves.bounceIn,
-      androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsRetrieverApi,
+
+      // androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsRetrieverApi,
       closeKeyboardWhenCompleted: true,
       keyboardType: TextInputType.number,
       errorPinTheme: PinTheme(
