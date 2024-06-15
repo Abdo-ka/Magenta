@@ -29,9 +29,9 @@ class _BasePageState extends State<BasePage> {
         resizeToAvoidBottomInset: false,
         routes: const [
           HomeRoute(),
-          ProfileRoute(),
-          NotificationRoute(),
           FavoriteRoute(),
+          NotificationRoute(),
+          ProfileRoute(),
         ],
         floatingActionButtonBuilder: (context, tabsRouter) => Container(
           width: 350.w,

@@ -21,16 +21,34 @@ class $AssetsFontsGen {
   /// File path: assets/fonts/Poppins-Regular.ttf
   String get poppinsRegular => 'assets/fonts/Poppins-Regular.ttf';
 
-  /// File path: assets/fonts/Praise-Regular.ttf
-  String get praiseRegular => 'assets/fonts/Praise-Regular.ttf';
+  /// File path: assets/fonts/Praise.ttf
+  String get praise => 'assets/fonts/Praise.ttf';
 
   /// List of all assets
   List<String> get values =>
-      [poppinsBold, poppinsExtraLight, poppinsRegular, praiseRegular];
+      [poppinsBold, poppinsExtraLight, poppinsRegular, praise];
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
+
+  /// File path: assets/icons/Change_Language.svg
+  String get changeLanguage => 'assets/icons/Change_Language.svg';
+
+  /// File path: assets/icons/Change_Skin.svg
+  String get changeSkin => 'assets/icons/Change_Skin.svg';
+
+  /// File path: assets/icons/Chat.svg
+  String get chat => 'assets/icons/Chat.svg';
+
+  /// File path: assets/icons/Location.svg
+  String get location => 'assets/icons/Location.svg';
+
+  /// File path: assets/icons/Profile_Icon.svg
+  String get profileIcon => 'assets/icons/Profile_Icon.svg';
+
+  /// File path: assets/icons/Schedule.svg
+  String get schedule => 'assets/icons/Schedule.svg';
 
   /// File path: assets/icons/Vector.svg
   String get vector => 'assets/icons/Vector.svg';
@@ -46,6 +64,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/back_button.svg
   String get backButton => 'assets/icons/back_button.svg';
+
+  /// File path: assets/icons/crown.svg
+  String get crown => 'assets/icons/crown.svg';
 
   /// File path: assets/icons/drawer.svg
   String get drawer => 'assets/icons/drawer.svg';
@@ -106,11 +127,18 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        changeLanguage,
+        changeSkin,
+        chat,
+        location,
+        profileIcon,
+        schedule,
         vector,
         add,
         arrowLeft,
         arrowRight,
         backButton,
+        crown,
         drawer,
         favourite,
         flowerVector,

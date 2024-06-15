@@ -44,7 +44,7 @@ class ItemCardWidget extends StatelessWidget {
               AppImage.asset(
                 Assets.icons.test.path,
                 fit: BoxFit.fill,
-                width: 140.w,
+                width: 140.w, 
                 height: 120.h,
               )
             ],
