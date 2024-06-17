@@ -9,7 +9,6 @@ import 'package:magenta/features/app/components_overrides/app_text.dart';
 
 // 🌎 Project imports:
 
-
 class ButtonWidget extends StatelessWidget {
   static Color surfaceContainer(BuildContext context) =>
       context.isDark ? const Color(0xff1D2021) : const Color(0xffECEEEF);
@@ -35,6 +34,7 @@ class ButtonWidget extends StatelessWidget {
     this.textStyle,
     this.isDisabled = false,
     this.childPadding,
+    this.isCircle = false,
   });
 
   final Function() onPressed;
@@ -56,6 +56,7 @@ class ButtonWidget extends StatelessWidget {
   final TextDirection? textDirection;
   final TextStyle? textStyle;
   final bool isDisabled;
+  final bool isCircle;
 
   @override
   Widget build(BuildContext context) {
@@ -72,22 +73,25 @@ class ButtonWidget extends StatelessWidget {
         minimumSize: const Size(0, 0),
         maximumSize: getFixedSize,
         padding: padding ?? EdgeInsets.zero,
-        shape: ContinuousRectangleBorder(
-          borderRadius: BorderRadius.circular(radius ?? 36),
-          side: BorderSide(
-            color: isOutlined
-                ? (borderColor ?? Theme.of(context).colorScheme.outline)
-                : Colors.transparent,
-            width: 1,
-          ),
-        ),
+        shape: isCircle == true
+            ? const StadiumBorder()
+            : ContinuousRectangleBorder(
+                borderRadius: BorderRadius.circular(radius ?? 36),
+                side: BorderSide(
+                  color: isOutlined
+                      ? (borderColor ?? Theme.of(context).colorScheme.outline)
+                      : Colors.transparent,
+                  width: 1,
+                ),
+              ),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (prefixIcon != null) prefixIcon!,
-          if (spaceBetween != null && text != null && prefixIcon != null) spaceBetween!.ws,
+          if (spaceBetween != null && text != null && prefixIcon != null)
+            spaceBetween!.ws,
           if (text != null)
             Center(
                 child: AppText(

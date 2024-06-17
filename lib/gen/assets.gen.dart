@@ -41,6 +41,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/Chat.svg
   String get chat => 'assets/icons/Chat.svg';
 
+  /// File path: assets/icons/E_letter.svg
+  String get eLetter => 'assets/icons/E_letter.svg';
+
   /// File path: assets/icons/Location.svg
   String get location => 'assets/icons/Location.svg';
 
@@ -130,6 +133,7 @@ class $AssetsIconsGen {
         changeLanguage,
         changeSkin,
         chat,
+        eLetter,
         location,
         profileIcon,
         schedule,

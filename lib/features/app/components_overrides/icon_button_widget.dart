@@ -20,6 +20,7 @@ class IconButtonWidget extends StatelessWidget {
     this.widgetDimension = 42,
     this.padding,
     this.radius = 12,
+    this.isCircle = false,
   }) : assert(iconPath != null || child != null);
 
   final VoidCallback onPressed;
@@ -31,6 +32,7 @@ class IconButtonWidget extends StatelessWidget {
   final double widgetDimension;
   final double? radius;
   final EdgeInsetsGeometry? padding;
+  final bool isCircle;
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +41,9 @@ class IconButtonWidget extends StatelessWidget {
       width: widgetDimension,
       backgroundColor: buttonColor,
       radius: radius,
+      isCircle: isCircle,
       onPressed: onPressed,
-      padding: padding ?? const EdgeInsets.all(8),
+      padding: padding ?? const EdgeInsets.all(5),
       prefixIcon: child ??
           AppImage.asset(
             iconPath!,
