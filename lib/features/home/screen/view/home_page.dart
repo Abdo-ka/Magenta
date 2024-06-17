@@ -1,17 +1,13 @@
 // 🐦 Flutter imports:
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/app_text_field.dart';
-import 'package:magenta/features/app/components_overrides/button_widget.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:magenta/features/app/components_overrides/icon_button_widget.dart';
 import 'package:magenta/features/home/screen/widget/carousel_slider_widget.dart';
 import 'package:magenta/features/home/screen/widget/category_item.dart';
@@ -34,8 +30,8 @@ class HomePage extends StatelessWidget {
             children: [
               IconButtonWidget(
                 onPressed: () {},
-                child: AppImage.asset(Assets.icons.drawer),
                 buttonColor: Colors.transparent,
+                child: AppImage.asset(Assets.icons.drawer),
               ),
               AppImage.asset(
                 Assets.icons.logo,
@@ -43,8 +39,8 @@ class HomePage extends StatelessWidget {
               ),
               IconButtonWidget(
                 onPressed: () {},
-                child: AppImage.asset(Assets.icons.handBag),
                 buttonColor: Colors.transparent,
+                child: AppImage.asset(Assets.icons.handBag),
               ),
             ],
           ),

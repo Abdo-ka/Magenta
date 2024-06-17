@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:magenta/config/theme/app_typography.dart';
 import 'package:magenta/config/theme/color_scheme.dart';
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
@@ -98,7 +97,7 @@ class DetailsItemPage extends StatelessWidget {
                   Row(
                     children: [
                       AppText.bodyLarge(
-                        '\" Imagine your world \"',
+                        '" Imagine your world "',
                         color: context.colorScheme.primary,
                         fontWeight: FontWeight.bold,
                       ),

@@ -20,7 +20,7 @@ class AppTheme {
         textTheme: AppTypography.textTheme,
         fontFamily: AppTypography.poppinsFamily,
         appBarTheme: _appBarTheme(AppColorScheme.light),
-        switchTheme: SwitchThemeData(thumbColor: MaterialStatePropertyAll(AppColorScheme.light.background)),
+        switchTheme: SwitchThemeData(thumbColor: WidgetStatePropertyAll(AppColorScheme.light.surface)),
       );
 
   static ThemeData get dark => ThemeData(
@@ -29,9 +29,9 @@ class AppTheme {
         textTheme: AppTypography.textTheme,
         fontFamily: AppTypography.poppinsFamily,
         appBarTheme: _appBarTheme(AppColorScheme.dark),
-        switchTheme: SwitchThemeData(thumbColor: MaterialStatePropertyAll(AppColorScheme.light.background)),
+        switchTheme: SwitchThemeData(thumbColor: WidgetStatePropertyAll(AppColorScheme.light.surface)),
       );
 
   static AppBarTheme _appBarTheme(ColorScheme scheme) =>
-      AppBarTheme(color: scheme.background, centerTitle: true);
+      AppBarTheme(color: scheme.surface, centerTitle: true);
 }

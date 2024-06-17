@@ -1,5 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:magenta/core/extension/extensions.dart';
+import 'package:magenta/features/app/components_overrides/app_text.dart';
+import 'package:magenta/features/notification/screen/widget/list_tile_notification_widget.dart';
 
 @RoutePage()
 class NotificationPage extends StatelessWidget {
@@ -7,6 +11,31 @@ class NotificationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: AppText(
+          'Notification Bar',
+          style: context.textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: ListView(padding: const EdgeInsets.all(16), children: [
+        GridView.builder(
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 1,
+            childAspectRatio: 5,
+          ),
+          itemBuilder: (context, index) => const Padding(
+            padding: EdgeInsets.only(bottom: 20),
+            child: ListTileNotification(),
+          ),
+          itemCount: 10,
+          shrinkWrap: true,
+        ),
+        50.verticalSpace,
+      ]),
+    );
   }
 }

@@ -5,9 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
-import 'package:path/path.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:magenta/gen/assets.gen.dart';
 
 class CarouselSliderWidget extends StatelessWidget {
   final List<String> image;

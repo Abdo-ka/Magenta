@@ -1,5 +1,4 @@
 // 🐦 Flutter imports:
-import 'package:flutter/cupertino.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
@@ -13,7 +12,7 @@ import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
 class BasePage extends StatefulWidget {
-  BasePage({super.key});
+  const BasePage({super.key});
 
   @override
   State<BasePage> createState() => _BasePageState();

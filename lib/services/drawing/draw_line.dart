@@ -42,7 +42,7 @@ class _LineState extends State<Line> with SingleTickerProviderStateMixin {
 
 class LinePainter extends CustomPainter {
   Paint _paint = Paint();
-  double _progress;
+  final double _progress;
 
   LinePainter(this._progress) {
     _paint = Paint()

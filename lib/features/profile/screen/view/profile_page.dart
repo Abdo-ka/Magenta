@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/config/theme/color_scheme.dart';
 import 'package:magenta/core/extension/context_ext.dart';
-import 'package:magenta/features/app/components_overrides/app_bar_widget.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/gen/assets.gen.dart';

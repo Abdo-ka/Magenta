@@ -31,7 +31,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Timer(
       const Duration(seconds: 2),
-      () => context.replaceRoute( IntroRoute()),
+      () => context.replaceRoute( const IntroRoute()),
     );
   }
 
