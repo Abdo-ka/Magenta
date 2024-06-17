@@ -32,6 +32,9 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/Broken_heart.svg
+  String get brokenHeart => 'assets/icons/Broken_heart.svg';
+
   /// File path: assets/icons/Change_Language.svg
   String get changeLanguage => 'assets/icons/Change_Language.svg';
 
@@ -130,6 +133,7 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        brokenHeart,
         changeLanguage,
         changeSkin,
         chat,

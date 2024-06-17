@@ -11,8 +11,13 @@ import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
 class ItemCardWidget extends StatelessWidget {
-  const ItemCardWidget({super.key});
-
+  const ItemCardWidget({
+    super.key,
+    this.width,
+    this.height,
+  });
+  final double? width;
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,8 +27,8 @@ class ItemCardWidget extends StatelessWidget {
           context.router.push(DetailsItemRoute(id: 1));
         },
         child: Container(
-          width: 146.w,
-          height: 256.h,
+          width: width ?? 146.w,
+          height: height ?? 256.h,
           margin: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             border: Border.all(color: context.colorScheme.primary),
