@@ -77,6 +77,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/back_button.svg
   String get backButton => 'assets/icons/back_button.svg';
 
+  /// File path: assets/icons/close.svg
+  String get close => 'assets/icons/close.svg';
+
   /// File path: assets/icons/crown.svg
   String get crown => 'assets/icons/crown.svg';
 
@@ -154,6 +157,7 @@ class $AssetsIconsGen {
         arrowLeft,
         arrowRight,
         backButton,
+        close,
         crown,
         drawer,
         favourite,
@@ -177,6 +181,16 @@ class $AssetsIconsGen {
       ];
 }
 
+class $AssetsLottieGen {
+  const $AssetsLottieGen();
+
+  /// File path: assets/lottie/done.json
+  String get done => 'assets/lottie/done.json';
+
+  /// List of all assets
+  List<String> get values => [done];
+}
+
 class $AssetsTranslationsGen {
   const $AssetsTranslationsGen();
 
@@ -195,6 +209,7 @@ class Assets {
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsLottieGen lottie = $AssetsLottieGen();
   static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();
 }
 

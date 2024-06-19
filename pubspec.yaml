@@ -84,6 +84,7 @@ flutter:
     - assets/icons/
     - assets/translations/
     - assets/fonts/
+    - assets/lottie/
 
   fonts:
     - family: Praise

@@ -70,6 +70,7 @@ class HomePage extends StatelessWidget {
             'Select Category',
             fontWeight: FontWeight.bold,
           ),
+          10.verticalSpace,
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(

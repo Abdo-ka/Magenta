@@ -2,10 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/core/extension/extensions.dart';
+import 'package:magenta/features/app/components_overrides/animated_dialog.dart';
 import 'package:magenta/features/app/components_overrides/app_bar_widget.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/home/screen/widget/cart_widget.dart';
+import 'package:magenta/features/home/screen/widget/payment_success_dialog.dart';
 import 'package:magenta/gen/assets.gen.dart';
 
 @RoutePage()
@@ -50,7 +52,10 @@ class CartPage extends StatelessWidget {
                     ],
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      AnimatedDialog.show(context,
+                          child: PaymentSuccessDialog());
+                    },
                     child: Row(
                       children: [
                         AppText(

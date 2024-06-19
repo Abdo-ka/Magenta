@@ -106,7 +106,7 @@ class _IntroPageState extends State<IntroPage> {
             valueListenable: values,
             builder: (BuildContext context, _, Widget? child) => Positioned(
               bottom: 100,
-              right: context.width / 2.75.w,
+              right: 130.w,
               child: Row(
                 children: List.generate(
                   3,

@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/config/theme/theme.dart';
 import 'package:magenta/core/extension/context_ext.dart';
+import 'package:magenta/features/app/components_overrides/app_checkbox.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/app_text_field.dart';
@@ -92,8 +93,9 @@ class _SignInPageState extends State<SignInPage> {
             children: [
               Row(
                 children: [
-                  Checkbox(
-                    value: true,
+                  AppCheckbox(
+                    isSelected: true,
+                    width: 40,
                     onChanged: (value) {},
                   ),
                   AppText('Rememebr me'),
@@ -119,7 +121,7 @@ class _SignInPageState extends State<SignInPage> {
             ]),
             child: ButtonWidget(
               height: 50.h,
-            radius: 32,
+              radius: 32,
               onPressed: () {
                 context.router.push(const VerifyNumberRoute());
               },
