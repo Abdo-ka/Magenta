@@ -23,20 +23,14 @@ class ListTileNotification extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      trailing: Container(
-          height: context.height,
-          width: 34.w,
-          decoration: BoxDecoration(
-            color: context.colorScheme.primary,
-          ),
-          child: IconButtonWidget(
-            onPressed: () {},
-            buttonColor: context.colorScheme.primary,
-            child: AppImage.asset(
-              Assets.icons.arrowRight,
-              color: context.colorScheme.onPrimary,
-            ),
-          )),
+      trailing: IconButtonWidget(
+        onPressed: () {},
+        buttonColor: context.colorScheme.surface,
+        child: AppImage.asset(
+          Assets.icons.remove,
+          color: context.colorScheme.primary,
+        ),
+      ),
     );
   }
 }
