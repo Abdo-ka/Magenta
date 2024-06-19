@@ -33,6 +33,9 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             page: DetailsItemRoute.page,
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+        CustomRoute(
+            page: CartRoute.page,
+            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
 
         AutoRoute(
           page: BaseRoute.page,

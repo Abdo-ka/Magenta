@@ -16,7 +16,7 @@ class AppColorScheme {
     onTertiary: Color(0xFFFFFFFF),
     errorContainer: Color(0xFFFFEDE8),
     onErrorContainer: Color(0xFF87361D),
-    surface: Color(0xFFF7F8FA),
+    surface: Color.fromARGB(0, 255, 255, 255),
     onSurface: Color(0xFF34313C),
     surfaceContainerHighest: Color(0xFFDEDDE1),
     onSurfaceVariant: Color(0xFF534F5C),

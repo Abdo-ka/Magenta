@@ -13,6 +13,7 @@ import 'package:magenta/features/home/screen/widget/carousel_slider_widget.dart'
 import 'package:magenta/features/home/screen/widget/category_item.dart';
 import 'package:magenta/features/home/screen/widget/item_card_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
+import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -38,9 +39,23 @@ class HomePage extends StatelessWidget {
                 size: 40,
               ),
               IconButtonWidget(
-                onPressed: () {},
+                onPressed: () {
+                  context.router.push(const CartRoute());
+                },
                 buttonColor: Colors.transparent,
-                child: AppImage.asset(Assets.icons.handBag),
+                child: Stack(children: [
+                  AppImage.asset(Assets.icons.handBag),
+                  Positioned(
+                    left: 10,
+                    child: Container(
+                      width: 10.w,
+                      height: 10.h,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: context.colorScheme.error),
+                    ),
+                  )
+                ]),
               ),
             ],
           ),

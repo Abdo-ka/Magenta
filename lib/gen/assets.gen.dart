@@ -56,6 +56,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/Schedule.svg
   String get schedule => 'assets/icons/Schedule.svg';
 
+  /// File path: assets/icons/Trash.svg
+  String get trash => 'assets/icons/Trash.svg';
+
   /// File path: assets/icons/Vector.svg
   String get vector => 'assets/icons/Vector.svg';
 
@@ -141,6 +144,7 @@ class $AssetsIconsGen {
         location,
         profileIcon,
         schedule,
+        trash,
         vector,
         add,
         arrowLeft,
