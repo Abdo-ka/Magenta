@@ -6,15 +6,20 @@ import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/button_widget.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key, required this.imagePath, required this.text});
+  const CategoryItem(
+      {super.key,
+      required this.imagePath,
+      required this.text,
+      required this.onPressed});
   final String imagePath;
   final String text;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(right: 10),
         child: GestureDetector(
-          onTap: () {},
+          onTap: () => onPressed.call(),
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(),

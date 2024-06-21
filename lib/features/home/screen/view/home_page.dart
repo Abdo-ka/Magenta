@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
@@ -16,8 +17,15 @@ import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  GlobalKey FancyKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -77,19 +85,27 @@ class HomePage extends StatelessWidget {
               children: [
                 CategoryItem(
                   imagePath: Assets.icons.flowerVector,
-                  text: 'Fancy',
+                  text: 'Fanceey',
+                  onPressed: () {
+                    Scrollable.ensureVisible(FancyKey.currentContext!,
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeIn);
+                  },
                 ),
                 CategoryItem(
                   imagePath: Assets.icons.flowerVector,
                   text: 'Fancy1',
+                  onPressed: () {},
                 ),
                 CategoryItem(
                   imagePath: Assets.icons.flowerVector,
                   text: 'Fancy2',
+                  onPressed: () {},
                 ),
                 CategoryItem(
                   imagePath: Assets.icons.flowerVector,
                   text: 'Fancy3',
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -149,6 +165,7 @@ class HomePage extends StatelessWidget {
           ),
           15.verticalSpace,
           SingleChildScrollView(
+            key: FancyKey,
             scrollDirection: Axis.horizontal,
             child: Row(
                 children: List.generate(

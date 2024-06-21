@@ -61,9 +61,11 @@ abstract class $AppRouter extends _i14.RootStackRouter {
       );
     },
     HomeRoute.name: (routeData) {
+      final args =
+          routeData.argsAs<HomeRouteArgs>(orElse: () => const HomeRouteArgs());
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.HomePage(),
+        child: _i5.HomePage(key: args.key),
       );
     },
     IntroRoute.name: (routeData) {
@@ -199,16 +201,31 @@ class FavoriteRoute extends _i14.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.HomePage]
-class HomeRoute extends _i14.PageRouteInfo<void> {
-  const HomeRoute({List<_i14.PageRouteInfo>? children})
-      : super(
+class HomeRoute extends _i14.PageRouteInfo<HomeRouteArgs> {
+  HomeRoute({
+    _i15.Key? key,
+    List<_i14.PageRouteInfo>? children,
+  }) : super(
           HomeRoute.name,
+          args: HomeRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'HomeRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static const _i14.PageInfo<HomeRouteArgs> page =
+      _i14.PageInfo<HomeRouteArgs>(name);
+}
+
+class HomeRouteArgs {
+  const HomeRouteArgs({this.key});
+
+  final _i15.Key? key;
+
+  @override
+  String toString() {
+    return 'HomeRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
