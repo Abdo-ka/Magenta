@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flutter Run Dev",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define-from-file=env/.env_dev.json",
+                "--flavor",
+                "dev"
+            ]
+        },
+        {
+            "name": "Flutter Run Prod",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define-from-file=env/.env_prod.json",
+                "--flavor",
+                "prod"
+            ]
+        },
+        {
+            "name": "Flutter Run Stag",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define-from-file=env/.env_stag.json",
+                "--flavor",
+                "stag"
+            ]
+        }
+    ]
+}

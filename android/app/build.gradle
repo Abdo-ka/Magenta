@@ -39,12 +39,26 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+    flavorDimensions  "app"
 
+    productFlavors {
+        dev {
+          dimension "app"
+          applicationId "com.magenta.dev"
+
+        
+        }
+        prod {
+          dimension "app"
+          applicationId "com.magenta.prod"          
+        }
+        stag {
+          dimension "app"
+          applicationId "com.magenta.stag"          
+        }
+    }
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.magenta.repo"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion  23
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()

@@ -33,7 +33,7 @@
     <!--#enddocregion android-queries-->
 
     <application
-        android:label="magenta"
+        android:label="@string/app_name"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
           android:allowBackup="false"
