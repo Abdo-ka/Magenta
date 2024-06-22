@@ -7,7 +7,6 @@ import 'package:magenta/initialization.dart';
 
 void main() async {
   await preInitializations();
-  
 
   runApp(const MagentaApp());
 }

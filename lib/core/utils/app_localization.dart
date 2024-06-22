@@ -10,8 +10,10 @@ class AppLocalization {
   static get supportedLocales => [arLocale, enLocale];
   static get fallbackLocale => enLocale;
 
-  static bool isEnglish(BuildContext context) => context.locale.languageCode == enLocale.languageCode;
+  static bool isEnglish(BuildContext context) =>
+      context.locale.languageCode == enLocale.languageCode;
 
-  static reverseLang(BuildContext context) =>
-      isEnglish(context) ? context.setLocale(arLocale) : context.setLocale(enLocale);
+  static reverseLang(BuildContext context) => isEnglish(context)
+      ? context.setLocale(arLocale)
+      : context.setLocale(enLocale);
 }

@@ -1,6 +1,4 @@
 // 🌎 Project imports:
-
-// 🌎 Project imports:
 import 'app_exception.dart';
 
 typedef DataConverter<T> = T Function(dynamic json);

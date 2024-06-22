@@ -27,7 +27,8 @@ abstract class AppModule {
   Future<GoogleSignIn> get googleSignIn async => GoogleSignIn();
 
   @singleton
-  Future<SharedPreferences> get sharedPreferences => SharedPreferences.getInstance();
+  Future<SharedPreferences> get sharedPreferences =>
+      SharedPreferences.getInstance();
 
   @singleton
   AppRouter get router => AppRouter();

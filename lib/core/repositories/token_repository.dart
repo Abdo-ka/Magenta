@@ -28,7 +28,8 @@ class TokenRepositoryImp implements TokenRepository {
   }
 
   @override
-  Future<void> saveToken(String token) => secureStorage.write(key: tokenKey, value: token);
+  Future<void> saveToken(String token) =>
+      secureStorage.write(key: tokenKey, value: token);
 
   @override
   Future<String?> get token => secureStorage.read(key: tokenKey);

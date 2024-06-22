@@ -1,15 +1,11 @@
 // 🐦 Flutter imports:
-
-// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
-
-// 🌎 Project imports:
 import 'package:magenta/config/theme/app_typography.dart';
 import 'package:magenta/config/theme/color_scheme.dart';
-
-// 🌎 Project imports:
 
 export 'app_typography.dart';
 export 'color_scheme.dart';

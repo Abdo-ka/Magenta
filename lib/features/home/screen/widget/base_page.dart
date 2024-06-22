@@ -1,9 +1,11 @@
 // 🐦 Flutter imports:
+import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/context_ext.dart';
 import 'package:magenta/core/utils/toaster.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
@@ -33,7 +35,7 @@ class _BasePageState extends State<BasePage> {
         if (isActive.value != 0) {
           isActive.value = 0;
           context.router.replaceAll([
-             BaseRoute(children: [HomeRoute()])
+            BaseRoute(children: [HomeRoute()])
           ]);
           return false;
         } else if (lastBackPressTime == null ||
@@ -52,9 +54,9 @@ class _BasePageState extends State<BasePage> {
           resizeToAvoidBottomInset: false,
           routes: [
             HomeRoute(),
-            FavoriteRoute(),
-            NotificationRoute(),
-            ProfileRoute(),
+            const FavoriteRoute(),
+            const NotificationRoute(),
+            const ProfileRoute(),
           ],
           floatingActionButtonBuilder: (context, tabsRouter) {
             return Container(

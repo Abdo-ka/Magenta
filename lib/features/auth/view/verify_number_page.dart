@@ -29,7 +29,6 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
     return Scaffold(
       appBar: AppBarWidget(
         title: AppText.headlineMedium('Verify Number'),
-        
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -67,7 +66,7 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
               height: 50.h,
               radius: 32,
               onPressed: () {
-                context.router.replaceAll([BaseRoute()]);
+                context.router.replaceAll([const BaseRoute()]);
               },
               backgroundColor: context.colorScheme.primary,
               textStyle: context.textTheme.titleMedium

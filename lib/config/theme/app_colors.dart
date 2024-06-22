@@ -4,19 +4,15 @@ import 'package:flutter/material.dart';
 // 🌎 Project imports:
 import 'package:magenta/core/extension/context_ext.dart';
 
-// 🌎 Project imports:
-
-
-// 🌎 Project imports:
-
 abstract class AppColors {
   static const lightSurfaceContainer = Color(0xffECEEEF);
   static const darkSurfaceContainer = Color(0xff1D2021);
 
   static Color surfaceBright(BuildContext context) =>
       context.isDark ? DarkColors.darkSurfaceBright : LightColors.surfaceBright;
-  static Color surfaceContainerLow(BuildContext context) =>
-      context.isDark ? DarkColors.surfaceLowContainer : LightColors.surfaceLowContainer;
+  static Color surfaceContainerLow(BuildContext context) => context.isDark
+      ? DarkColors.surfaceLowContainer
+      : LightColors.surfaceLowContainer;
 
   static Color surfaceContainer(BuildContext context) =>
       context.isDark ? const Color(0xff1D2021) : const Color(0xffECEEEF);

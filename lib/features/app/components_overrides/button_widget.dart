@@ -1,13 +1,9 @@
 // 🐦 Flutter imports:
-
-// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
-
-// 🌎 Project imports:
 
 class ButtonWidget extends StatelessWidget {
   static Color surfaceContainer(BuildContext context) =>

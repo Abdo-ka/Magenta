@@ -1,11 +1,11 @@
 // 🐦 Flutter imports:
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
+import 'package:auto_route/auto_route.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/core/extension/context_ext.dart';
-
-// 📦 Package imports:
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({

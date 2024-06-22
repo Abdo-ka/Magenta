@@ -10,9 +10,6 @@ import 'package:dio/io.dart';
 import 'package:magenta/config/types/types.dart';
 import '../interceptors/dio_log_interceptor.dart';
 
-// 🌎 Project imports:
-
-
 class DioClient with DioMixin implements Dio {
   final BaseOptions? baseOptions;
   DioClient({

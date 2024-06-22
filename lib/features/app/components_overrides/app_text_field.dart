@@ -1,6 +1,4 @@
 // 🐦 Flutter imports:
-
-// 🐦 Flutter imports:
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,8 +10,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
-
-// 🌎 Project imports:
 
 class AppTextFormField extends StatelessWidget {
   const AppTextFormField({
@@ -199,7 +195,10 @@ class AppTextFormField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          if (title != null) ...{AppText(title!, style: titleStyle), 6.verticalSpace},
+          if (title != null) ...{
+            AppText(title!, style: titleStyle),
+            6.verticalSpace
+          },
           Directionality(
             textDirection: textDirection ?? TextDirection.rtl,
             child: FormBuilderTextField(
@@ -220,23 +219,28 @@ class AppTextFormField extends StatelessWidget {
                     floatingLabelAlignment: FloatingLabelAlignment.start,
                     hintMaxLines: hintMaxLines,
                     hintTextDirection: hintTextDirection,
-                    contentPadding: REdgeInsetsDirectional.only(start: 16, top: 16, bottom: 10),
+                    contentPadding: REdgeInsetsDirectional.only(
+                        start: 16, top: 16, bottom: 10),
                     fillColor: fillColor ?? context.colorScheme.surface,
                     focusColor: context.colorScheme.surface,
                     alignLabelWithHint: alignLabelWithHint,
                     suffixIcon: suffixIcon,
-                    suffixIconConstraints: BoxConstraints(maxHeight: 40.h, minHeight: 10.h, minWidth: 40.w),
+                    suffixIconConstraints: BoxConstraints(
+                        maxHeight: 40.h, minHeight: 10.h, minWidth: 40.w),
                     constraints: constraints ?? BoxConstraints(minHeight: 48.h),
                     prefixIconConstraints: prefixIconConstraints ??
-                        BoxConstraints(maxHeight: 40.h, minHeight: 10.h, minWidth: 40.w),
+                        BoxConstraints(
+                            maxHeight: 40.h, minHeight: 10.h, minWidth: 40.w),
                     prefixIcon: prefixIcon,
                     filled: filled,
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: context.colorScheme.outline),
+                      borderSide:
+                          BorderSide(color: context.colorScheme.outline),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     disabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: context.colorScheme.outline),
+                      borderSide:
+                          BorderSide(color: context.colorScheme.outline),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     errorBorder: OutlineInputBorder(
@@ -245,12 +249,14 @@ class AppTextFormField extends StatelessWidget {
                     ),
                     enabledBorder: enabledBorder ??
                         OutlineInputBorder(
-                          borderSide: BorderSide(color: context.colorScheme.outline),
+                          borderSide:
+                              BorderSide(color: context.colorScheme.outline),
                           borderRadius: BorderRadius.circular(16),
                         ),
                     focusedBorder: focusedBorder ??
                         OutlineInputBorder(
-                          borderSide: BorderSide(color: context.colorScheme.primary),
+                          borderSide:
+                              BorderSide(color: context.colorScheme.primary),
                           borderRadius: BorderRadius.circular(16),
                         ),
                   ),

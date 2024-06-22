@@ -4,8 +4,6 @@ import 'package:auto_route/auto_route.dart';
 // 🌎 Project imports:
 import 'package:magenta/services/router/router.gr.dart';
 
-// 🌎 Project imports:
-
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
 class AppRouter extends $AppRouter {
   @override

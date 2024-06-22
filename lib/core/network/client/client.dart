@@ -11,11 +11,6 @@ import 'package:magenta/core/utils/app_toast.dart';
 import '../../../config/types/types.dart';
 import 'dio_override.dart';
 
-// 📦 Package imports:
-
-
-
-
 class Client {
   final String baseUrl;
   final List<Interceptor> interceptors;
@@ -132,7 +127,8 @@ class Client {
   String addBearer(String token) => 'Bearer $token';
 }
 
-Future<Either<AppException, T>> toApiResult<T>(FutureOr<T> Function() call) async {
+Future<Either<AppException, T>> toApiResult<T>(
+    FutureOr<T> Function() call) async {
   String? errorMessage;
   try {
     return Right(await call());

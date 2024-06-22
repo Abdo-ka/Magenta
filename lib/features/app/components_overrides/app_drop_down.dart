@@ -27,8 +27,8 @@ class AppDropDown<T> extends StatefulWidget {
   final bool isExpanded;
   final double? height;
   final Widget? child;
- final  ButtonStyleData? buttonStyleData;
- final BoxBorder? border ;
+  final ButtonStyleData? buttonStyleData;
+  final BoxBorder? border;
   const AppDropDown({
     super.key,
     this.isExpanded = true,
@@ -46,7 +46,9 @@ class AppDropDown<T> extends StatefulWidget {
     this.onChanged,
     this.margin,
     this.height,
-    this.child, this.buttonStyleData, this.border,
+    this.child,
+    this.buttonStyleData,
+    this.border,
   });
 
   @override
@@ -64,7 +66,7 @@ class _AppDropDownState<T> extends State<AppDropDown<T>> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (widget.title != null) AppText.titleMedium(widget.title!),
-          if (widget.title != null)  6.verticalSpace,
+          if (widget.title != null) 6.verticalSpace,
           SizedBox(
             height: widget.height ?? 48.h,
             child: Material(
@@ -80,21 +82,23 @@ class _AppDropDownState<T> extends State<AppDropDown<T>> {
                     icon: widget.child ??
                         Padding(
                           padding: REdgeInsetsDirectional.only(end: 10),
-                          child:  AppImage.asset(
+                          child: AppImage.asset(
                               'packages/core/assets/icons/down2.svg'),
                         ),
                   ),
                   onChanged: (value) => setState(() => _selectedValue = value),
                   value: _selectedValue,
-                  buttonStyleData:widget.buttonStyleData ??  ButtonStyleData(
-                    padding: REdgeInsets.symmetric(horizontal: 12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: context.colorScheme.surface,
-                      border: widget.border ?? Border.all(
-                          color: context.colorScheme.outline, width: 1),
-                    ),
-                  ),
+                  buttonStyleData: widget.buttonStyleData ??
+                      ButtonStyleData(
+                        padding: REdgeInsets.symmetric(horizontal: 12),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: context.colorScheme.surface,
+                          border: widget.border ??
+                              Border.all(
+                                  color: context.colorScheme.outline, width: 1),
+                        ),
+                      ),
                   style: context.textTheme.bodyMedium
                       ?.copyWith(fontWeight: FontWeight.w100),
                   dropdownStyleData: DropdownStyleData(

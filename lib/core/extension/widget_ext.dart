@@ -12,7 +12,8 @@ extension PaddingApp on Widget {
   Widget scrollable({Axis scrollDirection = Axis.vertical}) =>
       SingleChildScrollView(scrollDirection: scrollDirection, child: this);
 
-  Widget paddingAll(double value) => Padding(padding: EdgeInsets.all(value), child: this);
+  Widget paddingAll(double value) =>
+      Padding(padding: EdgeInsets.all(value), child: this);
 
   Widget positioned({
     double? top,
@@ -44,8 +45,15 @@ extension PaddingApp on Widget {
 
   Widget center() => Center(child: this);
 
-  Widget row([MainAxisAlignment mainAxisAlignment=MainAxisAlignment.center])=>Row(mainAxisAlignment: mainAxisAlignment,children: [this],);
-  Widget column()=>Column(children: [this],);
+  Widget row(
+          [MainAxisAlignment mainAxisAlignment = MainAxisAlignment.center]) =>
+      Row(
+        mainAxisAlignment: mainAxisAlignment,
+        children: [this],
+      );
+  Widget column() => Column(
+        children: [this],
+      );
 
   Widget expand({int flex = 1}) => Expanded(flex: flex, child: this);
 }

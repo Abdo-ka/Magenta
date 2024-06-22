@@ -1,13 +1,16 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:magenta/config/theme/color_scheme.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_checkbox.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/home/screen/view/cart_page.dart';
 import 'package:magenta/gen/assets.gen.dart';
-import 'package:path/path.dart';
 
 class CartWidget extends StatelessWidget {
   const CartWidget({super.key});

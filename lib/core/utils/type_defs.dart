@@ -1,7 +1,3 @@
-// 📦 Package imports:
-
-// 🌎 Project imports:
-
 typedef ParamsMap = Map<String, String?>?;
 
 typedef BodyMap = Map<String, dynamic>;

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:magenta/config/common/environment_variables.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/theme/theme.dart';

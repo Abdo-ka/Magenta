@@ -1,5 +1,10 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/context_ext.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/app/components_overrides/icon_button_widget.dart';

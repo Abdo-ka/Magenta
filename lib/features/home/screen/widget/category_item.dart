@@ -1,9 +1,12 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:magenta/core/extension/extensions.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/app_text.dart';
-import 'package:magenta/features/app/components_overrides/button_widget.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem(

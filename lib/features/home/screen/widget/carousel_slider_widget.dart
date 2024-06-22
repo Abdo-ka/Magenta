@@ -1,11 +1,16 @@
-import 'package:carousel_slider/carousel_slider.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+// 📦 Package imports:
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CarouselSliderWidget extends StatelessWidget {
   final List<String> image;

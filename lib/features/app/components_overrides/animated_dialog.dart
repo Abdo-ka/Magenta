@@ -1,8 +1,13 @@
+// 🎯 Dart imports:
 import 'dart:ui';
 
-
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/app_image.dart';
 import 'package:magenta/features/app/components_overrides/icon_button_widget.dart';

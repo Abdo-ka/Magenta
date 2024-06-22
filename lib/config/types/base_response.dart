@@ -1,6 +1,4 @@
 // 🌎 Project imports:
-
-// 🌎 Project imports:
 import 'app_exception.dart';
 
 typedef DataConverter<T> = T Function(dynamic json);
@@ -18,7 +16,8 @@ class BaseResponse<T> {
     required this.success,
   });
 
-  factory BaseResponse.fromJson(Map<String, dynamic> json, DataConverter<T> dataConverter) {
+  factory BaseResponse.fromJson(
+      Map<String, dynamic> json, DataConverter<T> dataConverter) {
     if (!json['success']) {
       throw AppNetworkResponseException(message: json["message"]);
     }

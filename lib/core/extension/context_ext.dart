@@ -1,15 +1,16 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
-
 extension ContextExtension on BuildContext {
   double get height => MediaQuery.of(this).size.height;
 
   double get width => MediaQuery.of(this).size.width;
 
   LinearGradient get primaryLinear => LinearGradient(
-        colors: [Theme.of(this).primaryColor, Theme.of(this).primaryColor.withOpacity(.5)],
+        colors: [
+          Theme.of(this).primaryColor,
+          Theme.of(this).primaryColor.withOpacity(.5)
+        ],
       );
 
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
@@ -36,6 +37,11 @@ extension ContextExtension on BuildContext {
     double bottomBar = mediaQuery.viewInsets.bottom;
     double bottomPadding = mediaQuery.viewPadding.bottom;
     double bottomSafeArea = mediaQuery.padding.bottom;
-    return size.height - statusBar - kLeadingWidth - bottomBar - bottomPadding - bottomSafeArea;
+    return size.height -
+        statusBar -
+        kLeadingWidth -
+        bottomBar -
+        bottomPadding -
+        bottomSafeArea;
   }
 }

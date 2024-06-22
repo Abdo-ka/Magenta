@@ -1,6 +1,11 @@
-import 'package:auto_route/auto_route.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 import 'package:magenta/features/app/components_overrides/animated_dialog.dart';
 import 'package:magenta/features/app/components_overrides/app_bar_widget.dart';
@@ -54,7 +59,7 @@ class CartPage extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       AnimatedDialog.show(context,
-                          child: PaymentSuccessDialog());
+                          child: const PaymentSuccessDialog());
                     },
                     child: Row(
                       children: [
@@ -92,7 +97,7 @@ class CartPage extends StatelessWidget {
               ? 70.verticalSpace
               : const Padding(
                   padding: EdgeInsets.only(bottom: 15),
-                  child: const CartWidget(),
+                  child: CartWidget(),
                 ),
         ),
       ),

@@ -13,7 +13,8 @@ extension StringExtension on String {
 }
 
 extension ListWidgetExtension on List<Widget> {
-  List<Widget> separated(Widget separator) => map((e) => [e, separator]).expand((e) => e).toList();
+  List<Widget> separated(Widget separator) =>
+      map((e) => [e, separator]).expand((e) => e).toList();
 }
 
 extension SliverSizedBox on SizedBox {

@@ -8,11 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/features/app/components_overrides/app_text.dart';
 
-// 🌎 Project imports:
-
-
-// 🌎 Project imports:
-
 class Toaster {
   Toaster._();
 

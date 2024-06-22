@@ -1,5 +1,10 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/core/extension/extensions.dart';
 
 class AppCheckbox extends StatelessWidget {

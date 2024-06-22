@@ -8,5 +8,6 @@ class LocalStorage {
 
   LocalStorage(this.sharedPreferences);
   bool isFirstOpen(String name) => sharedPreferences.getBool(name) ?? true;
-  void setIsFirstOpen(String name,bool value) => sharedPreferences.setBool(name, value);
+  void setIsFirstOpen(String name, bool value) =>
+      sharedPreferences.setBool(name, value);
 }
