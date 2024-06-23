@@ -44,20 +44,22 @@ Install dependencies
 
 ## Run Application
 
-cause this application is using Flavor to run it should run this line on terminal
+cause this application is using Flavor to run it should run this command on terminal as you need
 
 ```bash
 Development:
 
-flutter run --dart-define-from-file=env/.env_dev.json --flavor dev
-  
+flutter run --dart-define-from-file=env/.env_dev.json --flavor dev  
+```
+```bash
 production:  
 flutter run --dart-define-from-file=env/.env_prod.json --flavor prod
+```
 
+```bash
 staging:
 flutter run --dart-define-from-file=env/.env_stag.json --flavor stag
 ```
-
 
 
 
