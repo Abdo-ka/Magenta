@@ -26,6 +26,7 @@ class AppColorScheme {
     shadow: Color(0xFF000000),
   );
   static const lightStage = ColorScheme.light(
+    
     primary: Color(0xFF9747FF),
     onPrimary: Color(0xFFFDFFFA),
     primaryContainer: Color(0xffFFECCC),

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:magenta/config/common/enum/enums.dart';
+import 'package:magenta/config/common/environment_variables.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/theme/theme.dart';
@@ -48,7 +50,11 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           Column(
             children: [
-              AppImage.asset(Assets.icons.logo),
+              AppImage.asset(EnvironmentVariables.flavor == Flavor.Dev
+                      ? Assets.icons.logoDev
+                      : EnvironmentVariables.flavor == Flavor.Stag
+                          ? Assets.icons.logoStage
+                          : Assets.icons.logo,),
               10.verticalSpace,
               AppText.headlineMedium(
                 'Welcome !',

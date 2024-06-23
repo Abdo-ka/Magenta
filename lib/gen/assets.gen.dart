@@ -7,7 +7,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
 class $AssetsFontsGen {
@@ -111,6 +110,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
 
+  /// File path: assets/icons/logo_dev.svg
+  String get logoDev => 'assets/icons/logo_dev.svg';
+
+  /// File path: assets/icons/logo_stage.svg
+  String get logoStage => 'assets/icons/logo_stage.svg';
+
   /// File path: assets/icons/mail.svg
   String get mail => 'assets/icons/mail.svg';
 
@@ -169,6 +174,8 @@ class $AssetsIconsGen {
         invisible,
         lock,
         logo,
+        logoDev,
+        logoStage,
         mail,
         notification,
         phone,

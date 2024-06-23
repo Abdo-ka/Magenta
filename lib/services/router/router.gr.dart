@@ -8,31 +8,24 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-
-// 🐦 Flutter imports:
-import 'package:flutter/material.dart' as _i15;
-
-// 📦 Package imports:
 import 'package:auto_route/auto_route.dart' as _i14;
-
-// 🌎 Project imports:
+import 'package:flutter/material.dart' as _i15;
 import 'package:magenta/features/auth/view/reset_password_page.dart' as _i9;
 import 'package:magenta/features/auth/view/sign_in_page.dart' as _i10;
 import 'package:magenta/features/auth/view/sign_up_page.dart' as _i11;
 import 'package:magenta/features/auth/view/verify_number_page.dart' as _i13;
+import 'package:magenta/features/favourite/screen/view/favorite_page.dart'
+    as _i4;
 import 'package:magenta/features/home/screen/view/cart_page.dart' as _i2;
+import 'package:magenta/features/home/screen/view/details_item_page.dart'
+    as _i3;
 import 'package:magenta/features/home/screen/view/home_page.dart' as _i5;
 import 'package:magenta/features/home/screen/widget/base_page.dart' as _i1;
 import 'package:magenta/features/intro/view/intro_page.dart' as _i6;
-import 'package:magenta/features/profile/screen/view/profile_page.dart' as _i8;
-import 'package:magenta/features/splash/splash_page.dart' as _i12;
-
-import 'package:magenta/features/favourite/screen/view/favorite_page.dart'
-    as _i4;
-import 'package:magenta/features/home/screen/view/details_item_page.dart'
-    as _i3;
 import 'package:magenta/features/notification/screen/view/notification_page.dart'
     as _i7;
+import 'package:magenta/features/profile/screen/view/profile_page.dart' as _i8;
+import 'package:magenta/features/splash/splash_page.dart' as _i12;
 
 abstract class $AppRouter extends _i14.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -68,11 +61,9 @@ abstract class $AppRouter extends _i14.RootStackRouter {
       );
     },
     HomeRoute.name: (routeData) {
-      final args =
-          routeData.argsAs<HomeRouteArgs>(orElse: () => const HomeRouteArgs());
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i5.HomePage(key: args.key),
+        child: const _i5.HomePage(),
       );
     },
     IntroRoute.name: (routeData) {
@@ -208,31 +199,16 @@ class FavoriteRoute extends _i14.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.HomePage]
-class HomeRoute extends _i14.PageRouteInfo<HomeRouteArgs> {
-  HomeRoute({
-    _i15.Key? key,
-    List<_i14.PageRouteInfo>? children,
-  }) : super(
+class HomeRoute extends _i14.PageRouteInfo<void> {
+  const HomeRoute({List<_i14.PageRouteInfo>? children})
+      : super(
           HomeRoute.name,
-          args: HomeRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'HomeRoute';
 
-  static const _i14.PageInfo<HomeRouteArgs> page =
-      _i14.PageInfo<HomeRouteArgs>(name);
-}
-
-class HomeRouteArgs {
-  const HomeRouteArgs({this.key});
-
-  final _i15.Key? key;
-
-  @override
-  String toString() {
-    return 'HomeRouteArgs{key: $key}';
-  }
+  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
 }
 
 /// generated route for
