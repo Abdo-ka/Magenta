@@ -1,0 +1,10 @@
+name: feature
+description: A new brick created with the Mason CLI.
+version: 0.1.0+1
+environment:
+  mason:
+vars:
+  feature_name:
+    type: string
+    description: feature_name
+    prompt: The name of the feature name
