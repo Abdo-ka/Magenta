@@ -22,7 +22,7 @@ class ButtonWidget extends StatelessWidget {
     this.isElevated = false,
     this.borderColor,
     this.width,
-    this.height,
+    this.height = 50,
     this.isCenter = false,
     this.padding,
     this.spaceBetween,

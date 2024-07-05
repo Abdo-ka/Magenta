@@ -95,7 +95,7 @@ class AppCheckbox extends StatelessWidget {
   bool get isDisabled => onChanged == null;
 }
 
-///TODO CHANGE THIS COLOr
+
 Color _shadowCard1(double opacity) {
   return Color.fromRGBO(16, 24, 40, opacity);
 }

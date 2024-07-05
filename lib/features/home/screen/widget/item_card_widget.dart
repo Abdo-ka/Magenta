@@ -57,6 +57,7 @@ class ItemCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                //TODO: here should add hero widget
                 AppImage.asset(
                   Assets.icons.test.path,
                   fit: BoxFit.fill,

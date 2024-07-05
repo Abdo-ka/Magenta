@@ -1,5 +1,6 @@
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/services/router/router.gr.dart';
@@ -29,8 +30,13 @@ class AppRouter extends $AppRouter {
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),
 
         CustomRoute(
-            page: DetailsItemRoute.page,
-            transitionsBuilder: TransitionsBuilders.slideRightWithFade),
+          page: DetailsItemRoute.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        ),
         CustomRoute(
             page: CartRoute.page,
             transitionsBuilder: TransitionsBuilders.slideRightWithFade),

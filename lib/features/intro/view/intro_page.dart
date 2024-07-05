@@ -1,11 +1,6 @@
-// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-
-// 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
 import 'package:magenta/config/theme/theme.dart';
@@ -57,11 +52,13 @@ class _IntroPageState extends State<IntroPage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                AppImage.asset(EnvironmentVariables.flavor == Flavor.Dev
+                AppImage.asset(
+                  EnvironmentVariables.flavor == Flavor.Dev
                       ? Assets.icons.logoDev
                       : EnvironmentVariables.flavor == Flavor.Stag
                           ? Assets.icons.logoStage
-                          : Assets.icons.logo,),
+                          : Assets.icons.logo,
+                ),
                 8.verticalSpace,
                 AppText.titleMedium(
                   'Imagine your world',
@@ -109,21 +106,24 @@ class _IntroPageState extends State<IntroPage> {
               ],
             ),
           ),
-          ValueListenableBuilder(
-            valueListenable: values,
-            builder: (BuildContext context, _, Widget? child) => Positioned(
-              bottom: 100,
-              right: 130.w,
-              child: Row(
-                children: List.generate(
-                  3,
-                  (index) => Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: AppImage.asset(
-                      Assets.icons.flowerVector,
-                      color: values.value >= index
-                          ? context.colorScheme.primary
-                          : null,
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 90.h),
+              child: ValueListenableBuilder(
+                valueListenable: values,
+                builder: (BuildContext context, _, Widget? child) => Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: List.generate(
+                    3,
+                    (index) => Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: AppImage.asset(
+                        Assets.icons.flowerVector,
+                        color: values.value >= index
+                            ? context.colorScheme.primary
+                            : null,
+                      ),
                     ),
                   ),
                 ),
@@ -133,50 +133,53 @@ class _IntroPageState extends State<IntroPage> {
           ValueListenableBuilder(
             valueListenable: values,
             builder: (context, value, child) => values.value == 2
-                ? Positioned(
-                    bottom: 140.w,
-                    left: context.width / 4.5.w,
-                    child: Container(
-                      decoration: BoxDecoration(boxShadow: [
-                        BoxShadow(
-                          color: context.colorScheme.primary.lighten(0.4),
-                          spreadRadius: 4,
-                          blurRadius: 10,
-                          offset: const Offset(0, 3),
-                        )
-                      ]),
-                      child: ButtonWidget(
-                        width: 215.w,
-                        height: 50.h,
-                        onPressed: () {
-                          context.replaceRoute(const SignInRoute());
-                        },
-                        backgroundColor: context.colorScheme.primary,
-                        textStyle: context.textTheme.titleMedium
-                            ?.copyWith(color: context.colorScheme.onPrimary),
-                        text: 'Start Imagination',
+                ? Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 140.h),
+                      child: Container(
+                        decoration: BoxDecoration(boxShadow: [
+                          BoxShadow(
+                            color: context.colorScheme.primary.lighten(0.4),
+                            spreadRadius: 4,
+                            blurRadius: 10,
+                            offset: const Offset(0, 3),
+                          )
+                        ]),
+                        child: ButtonWidget(
+                          width: 215.w,
+                          onPressed: () {
+                            context.replaceRoute(const SignInRoute());
+                          },
+                          backgroundColor: context.colorScheme.primary,
+                          textStyle: context.textTheme.titleMedium
+                              ?.copyWith(color: context.colorScheme.onPrimary),
+                          text: 'Start Imagination',
+                        ),
                       ),
-                    ))
-                : Positioned(
-                    bottom: 140.w,
-                    right: context.width / 2.3.w,
-                    child: ButtonWidget(
-                      width: 70.w,
-                      height: 40.h,
-                      textStyle: context.textTheme.titleMedium
-                          ?.copyWith(color: context.colorScheme.shadow),
-                      backgroundColor: context.colorScheme.primary.lighten(0.4),
-                      onPressed: () {
-                        controller.animateToPage(
-                          2,
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.easeIn,
-                        );
-                      },
-                      text: 'Skip',
+                    ),
+                  )
+                : Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 140.h),
+                      child: ButtonWidget(
+                        width: 70.w,
+                        textStyle: context.textTheme.titleMedium
+                            ?.copyWith(color: context.colorScheme.shadow),
+                        backgroundColor: context.colorScheme.surface,
+                        onPressed: () {
+                          controller.animateToPage(
+                            2,
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeIn,
+                          );
+                        },
+                        text: 'Skip',
+                      ),
                     ),
                   ),
-          )
+          ),
         ],
       ),
     );

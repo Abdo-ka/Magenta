@@ -83,6 +83,7 @@ class DetailsItemPage extends StatelessWidget {
                   ),
                   15.verticalSpace,
                   Center(
+                    // TODO: also here should add hero
                     child: AppImage.asset(
                       Assets.icons.test.path,
                       fit: BoxFit.fill,

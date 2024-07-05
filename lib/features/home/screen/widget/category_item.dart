@@ -24,17 +24,29 @@ class CategoryItem extends StatelessWidget {
         child: GestureDetector(
           onTap: () => onPressed.call(),
           child: Container(
+            width: 108.w,
+            height: 45.h,
             decoration: BoxDecoration(
               border: Border.all(),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 children: [
-                  AppImage.asset(imagePath),
+                  AppImage.asset(
+                    imagePath,
+                    size: 20,
+                  ),
                   5.horizontalSpace,
-                  AppText(text)
+                  Expanded(
+                    child: AppText(
+                      text,
+                      maxLines: 1,
+                      overflow: TextOverflow.clip,
+                      softWrap: true,
+                    ),
+                  )
                 ],
               ),
             ),

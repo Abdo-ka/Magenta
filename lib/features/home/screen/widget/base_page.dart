@@ -35,7 +35,7 @@ class _BasePageState extends State<BasePage> {
         if (isActive.value != 0) {
           isActive.value = 0;
           context.router.replaceAll([
-            BaseRoute(children: [HomeRoute()])
+            const BaseRoute(children: [HomeRoute()])
           ]);
           return false;
         } else if (lastBackPressTime == null ||
@@ -52,11 +52,11 @@ class _BasePageState extends State<BasePage> {
         builder: (BuildContext context, value, Widget? child) =>
             AutoTabsScaffold(
           resizeToAvoidBottomInset: false,
-          routes: [
+          routes: const [
             HomeRoute(),
-            const FavoriteRoute(),
-            const NotificationRoute(),
-            const ProfileRoute(),
+            FavoriteRoute(),
+            NotificationRoute(),
+            ProfileRoute(),
           ],
           floatingActionButtonBuilder: (context, tabsRouter) {
             return Container(
