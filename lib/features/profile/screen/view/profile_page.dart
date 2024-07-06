@@ -6,13 +6,11 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
+import 'package:core/core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/theme/color_scheme.dart';
-import 'package:magenta/core/extension/context_ext.dart';
-import 'package:magenta/features/app/components_overrides/app_image.dart';
-import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/gen/assets.gen.dart';
 
 @RoutePage()

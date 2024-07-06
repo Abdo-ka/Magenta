@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
+import 'package:core/core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import 'package:magenta/core/extension/context_ext.dart';
-import 'package:magenta/features/app/components_overrides/app_text.dart';
 import 'package:magenta/features/home/screen/widget/item_card_widget.dart';
+
+// 🌎 Project imports:
+
+
 
 @RoutePage()
 class FavoritePage extends StatelessWidget {

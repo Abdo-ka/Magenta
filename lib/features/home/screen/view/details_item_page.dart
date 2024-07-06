@@ -3,16 +3,11 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:auto_route/auto_route.dart';
+import 'package:core/core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/theme/color_scheme.dart';
-import 'package:magenta/core/extension/extensions.dart';
-import 'package:magenta/features/app/components_overrides/app_image.dart';
-import 'package:magenta/features/app/components_overrides/app_increment.dart';
-import 'package:magenta/features/app/components_overrides/app_text.dart';
-import 'package:magenta/features/app/components_overrides/button_widget.dart';
-import 'package:magenta/features/app/components_overrides/icon_button_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
 
 @RoutePage()
@@ -97,7 +92,7 @@ class DetailsItemPage extends StatelessWidget {
                     color: context.colorScheme.primary,
                   ),
                   15.verticalSpace,
-                  AppText.titleMedium(
+                  AppText(
                       'You can plot each fragrance family s popularity percentage over the years, showing trends in consumer preferences. This could be based on market research data, sales figures, or expert opinions on the dominant trends in the perfume industry.'),
                   15.verticalSpace,
                   Row(

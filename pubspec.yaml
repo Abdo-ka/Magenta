@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 # UI packages
+  core:
+    path: packages/core
+
   cupertino_icons: ^1.0.6
   bot_toast: ^4.1.3
   carousel_slider: ^4.2.1

@@ -1,8 +1,10 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:core/core.dart';
+
 // 🌎 Project imports:
-import 'package:magenta/core/extension/context_ext.dart';
 
 abstract class AppColors {
   static const lightSurfaceContainer = Color(0xffECEEEF);
