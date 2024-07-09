@@ -60,8 +60,24 @@ flutter run --dart-define-from-file=env/.env_prod.json --flavor prod
 staging:
 flutter run --dart-define-from-file=env/.env_stag.json --flavor stag
 ```
+## Build Application
 
+ if you want to build application it should run one of these command on terminal as you need 
 
+```bash
+Development:
+flutter build apk --release --flavor dev --dart-define-from-file=env/.env_dev.json
+```
+
+```bash
+production:
+flutter build apk --release --flavor prod --dart-define-from-file=env/.env_prod.json
+```
+
+```bash
+staging:
+flutter build apk --release --flavor stag --dart-define-from-file=env/.env_stag.json
+```
 
 ## Screenshots
 
