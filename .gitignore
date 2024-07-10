@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/release
 # environment variables
 env/
+env/.env_dev.json
+env/.env_prod.json
+env/.env_stag.json
