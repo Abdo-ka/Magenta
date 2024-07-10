@@ -6,7 +6,7 @@
 
 # Magenta
 Magenta is app build on flutter
-Used Clean architecture and clean code
+Used Clean architecture with MVC Structure and clean code 
 
 
 ## Authors
@@ -35,10 +35,17 @@ Go to the project directory
   cd Magenta
 ```
 
-Install dependencies
+Install dependencies 
 
-```bash
+```bash 
   flutter pub get
+```
+
+Install dependencies on packages 
+
+```bash 
+  cd pubsbec.yaml
+  flutter pub get 
 ```
 
 
