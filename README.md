@@ -44,7 +44,7 @@ Install dependencies
 Install dependencies on packages 
 
 ```bash 
-  cd pubsbec.yaml
+  cd packages
   flutter pub get 
 ```
 
