@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "836729890591",
+    "project_id": "magenta-abdo-ka",
+    "storage_bucket": "magenta-abdo-ka.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836729890591:android:8f247c2ffcd3100fb8f22a",
+        "android_client_info": {
+          "package_name": "com.magenta.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAby3mqrU3tV6RKzkTukXFuloDBxDTUOtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836729890591:android:3bdef5bc81d4bbe1b8f22a",
+        "android_client_info": {
+          "package_name": "com.magenta.prod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAby3mqrU3tV6RKzkTukXFuloDBxDTUOtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836729890591:android:dd0eed1f1c862de1b8f22a",
+        "android_client_info": {
+          "package_name": "com.magenta.stage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAby3mqrU3tV6RKzkTukXFuloDBxDTUOtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

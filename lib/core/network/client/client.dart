@@ -132,13 +132,14 @@ Future<Either<AppException, T>> toApiResult<T>(
   String? errorMessage;
   try {
     return Right(await call());
-  } on AppNetworkResponseException catch (e) {
+  } on AppNetworkResponseException catch (e,stackTrace) {
     if (e.data is! String) {
       errorMessage = e.message;
       return Left(e);
     }
     return Left(e);
   } on AppNetworkException catch (e) {
+    
     errorMessage = e.message;
     return Left(e);
   } on AppException catch (e) {

@@ -8,6 +8,7 @@ import 'package:dio/io.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/types/types.dart';
+import 'package:magenta/services/crashlytics_service.dart';
 import '../interceptors/dio_log_interceptor.dart';
 
 class DioClient with DioMixin implements Dio {
@@ -135,7 +136,24 @@ class DioClient with DioMixin implements Dio {
   }) async {
     try {
       return await method();
-    } on DioException catch (exception) {
+    } on DioException catch (exception, stackTrace) {
+        if (exception.type == DioExceptionType.badResponse) {
+        await CrashlyticsService.recordError(
+          exception,
+          stackTrace,
+          reason: "DioError ${exception.response?.statusCode}",
+          information: [
+            "Data: ${exception.requestOptions.data} ",
+            "path: ${exception.requestOptions.path} ",
+            "baseUrl: ${exception.requestOptions.baseUrl} ",
+            "queryParameters: ${exception.requestOptions.queryParameters} ",
+            "headers: ${exception.requestOptions.headers} ",
+          ],
+          fatal: true,
+        );
+      }
+      await CrashlyticsService.recordError(exception, stackTrace,
+          reason: "catch Error.", fatal: true);
       final response = exception.response;
       final message = handleMessage(response?.data);
       final networkException = AppNetworkException(
