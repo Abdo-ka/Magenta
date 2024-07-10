@@ -1,10 +1,15 @@
+// 🎯 Dart imports:
 import 'dart:isolate';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+
+// 🐦 Flutter imports:
 import 'package:flutter/foundation.dart';
+
+// 📦 Package imports:
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
-
-
 
 abstract class CrashlyticsService {
   static final _instance = FirebaseCrashlytics.instance;

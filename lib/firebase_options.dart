@@ -4,9 +4,11 @@
 // 📦 Package imports:
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 
+// 🌎 Project imports:
+import 'package:magenta/config/common/environment_variables.dart';
+
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
-import 'package:magenta/config/common/environment_variables.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
