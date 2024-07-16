@@ -47,6 +47,17 @@ Install dependencies on packages
   cd packages
   flutter pub get 
 ```
+## Important ⚠️⚠️
+
+If you want to run app You should add on the main project folder env inside it you should add 
+
+.env_dev.json
+.env_prod.json
+.env_stag.json
+
+and add inside these files important data like this image:
+
+![env_variable](/images/env_variables.png)
 
 
 ## Run Application
