@@ -5,7 +5,7 @@
 </div>
 
 # Magenta
-Magenta is app build on flutter
+Magenta is app build on flutter E-commerce app for trading parfums and other things
 Used Clean architecture with MVC Structure and clean code 
 
 
@@ -64,36 +64,42 @@ and add inside these files important data like this image:
 
 cause this application is using Flavor to run it should run this command on terminal as you need
 
-```bash
 Development:
+
+```bash
 
 flutter run --dart-define-from-file=env/.env_dev.json --flavor dev  
 ```
-```bash
 production:  
+
+```bash
+
 flutter run --dart-define-from-file=env/.env_prod.json --flavor prod
 ```
 
-```bash
 staging:
+
+```bash
+
 flutter run --dart-define-from-file=env/.env_stag.json --flavor stag
 ```
+
 ## Build Application
 
  if you want to build application it should run one of these command on terminal as you need 
 
-```bash
 Development:
+```bash
 flutter build apk --release --flavor dev --dart-define-from-file=env/.env_dev.json
 ```
-
-```bash
 production:
+```bash
+
 flutter build apk --release --flavor prod --dart-define-from-file=env/.env_prod.json
 ```
-
-```bash
 staging:
+```bash
+
 flutter build apk --release --flavor stag --dart-define-from-file=env/.env_stag.json
 ```
 
