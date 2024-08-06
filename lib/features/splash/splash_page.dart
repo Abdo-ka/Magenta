@@ -13,6 +13,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
+import 'package:magenta/core/di/di_container.dart';
+import 'package:magenta/core/repositories/local_storage.dart';
+import 'package:magenta/core/repositories/token_repository.dart';
 import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
@@ -25,15 +28,28 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  bool isAuthenticated = false;
   @override
   void initState() {
     super.initState();
-
-    Timer(
-      const Duration(seconds: 2),
-      () => context.replaceRoute(const IntroRoute()),
-    );
+    checkAuthentication();
+    Timer(const Duration(seconds: 2), onSplashCompleted);
   }
+
+  void onSplashCompleted() {
+    if (isAuthenticated) {
+      getIt<LocalStorage>().setIsFirstOpen('auth', false);
+      context.replaceRoute(const BaseRoute(children: [HomeRoute()]));
+    } else {
+      getIt<LocalStorage>().setIsFirstOpen('auth', true);
+      getIt<LocalStorage>().isFirstOpen('isFirstOpen')
+          ? context.replaceRoute(const IntroRoute())
+          : context.replaceRoute(SignInRoute());
+    }
+  }
+
+  void checkAuthentication() async =>
+      isAuthenticated = await getIt<TokenRepository>().hastToken();
 
   @override
   Widget build(BuildContext context) {

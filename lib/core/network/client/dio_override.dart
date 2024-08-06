@@ -27,7 +27,7 @@ class DioClient with DioMixin implements Dio {
       },
     );
     options = (baseOptions ?? BaseOptions()).copyWith(
-      followRedirects: true,
+      followRedirects: false,
       maxRedirects: 5,
       baseUrl: baseUrl,
       headers: {

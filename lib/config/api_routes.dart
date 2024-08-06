@@ -1,6 +1,9 @@
 // This file is generated. Do not edit it manually
 
 class ApiRoutes {
-  static const baseUrl = 'https://car-market.switcher-app.com/api/v1/';
-
+  static const baseUrl =
+      'https://dodgerblue-dragonfly-416059.hostingersite.com/';
+  static const register = 'register';
+  static const verification = 'verification';
+  static const login = 'login';
 }

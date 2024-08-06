@@ -51,6 +51,7 @@ dependencies:
   sliver_tools: ^0.2.12
   equatable: ^2.0.5
   in_app_purchase: ^3.2.0
+  flutter_form_builder: ^9.3.0
 #Service Locator
   get_it: ^7.6.8
   injectable: ^2.4.1

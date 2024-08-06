@@ -9,6 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
+import 'package:magenta/core/di/di_container.dart';
+import 'package:magenta/core/repositories/token_repository.dart';
 import 'package:magenta/features/home/screen/widget/carousel_slider_widget.dart';
 import 'package:magenta/features/home/screen/widget/category_item.dart';
 import 'package:magenta/features/home/screen/widget/item_card_widget.dart';
@@ -37,16 +39,18 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButtonWidget(
-                onPressed: () {},
+                onPressed: () async {
+                  getIt<TokenRepository>().deleteToken();
+                },
                 buttonColor: Colors.transparent,
                 child: AppImage.asset(Assets.icons.drawer),
               ),
               AppImage.asset(
                 EnvironmentVariables.flavor == Flavor.Dev
-                      ? Assets.icons.logoDev
-                      : EnvironmentVariables.flavor == Flavor.Stag
-                          ? Assets.icons.logoStage
-                          : Assets.icons.logo,
+                    ? Assets.icons.logoDev
+                    : EnvironmentVariables.flavor == Flavor.Stag
+                        ? Assets.icons.logoStage
+                        : Assets.icons.logo,
                 size: 40,
               ),
               IconButtonWidget(

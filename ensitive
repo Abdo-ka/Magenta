@@ -1,0 +1,381 @@
+[33mcommit 02713f25ad036a21ab99ee02930a7d0b3b770e8c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mrelease/devlopment[m[33m, [m[1;31morigin/release/devlopment[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Abdo_Ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue Jul 16 23:54:32 2024 +0300
+
+    📃 docs(readme):
+    
+    update readme file and add env variable image to show how to open this project
+
+[33mcommit ada24da2328d1b17ecb5b45bdc957cc697d55e3a[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue Jul 16 23:37:22 2024 +0300
+
+    📃 docs(readme):
+    
+    update readme file and add env variable image to show how to open this project
+
+[33mcommit e986ee2824a73776aa8a6d349255a2da54ef1e0a[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue Jul 16 23:36:11 2024 +0300
+
+    📃 docs(readme):
+    
+    update readme file and add env variable image to show how to open this project
+
+[33mcommit d72cb70c816d79d0b42a3c2416a25f07400be4a5[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Thu Jul 11 02:48:19 2024 +0300
+
+    📃 docs(readme file):
+    
+    update readme file
+
+[33mcommit 9c503b350715f82f3f062e9892aa8af7c353e287[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Thu Jul 11 01:35:52 2024 +0300
+
+    📃 docs(readme file):
+    
+    update readme file
+
+[33mcommit 5cfaf873f74d2bf46a95630de32ea45cbf7f9f04[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Thu Jul 11 01:12:49 2024 +0300
+
+    🌈 style(sort import):
+    
+    sort import and add comment on it
+
+[33mcommit 26841d28e0580ed2b532d452f0927f61e082d3a7[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Thu Jul 11 01:05:18 2024 +0300
+
+    📃 docs(readme file):
+    
+    update readme file with environment variables
+
+[33mcommit 07aa428a3aa27c76f0f144fb9cde124912e05a6e[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Thu Jul 11 01:01:12 2024 +0300
+
+    ✨ feat(firebase):
+    
+    add notification firebase to project and crashlytics and initilize it with flavor
+
+[33mcommit 0c0760db77670b8fb75f7fb659d63dd9051ae94f[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue Jul 9 21:20:05 2024 +0300
+
+    📃 docs(readme):
+    
+    Update readme File to help how to build apk using flavor
+
+[33mcommit 728237db168a7ca06d89ef1c5dad5796f25a8408[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jul 8 19:29:39 2024 +0300
+
+    ✨ feat(environment variables):
+    
+    uplode environment variables to github
+
+[33mcommit 089f92f7ad704989aba8f2282e151904c79f1c76[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat Jul 6 13:22:39 2024 +0300
+
+    🐳 chore(widget of app):
+    
+    add package just for widget and some initial data on all app
+
+[33mcommit 0162e1807f469b0b27fbad1e83b186c9d16cb342[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat Jul 6 10:55:45 2024 +0300
+
+    🐞 fix(ignore files):
+    
+    ignore mason file (bricks folder) from compiler
+
+[33mcommit ec63c8c5672b7a5d77a6bd70087b01d3ec252268[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Fri Jul 5 11:09:16 2024 +0300
+
+    🦄 refactor(User interface ):
+    
+    improve User interface on some screen and widget
+
+[33mcommit 86c8b73b8f821f95c827922ad84956c6172005dc[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jul 1 12:21:09 2024 +0300
+
+    🐳 chore(mason generator):
+    
+    add mason generator for geenrate feature file and data like MVC structure to app and activate it
+
+[33mcommit 31f2a551879e468976e04d978bc422b0cd9aa70b[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jun 24 22:07:47 2024 +0300
+
+    ✨ feat(flavor):
+    
+    add method for running app on intellij idea
+
+[33mcommit d6d46120b29add96175dbf6287ffadef8dc5202e[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jun 24 00:24:31 2024 +0300
+
+    📃 docs(readme):
+    
+    update readme file to add Run application on diffrent flavor
+
+[33mcommit b80985578ee36f5db5cdb66c80d64905ad8fdfca[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sun Jun 23 23:36:47 2024 +0300
+
+    📃 docs(readme):
+    
+    update readme file to add Run application on diffrent flavor
+
+[33mcommit a307e718a2dafc7acdc5f7457bdd7c2928fa7306[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sun Jun 23 21:37:59 2024 +0300
+
+    ✨ feat(flavor):
+    
+    Customize app with flavor for logo image and others
+
+[33mcommit 9e478ab489dfac933bed2ef860a802d968e08a2b[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sun Jun 23 02:39:13 2024 +0300
+
+    🦄 refactor(refactor):
+    
+    refactor commit for package , project and  flutter imports  and delete unused import
+
+[33mcommit de6098c6717d4f87c6ce73b17760bf8f1167be85[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sun Jun 23 02:35:36 2024 +0300
+
+    🐳 chore(Flavors):
+    
+    add flavors to app and intialize it to run on vs code
+
+[33mcommit bc099b53eb8e54202a8e85e6ec996e67d500f6a3[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Fri Jun 21 23:27:26 2024 +0300
+
+    ✨ feat(package renamer):
+    
+    changing package name of my app
+
+[33mcommit ec718ec888ecc9b20842596c3d33c454a197dc6e[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Fri Jun 21 21:50:49 2024 +0300
+
+    ✨ feat(manifest.xml):
+    
+    update data on android manifest file
+
+[33mcommit b2e8ce73ca7f90fb41f21be930765c9625f4df1c[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Fri Jun 21 09:46:27 2024 +0300
+
+    ✨ feat(Home Screen):
+    
+    add Auto Scroll when Tap on Category
+
+[33mcommit c552580e383c97485b2b03d73ae465115b7e9d36[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Wed Jun 19 19:59:51 2024 +0300
+
+    🐞 fix(UI / UX):
+    
+    Improve some UI design and UX on some page
+
+[33mcommit 6dfe22f681e3530b61f0225e65dd8bd1a9bebc78[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Wed Jun 19 18:00:35 2024 +0300
+
+    🐞 fix(notification page):
+    
+    solve UI on notification page on list tile
+
+[33mcommit 81668535c7aaeeedc6fd4a22c8b14ade6fcbf2e5[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Wed Jun 19 17:56:12 2024 +0300
+
+    ✨ feat(cart page):
+    
+    finish cart Page UI
+
+[33mcommit 49230694c2e42735c97250431e07e392009a5b17[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jun 17 22:19:51 2024 +0300
+
+    ✨ feat(notification page):
+    
+    add notification widget and fix unneccesry import ..
+
+[33mcommit 6329f67ab7082ccb33891309c76aad2d039066ec[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jun 17 21:46:00 2024 +0300
+
+    ✨ feat(favourite page):
+    
+    building favourite page
+
+[33mcommit 5640a6a1db6dafd6114b72082a1c8e7a285247b5[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon Jun 17 21:25:08 2024 +0300
+
+    ✨ feat(item card widget):
+    
+    spacify item card widget and add details on it
+
+[33mcommit f886e9a1d6f6b0f8fba0731b37162a6737f07fbe[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat Jun 15 11:37:24 2024 +0300
+
+    ✨ feat(profile page):
+    
+    build UI for profile page
+
+[33mcommit 1734d208a33f14ac52ca2d8b19acb01bc168bd92[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat Jun 15 04:21:54 2024 +0300
+
+    🐞 fix(initial page):
+    
+    revert initial page to splash
+
+[33mcommit 9a81d9f7b8e0546e15afe66d19c96d1149f03557[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat Jun 15 04:19:51 2024 +0300
+
+    ✨ feat(update packages):
+    
+    update pubspec.yaml file
+
+[33mcommit 3ef6c722d2c277647bfbd16b41108d602b0a1fe9[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Fri Jun 14 18:52:22 2024 +0300
+
+    ✨ feat(item Details):
+    
+    building Item details for app and solve some minor improvements  on fonts
+
+[33mcommit 20fecf91c499763b69387c2f3c7c08adad0302e9[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 28 14:30:28 2024 +0300
+
+    🦄 refactor(README.md):
+    
+    customize README.md file for project
+
+[33mcommit a1d1d592b755ff8950b4914b24c4e58e0e99f476[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 28 14:25:49 2024 +0300
+
+    🦄 refactor(README.md):
+    
+    customize README.md file for project
+
+[33mcommit b2f56c854fc446e4e8c861c249da4fb61a229d66[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 28 14:19:59 2024 +0300
+
+    🦄 refactor(README.md):
+    
+    customize README.md file for project
+
+[33mcommit 8807fb94daea5931540ed5829a7c199cb5279878[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 28 13:20:03 2024 +0300
+
+    ✨ feat(Home screen):
+    
+    add UI of Home screen
+
+[33mcommit 74c0bb66d73746e0258eda802747760290c21a02[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon May 13 22:25:16 2024 +0300
+
+    ✨ feat(animation to obscure eye):
+    
+    draw line with animation on eye
+
+[33mcommit 564396cef68d9b2ea5e91632f8480d455235a92b[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat May 11 10:15:40 2024 +0300
+
+    🌈 style(App image):
+    
+    update app image to logo
+
+[33mcommit c60a75b18bc2a483bef3a90f8186332f9d4a2bec[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat May 11 09:51:55 2024 +0300
+
+    🎈 perf(Proguard rules):
+    
+    update data on Proguard rules files to prevent any log data from third party app
+
+[33mcommit edf42406af19fd5a9a544ca5c93f5095ec42aa39[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat May 11 09:48:14 2024 +0300
+
+    ✨ feat(obfuscate):
+    
+    enable obfuscate for project
+
+[33mcommit 1af1ca358d2cbad6e4c810f511b82572797706fe[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Sat May 11 09:38:29 2024 +0300
+
+    ✨ feat(home screen):
+    
+    build home screen with custom bottom navigation bar
+
+[33mcommit e6ac7c98a3594d006da32e3b2928739ae015fb15[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 7 23:34:17 2024 +0300
+
+    🦄 refactor(imports ):
+    
+    delete unused imports and sort import
+
+[33mcommit 8ba42b9c1b9a9cca35fc5721e3f0cc5ec4dc0712[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 7 23:30:25 2024 +0300
+
+    ✨ feat(auth ):
+    
+    finish auth UI like reset password , sign in , sign up , Otp verify
+
+[33mcommit e8176c19de89d3a36eae5ac6e2eba327441c2915[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 7 03:24:07 2024 +0300
+
+    ✨ feat(splash and intro Page):
+    
+    finish splash and intro page and add some assets
+
+[33mcommit e239daabd920a0b120ea199eacb475ac3bd909c3[m
+Author: abdo_ka <kanawatiabdalrahman@gmail.com>
+Date:   Tue May 7 03:23:56 2024 +0300
+
+    ✨ feat(splash and intro Page):
+    
+    finish splash and intro page and add some assets
+
+[33mcommit 4b149aad1a714fc43421fb65f8cf398189da8008[m
+Author: Abdo_Ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon May 6 22:23:58 2024 +0300
+
+    ✨ feat(add basic component):
+    
+    add basic component for all project and initialize some package
+
+[33mcommit 1fa83d20abf558576b4e881fb92e3f288d1204f8[m
+Author: Abdo_Ka <kanawatiabdalrahman@gmail.com>
+Date:   Mon May 6 21:37:23 2024 +0300
+
+    🎉 init(init project)

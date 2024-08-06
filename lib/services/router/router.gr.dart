@@ -98,15 +98,19 @@ abstract class $AppRouter extends _i14.RootStackRouter {
       );
     },
     SignInRoute.name: (routeData) {
+      final args = routeData.argsAs<SignInRouteArgs>(
+          orElse: () => const SignInRouteArgs());
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.SignInPage(),
+        child: _i10.SignInPage(key: args.key),
       );
     },
     SignUpRoute.name: (routeData) {
+      final args = routeData.argsAs<SignUpRouteArgs>(
+          orElse: () => const SignUpRouteArgs());
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.SignUpPage(),
+        child: _i11.SignUpPage(key: args.key),
       );
     },
     SplashRoute.name: (routeData) {
@@ -276,30 +280,60 @@ class ResetPasswordRoute extends _i14.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i10.SignInPage]
-class SignInRoute extends _i14.PageRouteInfo<void> {
-  const SignInRoute({List<_i14.PageRouteInfo>? children})
-      : super(
+class SignInRoute extends _i14.PageRouteInfo<SignInRouteArgs> {
+  SignInRoute({
+    _i15.Key? key,
+    List<_i14.PageRouteInfo>? children,
+  }) : super(
           SignInRoute.name,
+          args: SignInRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'SignInRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static const _i14.PageInfo<SignInRouteArgs> page =
+      _i14.PageInfo<SignInRouteArgs>(name);
+}
+
+class SignInRouteArgs {
+  const SignInRouteArgs({this.key});
+
+  final _i15.Key? key;
+
+  @override
+  String toString() {
+    return 'SignInRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
 /// [_i11.SignUpPage]
-class SignUpRoute extends _i14.PageRouteInfo<void> {
-  const SignUpRoute({List<_i14.PageRouteInfo>? children})
-      : super(
+class SignUpRoute extends _i14.PageRouteInfo<SignUpRouteArgs> {
+  SignUpRoute({
+    _i15.Key? key,
+    List<_i14.PageRouteInfo>? children,
+  }) : super(
           SignUpRoute.name,
+          args: SignUpRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'SignUpRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static const _i14.PageInfo<SignUpRouteArgs> page =
+      _i14.PageInfo<SignUpRouteArgs>(name);
+}
+
+class SignUpRouteArgs {
+  const SignUpRouteArgs({this.key});
+
+  final _i15.Key? key;
+
+  @override
+  String toString() {
+    return 'SignUpRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
