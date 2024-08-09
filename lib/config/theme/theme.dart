@@ -13,6 +13,7 @@ export 'color_scheme.dart';
 class AppTheme {
   static ThemeData get light => ThemeData(
         brightness: Brightness.light,
+        // useMaterial3: false,
         colorScheme: EnvironmentVariables.flavor == Flavor.Dev
             ? AppColorScheme.lightDev
             : EnvironmentVariables.flavor == Flavor.Stag
@@ -28,6 +29,7 @@ class AppTheme {
 
   static ThemeData get dark => ThemeData(
         brightness: Brightness.dark,
+        // useMaterial3: false,
         colorScheme: AppColorScheme.dark,
         textTheme: AppTypography.textTheme,
         fontFamily: AppTypography.poppinsFamily,

@@ -196,8 +196,11 @@ class $AssetsLottieGen {
   /// File path: assets/lottie/done.json
   String get done => 'assets/lottie/done.json';
 
+  /// File path: assets/lottie/rose.json
+  String get rose => 'assets/lottie/rose.json';
+
   /// List of all assets
-  List<String> get values => [done];
+  List<String> get values => [done, rose];
 }
 
 class $AssetsTranslationsGen {

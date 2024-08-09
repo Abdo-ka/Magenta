@@ -36,15 +36,15 @@ class FavoritePage extends StatelessWidget {
             style: context.textTheme.labelSmall
                 ?.copyWith(fontWeight: FontWeight.bold),
           ),
-          GridView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: context.width / context.height / .75),
-            itemBuilder: (context, index) => const ItemCardWidget(),
-            itemCount: 10,
-          ),
+          // GridView.builder(
+          //   physics: const NeverScrollableScrollPhysics(),
+          //   shrinkWrap: true,
+          //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //       crossAxisCount: 2,
+          //       childAspectRatio: context.width / context.height / .75),
+          //   itemBuilder: (context, index) => const ItemCardWidget(),
+          //   itemCount: 10,
+          // ),
           60.verticalSpace,
         ],
       ),

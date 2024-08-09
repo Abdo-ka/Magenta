@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
@@ -126,50 +127,45 @@ class SignInPage extends StatelessWidget {
               //   ],
               // ),
               26.verticalSpace,
-              BlocBuilder<SignInCubit, SignInState>(
-                builder: (context, state) {
-                  switch (state.SignInStatus) {
-                    case Status.loading:
-                      return const Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    case (_):
-                      return Container(
-                        decoration: BoxDecoration(boxShadow: [
-                          BoxShadow(
-                            color: context.colorScheme.primary.lighten(0.4),
-                            spreadRadius: 4,
-                            blurRadius: 10,
-                            offset: const Offset(0, 3),
-                          )
-                        ]),
-                        child: ButtonWidget(
-                          height: 50.h,
-                          radius: 32,
-                          onPressed: () {
-                            if (!_formKey.currentState!.saveAndValidate())
-                              return;
-                            bloc.signIn(
-                                param: SignInModel(
-                                    email:
-                                        _formKey.fieldValue('email').toString(),
-                                    password: _formKey
-                                        .fieldValue('password')
-                                        .toString()),
-                                onSuccess: () {
-                                  context.router
-                                      .replaceAll([const BaseRoute()]);
-                                });
-                          },
-                          backgroundColor: context.colorScheme.primary,
-                          textStyle: context.textTheme.titleMedium
-                              ?.copyWith(color: context.colorScheme.onPrimary),
-                          text: 'Log In',
-                        ),
-                      );
+              BlocListener<SignInCubit, SignInState>(
+                listener: (context, state) {
+                  if (state.SignInStatus == Status.loading) {
+                    context.loaderOverlay.show();
+                  } else {
+                    context.loaderOverlay.hide();
                   }
                 },
+                child: Container(
+                  decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: context.colorScheme.primary.lighten(0.4),
+                      spreadRadius: 4,
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    )
+                  ]),
+                  child: ButtonWidget(
+                    height: 50.h,
+                    radius: 32,
+                    onPressed: () {
+                      if (!_formKey.currentState!.saveAndValidate()) return;
+                      bloc.signIn(
+                          param: SignInModel(
+                              email: _formKey.fieldValue('email').toString(),
+                              password:
+                                  _formKey.fieldValue('password').toString()),
+                          onSuccess: () {
+                            context.router.replaceAll([const BaseRoute()]);
+                          });
+                    },
+                    backgroundColor: context.colorScheme.primary,
+                    textStyle: context.textTheme.titleMedium
+                        ?.copyWith(color: context.colorScheme.onPrimary),
+                    text: 'Log In',
+                  ),
+                ),
               ),
+
               26.verticalSpace,
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -151,7 +151,7 @@ class _IntroPageState extends State<IntroPage> {
                         child: ButtonWidget(
                           width: 215.w,
                           onPressed: () {
-                            context.replaceRoute( SignInRoute());
+                            context.replaceRoute(SignInRoute());
                           },
                           backgroundColor: context.colorScheme.primary,
                           textStyle: context.textTheme.titleMedium

@@ -6,4 +6,6 @@ class ApiRoutes {
   static const register = 'register';
   static const verification = 'verification';
   static const login = 'login';
+  static const products = 'products';
+  static const categories = 'categories';
 }

@@ -17,9 +17,19 @@ class ItemCardWidget extends StatelessWidget {
     super.key,
     this.width,
     this.height,
+    required this.categoryName,
+    required this.name,
+    required this.price,
+    required this.image,
   });
+
   final double? width;
   final double? height;
+  final String categoryName;
+  final String name;
+  final String price;
+  final String image;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -54,12 +64,14 @@ class ItemCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                //TODO: here should add hero widget
-                AppImage.asset(
-                  Assets.icons.test.path,
-                  fit: BoxFit.fill,
-                  width: 146.w,
-                  height: 120.h,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: AppImage.network(
+                    image,
+                    fit: BoxFit.cover,
+                    width: 146.w,
+                    height: 120.h,
+                  ),
                 ),
                 7.verticalSpace,
                 Row(
@@ -73,7 +85,7 @@ class ItemCardWidget extends StatelessWidget {
                         ),
                         4.horizontalSpace,
                         AppText(
-                          'STYLE',
+                          categoryName,
                           style: context.textTheme.labelMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: context.colorScheme.primary,
@@ -90,7 +102,7 @@ class ItemCardWidget extends StatelessWidget {
                 ),
                 3.verticalSpace,
                 AppText(
-                  'SAUVAGE Dior',
+                  name,
                   style: context.textTheme.titleMedium
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
@@ -98,7 +110,7 @@ class ItemCardWidget extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    AppText('\$6500'),
+                    AppText('\$$price'),
                     IconButtonWidget(
                       widgetDimension: 32,
                       buttonColor: context.colorScheme.primary,

@@ -4,17 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 // 📦 Package imports:
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:core/core.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-// 🌎 Project imports:
+// 📦 Package imports:
 
+// 🌎 Project imports:
 
 class CarouselSliderWidget extends StatelessWidget {
   final List<String> image;
-  CarouselSliderWidget({super.key, required this.image});
+  final bool scroll;
+  final bool infinityScroll;
+  CarouselSliderWidget({
+    super.key,
+    required this.image,
+    this.scroll = true,
+    this.infinityScroll=true,
+  });
 
   ValueNotifier index = ValueNotifier(0);
 
@@ -24,7 +32,7 @@ class CarouselSliderWidget extends StatelessWidget {
       valueListenable: index,
       builder: (BuildContext context, value, Widget? child) => Stack(
         children: [
-          CarouselSlider.builder(
+          FlutterCarousel.builder(
             itemCount: image.length,
             itemBuilder: (BuildContext context, int index, int realIndex) =>
                 Container(
@@ -42,8 +50,8 @@ class CarouselSliderWidget extends StatelessWidget {
               height: 190.h,
               viewportFraction: .9,
               initialPage: 0,
-              enableInfiniteScroll: true,
-              autoPlay: true,
+              enableInfiniteScroll:infinityScroll?? true,
+              autoPlay: scroll ?? true,
               autoPlayInterval: const Duration(seconds: 3),
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
               autoPlayCurve: Curves.fastOutSlowIn,

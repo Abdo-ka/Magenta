@@ -104,8 +104,11 @@ class AppImage extends StatelessWidget {
                   ? failedBuilder!(context)
                   : const Text("failed");
             },
-            loadingBuilder: (context, child, imageChunk) =>
-                getLoadingBuilder(context),
+            loadingBuilder: (BuildContext context, Widget child,
+                ImageChunkEvent? loadingProgress) {
+              if (loadingProgress == null) return child;
+              return getLoadingBuilder(context);
+            },
             alignment: alignment ?? Alignment.center,
             fit: fit,
             height: size ?? height,
