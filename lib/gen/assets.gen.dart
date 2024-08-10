@@ -7,7 +7,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
 class $AssetsFontsGen {
@@ -126,6 +125,13 @@ class $AssetsIconsGen {
   /// File path: assets/icons/phone.svg
   String get phone => 'assets/icons/phone.svg';
 
+  /// File path: assets/icons/placeHolder.svg
+  String get placeHolder => 'assets/icons/placeHolder.svg';
+
+  /// File path: assets/icons/placeholder_magenta.png
+  AssetGenImage get placeholderMagenta =>
+      const AssetGenImage('assets/icons/placeholder_magenta.png');
+
   /// File path: assets/icons/profile.svg
   String get profile => 'assets/icons/profile.svg';
 
@@ -180,6 +186,8 @@ class $AssetsIconsGen {
         mail,
         notification,
         phone,
+        placeHolder,
+        placeholderMagenta,
         profile,
         removeObscure,
         rose,

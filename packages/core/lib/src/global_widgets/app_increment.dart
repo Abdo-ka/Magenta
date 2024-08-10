@@ -8,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 
-
 class AppIncrement extends StatefulWidget {
   const AppIncrement({
     super.key,
@@ -40,7 +39,7 @@ class _AppIncrementState extends State<AppIncrement> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.w,
+      width: 110.w,
       height: 50.h,
       decoration: BoxDecoration(
           border: Border.all(color: context.colorScheme.primary),

@@ -8,4 +8,28 @@ class GetPopularEvent implements HomeEvent {}
 
 class GetOfferEvent implements HomeEvent {}
 
-class InitialHomeEvent implements HomeEvent{}
+class GetSignalProductEvent implements HomeEvent {
+  final int id;
+
+  GetSignalProductEvent({
+    required this.id,
+  });
+}
+
+class GetFavouriteEvent implements HomeEvent {}
+
+class AddFavouriteEvent implements HomeEvent {
+  final int id;
+
+  AddFavouriteEvent({
+    required this.id,
+  });
+}
+
+class RemoveFavouriteEvent implements HomeEvent {
+  final int id;
+
+  RemoveFavouriteEvent({required this.id});
+}
+
+class InitialHomeEvent implements HomeEvent {}

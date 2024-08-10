@@ -29,7 +29,7 @@ class CoreHelperFunctions {
   /// Manage the state according to the value returned from callback
   static Future<void> handelApiResult<T>({
     bool Function(T)? emptyChecker,
-    required FutureResult<T> Function() callback,
+    required FutureResultType<T> Function() callback,
     required void Function(CommonState<dynamic>) emit,
   }) async {
     emit(LoadingState());
@@ -51,7 +51,7 @@ class CoreHelperFunctions {
 
   static Future<void> handelMultiApiResult<T, E extends Helper>({
     bool Function(T)? emptyChecker,
-    required FutureResult<T> Function() callback,
+    required FutureResultType<T> Function() callback,
     required void Function(List<CommonState<dynamic>>) emit,
     required List<CommonState> state,
     required E stateEnum,

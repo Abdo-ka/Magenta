@@ -1,36 +1,35 @@
 // To parse this JSON data, do
 //
-//     final productsModel = productsModelFromJson(jsonString);
+//     final favouriteModel = favouriteModelFromJson(jsonString);
 
-// 🎯 Dart imports:
 import 'dart:convert';
 
-ProductsModel productsModelFromJson(String str) =>
-    ProductsModel.fromJson(json.decode(str));
+FavouriteModel favouriteModelFromJson(String str) =>
+    FavouriteModel.fromJson(json.decode(str));
 
-String productsModelToJson(ProductsModel data) => json.encode(data.toJson());
+String favouriteModelToJson(FavouriteModel data) => json.encode(data.toJson());
 
-class ProductsModel {
-  final Products? products;
+class FavouriteModel {
+  final Favorites? favorites;
 
-  const ProductsModel({
-    this.products,
+  const FavouriteModel({
+    this.favorites,
   });
 
-  factory ProductsModel.fromJson(Map<String, dynamic> json) => ProductsModel(
-        products: json["products"] == null
+  factory FavouriteModel.fromJson(Map<String, dynamic> json) => FavouriteModel(
+        favorites: json["favorites"] == null
             ? null
-            : Products.fromJson(json["products"]),
+            : Favorites.fromJson(json["favorites"]),
       );
 
   Map<String, dynamic> toJson() => {
-        "products": products?.toJson(),
+        "favorites": favorites?.toJson(),
       };
 }
 
-class Products {
+class Favorites {
   final int? currentPage;
-  final List<DateM>? data;
+  final List<Datum>? data;
   final String? firstPageUrl;
   final int? from;
   final int? lastPage;
@@ -43,7 +42,7 @@ class Products {
   final int? to;
   final int? total;
 
-  Products({
+  Favorites({
     this.currentPage,
     this.data,
     this.firstPageUrl,
@@ -59,11 +58,11 @@ class Products {
     this.total,
   });
 
-  factory Products.fromJson(Map<String, dynamic> json) => Products(
+  factory Favorites.fromJson(Map<String, dynamic> json) => Favorites(
         currentPage: json["current_page"],
         data: json["data"] == null
             ? []
-            : List<DateM>.from(json["data"]!.map((x) => DateM.fromJson(x))),
+            : List<Datum>.from(json["data"]!.map((x) => Datum.fromJson(x))),
         firstPageUrl: json["first_page_url"],
         from: json["from"],
         lastPage: json["last_page"],
@@ -100,36 +99,26 @@ class Products {
       };
 }
 
-class DateM {
+class Datum {
   final int? id;
   final String? name;
   final String? price;
-  final int? categoryId;
-  final DateTime? createdAt;
-  final DateTime? updatedAt;
+  final int? userId;
   final List<Media>? media;
 
-  const DateM({
+  Datum({
     this.id,
     this.name,
     this.price,
-    this.categoryId,
-    this.createdAt,
-    this.updatedAt,
+    this.userId,
     this.media,
   });
 
-  factory DateM.fromJson(Map<String, dynamic> json) => DateM(
+  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
         id: json["id"],
         name: json["name"],
         price: json["price"],
-        categoryId: json["category_id"],
-        createdAt: json["created_at"] == null
-            ? null
-            : DateTime.parse(json["created_at"]),
-        updatedAt: json["updated_at"] == null
-            ? null
-            : DateTime.parse(json["updated_at"]),
+        userId: json["user_id"],
         media: json["media"] == null
             ? []
             : List<Media>.from(json["media"]!.map((x) => Media.fromJson(x))),
@@ -139,9 +128,7 @@ class DateM {
         "id": id,
         "name": name,
         "price": price,
-        "category_id": categoryId,
-        "created_at": createdAt?.toIso8601String(),
-        "updated_at": updatedAt?.toIso8601String(),
+        "user_id": userId,
         "media": media == null
             ? []
             : List<dynamic>.from(media!.map((x) => x.toJson())),

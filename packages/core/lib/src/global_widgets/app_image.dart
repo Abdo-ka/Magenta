@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -95,24 +96,15 @@ class AppImage extends StatelessWidget {
             width: size ?? width,
           );
         case Source.network:
-          return Image.network(
-            path,
-            color: color,
-            errorBuilder: (context, v, trace) {
-              //todo replace this with custom image
-              return failedBuilder != null
-                  ? failedBuilder!(context)
-                  : const Text("failed");
-            },
-            loadingBuilder: (BuildContext context, Widget child,
-                ImageChunkEvent? loadingProgress) {
-              if (loadingProgress == null) return child;
-              return getLoadingBuilder(context);
-            },
-            alignment: alignment ?? Alignment.center,
+          return CachedNetworkImage(
+            imageUrl: path,
             fit: fit,
-            height: size ?? height,
-            width: size ?? width,
+            height: height,
+            width: width,
+            color: color,
+            alignment: alignment ?? Alignment.center,
+            placeholder: (_, __) => getLoadingBuilder(context),
+            errorWidget: (_, __, ___) => const SizedBox.shrink(),
           );
       }
     }
@@ -159,6 +151,6 @@ class _LoadingImageIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: CircularProgressIndicator(strokeWidth: 2));
+    return const Center(child: CircularProgressIndicator(strokeWidth: 4));
   }
 }

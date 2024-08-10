@@ -8,21 +8,13 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-
-// 📦 Package imports:
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:google_sign_in/google_sign_in.dart' as _i116;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:shared_preferences/shared_preferences.dart' as _i460;
-
-// 🌎 Project imports:
 import 'package:magenta/core/di/di_container.dart' as _i363;
 import 'package:magenta/core/network/client/client.dart' as _i700;
 import 'package:magenta/core/repositories/local_storage.dart' as _i532;
 import 'package:magenta/core/repositories/token_repository.dart' as _i192;
-import 'package:magenta/features/home/controller/bloc/home_bloc.dart' as _i612;
-import 'package:magenta/services/router/router.dart' as _i925;
-
 import 'package:magenta/features/auth/controller/sign_in_cubit/cubit/sign_in_cubit.dart'
     as _i938;
 import 'package:magenta/features/auth/controller/sign_up_cubit/cubit/sign_up_cubit.dart'
@@ -35,8 +27,11 @@ import 'package:magenta/features/favourite/controller/favorite_bloc/favorite_blo
     as _i953;
 import 'package:magenta/features/favourite/data/repositories/favourite_repositories.dart'
     as _i393;
+import 'package:magenta/features/home/controller/bloc/home_bloc.dart' as _i612;
 import 'package:magenta/features/home/data/repositories/home_repositories.dart'
     as _i491;
+import 'package:magenta/services/router/router.dart' as _i925;
+import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -50,7 +45,6 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final appModule = _$AppModule();
-    gh.factory<_i953.FavoriteBloc>(() => _i953.FavoriteBloc());
     await gh.singletonAsync<_i116.GoogleSignIn>(
       () => appModule.googleSignIn,
       preResolve: true,
@@ -72,10 +66,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i280.SignUpCubit(gh<_i959.AuthRepositories>()));
     gh.factory<_i749.VerificationCubit>(
         () => _i749.VerificationCubit(gh<_i959.AuthRepositories>()));
-    gh.factory<_i612.HomeBloc>(
-        () => _i612.HomeBloc(gh<_i491.HomeRepositories>()));
     gh.singletonAsync<_i532.LocalStorage>(() async =>
         _i532.LocalStorage(await getAsync<_i460.SharedPreferences>()));
+    gh.factory<_i953.FavoriteBloc>(
+        () => _i953.FavoriteBloc(gh<_i393.FavouriteRepositories>()));
+    gh.singleton<_i612.HomeBloc>(() => _i612.HomeBloc(
+          gh<_i491.HomeRepositories>(),
+          gh<_i393.FavouriteRepositories>(),
+        ));
     return this;
   }
 }

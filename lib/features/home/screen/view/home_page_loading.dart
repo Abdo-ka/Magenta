@@ -1,6 +1,12 @@
-import 'package:core/core.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
+import 'package:core/core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shimmer/shimmer.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
 import 'package:magenta/config/theme/color_scheme.dart';
@@ -8,7 +14,6 @@ import 'package:magenta/features/home/screen/widget/carousel_slider_widget.dart'
 import 'package:magenta/features/home/screen/widget/category_item.dart';
 import 'package:magenta/features/home/screen/widget/item_card_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
-import 'package:shimmer/shimmer.dart';
 
 class HomePageLoading extends StatelessWidget {
   const HomePageLoading({super.key});
@@ -116,7 +121,8 @@ class HomePageLoading extends StatelessWidget {
           15.verticalSpace,
           CarouselSliderWidget(
             image: [
-              Assets.icons.flowerVector,
+              Assets.icons.placeholderMagenta.path,
+              Assets.icons.placeholderMagenta.path,
             ],
             scroll: false,
             infinityScroll: false,
@@ -163,9 +169,12 @@ class HomePageLoading extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          120.verticalSpace,
-                          //TODO: here should add hero widget
-
+                          AppImage.asset(
+                            Assets.icons.placeholderMagenta.path,
+                            fit: BoxFit.cover,
+                            width: 250.w,
+                            height: 215.h,
+                          ),
                           7.verticalSpace,
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,

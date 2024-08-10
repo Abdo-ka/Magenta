@@ -1,138 +1,55 @@
 // To parse this JSON data, do
 //
-//     final productsModel = productsModelFromJson(jsonString);
+//     final signlePrroductModel = signlePrroductModelFromJson(jsonString);
 
 // 🎯 Dart imports:
 import 'dart:convert';
 
-ProductsModel productsModelFromJson(String str) =>
-    ProductsModel.fromJson(json.decode(str));
+SignleProductModel signlePrroductModelFromJson(String str) =>
+    SignleProductModel.fromJson(json.decode(str));
 
-String productsModelToJson(ProductsModel data) => json.encode(data.toJson());
+String signlePrroductModelToJson(SignleProductModel data) =>
+    json.encode(data.toJson());
 
-class ProductsModel {
-  final Products? products;
+class SignleProductModel {
+  final Product? product;
 
-  const ProductsModel({
-    this.products,
+  const SignleProductModel.SignleProductModel({
+    this.product,
   });
 
-  factory ProductsModel.fromJson(Map<String, dynamic> json) => ProductsModel(
-        products: json["products"] == null
-            ? null
-            : Products.fromJson(json["products"]),
+  factory SignleProductModel.fromJson(Map<String, dynamic> json) =>
+      SignleProductModel.SignleProductModel(
+        product:
+            json["product"] == null ? null : Product.fromJson(json["product"]),
       );
 
   Map<String, dynamic> toJson() => {
-        "products": products?.toJson(),
+        "product": product?.toJson(),
       };
 }
 
-class Products {
-  final int? currentPage;
-  final List<DateM>? data;
-  final String? firstPageUrl;
-  final int? from;
-  final int? lastPage;
-  final String? lastPageUrl;
-  final List<Link>? links;
-  final dynamic nextPageUrl;
-  final String? path;
-  final int? perPage;
-  final dynamic prevPageUrl;
-  final int? to;
-  final int? total;
-
-  Products({
-    this.currentPage,
-    this.data,
-    this.firstPageUrl,
-    this.from,
-    this.lastPage,
-    this.lastPageUrl,
-    this.links,
-    this.nextPageUrl,
-    this.path,
-    this.perPage,
-    this.prevPageUrl,
-    this.to,
-    this.total,
-  });
-
-  factory Products.fromJson(Map<String, dynamic> json) => Products(
-        currentPage: json["current_page"],
-        data: json["data"] == null
-            ? []
-            : List<DateM>.from(json["data"]!.map((x) => DateM.fromJson(x))),
-        firstPageUrl: json["first_page_url"],
-        from: json["from"],
-        lastPage: json["last_page"],
-        lastPageUrl: json["last_page_url"],
-        links: json["links"] == null
-            ? []
-            : List<Link>.from(json["links"]!.map((x) => Link.fromJson(x))),
-        nextPageUrl: json["next_page_url"],
-        path: json["path"],
-        perPage: json["per_page"],
-        prevPageUrl: json["prev_page_url"],
-        to: json["to"],
-        total: json["total"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "current_page": currentPage,
-        "data": data == null
-            ? []
-            : List<dynamic>.from(data!.map((x) => x.toJson())),
-        "first_page_url": firstPageUrl,
-        "from": from,
-        "last_page": lastPage,
-        "last_page_url": lastPageUrl,
-        "links": links == null
-            ? []
-            : List<dynamic>.from(links!.map((x) => x.toJson())),
-        "next_page_url": nextPageUrl,
-        "path": path,
-        "per_page": perPage,
-        "prev_page_url": prevPageUrl,
-        "to": to,
-        "total": total,
-      };
-}
-
-class DateM {
+class Product {
   final int? id;
   final String? name;
   final String? price;
   final int? categoryId;
-  final DateTime? createdAt;
-  final DateTime? updatedAt;
-  final List<Media>? media;
+  final Image? image;
 
-  const DateM({
+  Product({
     this.id,
     this.name,
     this.price,
     this.categoryId,
-    this.createdAt,
-    this.updatedAt,
-    this.media,
+    this.image,
   });
 
-  factory DateM.fromJson(Map<String, dynamic> json) => DateM(
+  factory Product.fromJson(Map<String, dynamic> json) => Product(
         id: json["id"],
         name: json["name"],
         price: json["price"],
         categoryId: json["category_id"],
-        createdAt: json["created_at"] == null
-            ? null
-            : DateTime.parse(json["created_at"]),
-        updatedAt: json["updated_at"] == null
-            ? null
-            : DateTime.parse(json["updated_at"]),
-        media: json["media"] == null
-            ? []
-            : List<Media>.from(json["media"]!.map((x) => Media.fromJson(x))),
+        image: json["image"] == null ? null : Image.fromJson(json["image"]),
       );
 
   Map<String, dynamic> toJson() => {
@@ -140,15 +57,11 @@ class DateM {
         "name": name,
         "price": price,
         "category_id": categoryId,
-        "created_at": createdAt?.toIso8601String(),
-        "updated_at": updatedAt?.toIso8601String(),
-        "media": media == null
-            ? []
-            : List<dynamic>.from(media!.map((x) => x.toJson())),
+        "image": image?.toJson(),
       };
 }
 
-class Media {
+class Image {
   final int? id;
   final String? modelType;
   final int? modelId;
@@ -170,7 +83,7 @@ class Media {
   final String? originalUrl;
   final String? previewUrl;
 
-  Media({
+  Image({
     this.id,
     this.modelType,
     this.modelId,
@@ -193,7 +106,7 @@ class Media {
     this.previewUrl,
   });
 
-  factory Media.fromJson(Map<String, dynamic> json) => Media(
+  factory Image.fromJson(Map<String, dynamic> json) => Image(
         id: json["id"],
         modelType: json["model_type"],
         modelId: json["model_id"],
@@ -257,29 +170,5 @@ class Media {
         "updated_at": updatedAt?.toIso8601String(),
         "original_url": originalUrl,
         "preview_url": previewUrl,
-      };
-}
-
-class Link {
-  final String? url;
-  final String? label;
-  final bool? active;
-
-  Link({
-    this.url,
-    this.label,
-    this.active,
-  });
-
-  factory Link.fromJson(Map<String, dynamic> json) => Link(
-        url: json["url"],
-        label: json["label"],
-        active: json["active"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "url": url,
-        "label": label,
-        "active": active,
       };
 }
