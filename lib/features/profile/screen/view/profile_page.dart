@@ -12,6 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/config/theme/color_scheme.dart';
 import 'package:magenta/gen/assets.gen.dart';
+import 'package:magenta/services/router/router.gr.dart';
 
 @RoutePage()
 class ProfilePage extends StatelessWidget {
@@ -48,7 +49,7 @@ class ProfilePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       AppText(
-                        'Reda Heritany',
+                        'User Data',
                         style: context.textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: context.colorScheme.primary),
@@ -68,16 +69,18 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               50.verticalSpace,
-              ButtonProfile(
-                image: Assets.icons.profileIcon,
-                title: 'My Information',
-                onTap: () {},
-              ),
-              35.verticalSpace,
+              // ButtonProfile(
+              //   image: Assets.icons.profileIcon,
+              //   title: 'My Information',
+              //   onTap: () {},
+              // ),
+              // 35.verticalSpace,
               ButtonProfile(
                 image: Assets.icons.schedule,
                 title: 'My Orders',
-                onTap: () {},
+                onTap: () {
+                  context.router.push(CartRoute());
+                },
               ),
               35.verticalSpace,
               ButtonProfile(
@@ -92,17 +95,17 @@ class ProfilePage extends StatelessWidget {
                 onTap: () {},
               ),
               35.verticalSpace,
-              ButtonProfile(
-                image: Assets.icons.changeLanguage,
-                title: 'Change Language',
-                onTap: () {},
-              ),
-              35.verticalSpace,
-              ButtonProfile(
-                image: Assets.icons.changeSkin,
-                title: 'Change App Skin',
-                onTap: () {},
-              ),
+              // ButtonProfile(
+              //   image: Assets.icons.changeLanguage,
+              //   title: 'Change Language',
+              //   onTap: () {},
+              // ),
+              // 35.verticalSpace,
+              // ButtonProfile(
+              //   image: Assets.icons.changeSkin,
+              //   title: 'Change App Skin',
+              //   onTap: () {},
+              // ),
             ],
           )
         ],

@@ -25,7 +25,8 @@ class ItemCardWidget extends StatefulWidget {
     required this.name,
     required this.price,
     required this.image,
-    required this.id, required this.onTap,
+    required this.id,
+    required this.onTap,
   });
 
   final double? width;
@@ -57,7 +58,7 @@ class _ItemCardWidgetState extends State<ItemCardWidget> {
               },
               child: Container(
                 width: widget.width ?? 146.w,
-                height: widget.height ?? 256.h,
+                height: widget.height ?? 236.h,
                 margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   border: Border.all(color: context.colorScheme.primary),
@@ -111,7 +112,7 @@ class _ItemCardWidgetState extends State<ItemCardWidget> {
                             ],
                           ),
                           GestureDetector(
-                            onTap:widget.onTap.call,
+                            onTap: widget.onTap.call,
                             child: AppImage.asset(
                               Assets.icons.favourite,
                               color: state.Favourite.contains(widget.id)

@@ -52,7 +52,7 @@ class _FavoritePageState extends State<FavoritePage> {
               return const HomePageLoading();
             } else {
               if (state.favouriteModel.favorites?.data?.length == 0) {
-                return NoFavouriteWidget();
+                return const NoFavouriteWidget();
               } else {
                 return ListView(
                   padding: const EdgeInsets.all(16),
@@ -62,13 +62,14 @@ class _FavoritePageState extends State<FavoritePage> {
                       style: context.textTheme.labelSmall
                           ?.copyWith(fontWeight: FontWeight.bold),
                     ),
+                    10.verticalSpace,
                     GridView.builder(
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           childAspectRatio:
-                              context.width / context.height / .75),
+                              context.width / context.height / .70),
                       itemBuilder: (context, index) => ItemCardWidget(
                         categoryName:
                             state.favouriteModel.favorites?.data?[index].name ??
