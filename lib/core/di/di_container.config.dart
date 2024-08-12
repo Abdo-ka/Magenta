@@ -27,7 +27,12 @@ import 'package:magenta/features/favourite/controller/favorite_bloc/favorite_blo
     as _i953;
 import 'package:magenta/features/favourite/data/repositories/favourite_repositories.dart'
     as _i393;
-import 'package:magenta/features/home/controller/bloc/home_bloc.dart' as _i612;
+import 'package:magenta/features/home/controller/cart_cubit/cubit/cart_cubit.dart'
+    as _i505;
+import 'package:magenta/features/home/controller/home_bloc/home_bloc.dart'
+    as _i153;
+import 'package:magenta/features/home/data/repositories/cart_repositories.dart'
+    as _i375;
 import 'package:magenta/features/home/data/repositories/home_repositories.dart'
     as _i491;
 import 'package:magenta/services/router/router.dart' as _i925;
@@ -59,6 +64,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i393.FavouriteRepositories(gh<_i700.Client>()));
     gh.factory<_i491.HomeRepositories>(
         () => _i491.HomeRepositories(gh<_i700.Client>()));
+    gh.factory<_i375.CartRepositories>(
+        () => _i375.CartRepositories(gh<_i700.Client>()));
     gh.factory<_i192.TokenRepository>(() => _i192.TokenRepositoryImp());
     gh.factory<_i938.SignInCubit>(
         () => _i938.SignInCubit(gh<_i959.AuthRepositories>()));
@@ -66,11 +73,13 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i280.SignUpCubit(gh<_i959.AuthRepositories>()));
     gh.factory<_i749.VerificationCubit>(
         () => _i749.VerificationCubit(gh<_i959.AuthRepositories>()));
+    gh.singleton<_i505.CartCubit>(
+        () => _i505.CartCubit(gh<_i375.CartRepositories>()));
     gh.singletonAsync<_i532.LocalStorage>(() async =>
         _i532.LocalStorage(await getAsync<_i460.SharedPreferences>()));
     gh.factory<_i953.FavoriteBloc>(
         () => _i953.FavoriteBloc(gh<_i393.FavouriteRepositories>()));
-    gh.singleton<_i612.HomeBloc>(() => _i612.HomeBloc(
+    gh.singleton<_i153.HomeBloc>(() => _i153.HomeBloc(
           gh<_i491.HomeRepositories>(),
           gh<_i393.FavouriteRepositories>(),
         ));

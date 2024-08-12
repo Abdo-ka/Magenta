@@ -41,7 +41,7 @@ abstract class AppModule {
             onRequest: (options, handler) async {
               final token = await TokenRepositoryImp().token;
               if (token != null) {
-                options.headers['Authorization'] = 'Bearer $token';
+                options.headers['Authorization'] = token;
               }
               return handler.next(options);
             },

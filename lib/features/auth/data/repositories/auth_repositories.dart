@@ -24,7 +24,7 @@ class AuthRepositories {
           {required VerificationModel param}) =>
       _client.post(ApiRoutes.verification,
           fromJson: (json) => BaseResponse(
-              data: 'Bearer ${json['token']}',
+              data: 'Bearer ${json['data']['token']}',
               message: json['message'],
               code: 200,
               success: true),

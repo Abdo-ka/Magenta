@@ -12,7 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import 'package:magenta/config/theme/color_scheme.dart';
 import 'package:magenta/core/di/di_container.dart';
-import 'package:magenta/features/home/controller/bloc/home_bloc.dart';
+import 'package:magenta/features/home/controller/home_bloc/home_bloc.dart';
 import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 

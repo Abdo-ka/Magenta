@@ -11,9 +11,22 @@ import 'package:magenta/gen/assets.gen.dart';
 
 // 🌎 Project imports:
 
-
 class CartWidget extends StatelessWidget {
-  const CartWidget({super.key});
+  final String image;
+  final String category;
+  final String name;
+  final String quantity;
+  final int price;
+  final VoidCallback onTapTrash;
+  const CartWidget({
+    super.key,
+    required this.image,
+    required this.category,
+    required this.name,
+    required this.quantity,
+    required this.price,
+    required this.onTapTrash,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +47,8 @@ class CartWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppImage.asset(
-                      Assets.icons.test.path,
+                    AppImage.network(
+                      image,
                       width: 40,
                       height: 40,
                       fit: BoxFit.fill,
@@ -55,7 +68,7 @@ class CartWidget extends StatelessWidget {
                           ],
                         ),
                         AppText(
-                          'SAUVAGE Dior',
+                          name,
                           style: context.textTheme.titleMedium
                               ?.copyWith(fontWeight: FontWeight.bold),
                         )
@@ -70,14 +83,14 @@ class CartWidget extends StatelessWidget {
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 LayoutTextBuy(
-                  price: 50,
+                  price: int.parse(quantity),
                   title: 'paces',
                   color: context.colorScheme.shadow,
                   textStyle: context.textTheme.labelSmall
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 LayoutTextBuy(
-                  price: 100,
+                  price: price,
                   title: 'price',
                   color: context.colorScheme.shadow,
                   textStyle: context.textTheme.labelSmall
@@ -94,28 +107,17 @@ class CartWidget extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        AppImage.asset(
-                          Assets.icons.trash,
-                          size: 25,
-                        ),
-                        10.horizontalSpace,
-                        AppCheckbox(
-                          onChanged: (value) {},
-                          isSelected: true,
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: onTapTrash,
+                      child: AppImage.asset(
+                        Assets.icons.trash,
+                        size: 25,
+                      ),
                     ),
                     Row(
                       children: [
                         AppText(
-                          'total price: ',
-                          style: context.textTheme.labelSmall
-                              ?.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        AppText(
-                          '\$752.00',
+                          '\$${price + 100}',
                           style: context.textTheme.titleMedium
                               ?.copyWith(fontWeight: FontWeight.bold),
                         )

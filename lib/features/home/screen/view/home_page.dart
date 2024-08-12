@@ -12,7 +12,7 @@ import 'package:loader_overlay/loader_overlay.dart';
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/config/common/environment_variables.dart';
 import 'package:magenta/core/di/di_container.dart';
-import 'package:magenta/features/home/controller/bloc/home_bloc.dart';
+import 'package:magenta/features/home/controller/home_bloc/home_bloc.dart';
 import 'package:magenta/features/home/screen/view/home_page_loading.dart';
 import 'package:magenta/features/home/screen/widget/carousel_slider_widget.dart';
 import 'package:magenta/features/home/screen/widget/category_item.dart';
@@ -61,7 +61,9 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         IconButtonWidget(
                           onPressed: () async {
-                            context.loaderOverlay.show();
+                             context.router.replaceAll([
+                              const BaseRoute(children: [ProfileRoute()])
+                            ]);
                           },
                           buttonColor: Colors.transparent,
                           child: AppImage.asset(Assets.icons.drawer),

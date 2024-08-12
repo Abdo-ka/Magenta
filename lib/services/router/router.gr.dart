@@ -14,7 +14,8 @@ import 'package:magenta/features/auth/view/reset_password_page.dart' as _i9;
 import 'package:magenta/features/auth/view/sign_in_page.dart' as _i10;
 import 'package:magenta/features/auth/view/sign_up_page.dart' as _i11;
 import 'package:magenta/features/auth/view/verify_number_page.dart' as _i13;
-import 'package:magenta/features/favourite/screen/view/favorite_page.dart' as _i4;
+import 'package:magenta/features/favourite/screen/view/favorite_page.dart'
+    as _i4;
 import 'package:magenta/features/home/screen/view/cart_page.dart' as _i2;
 import 'package:magenta/features/home/screen/view/details_item_page.dart'
     as _i3;
