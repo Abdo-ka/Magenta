@@ -1,25 +1,18 @@
 
 ## Main photo
-<div align="center">
+<style>
+  .white-background {
+    background-color: white;
+  }
+</style>
+
+<div align="center" class="white-background">
   <img src="/images/logo.svg" alt="Abdo_ka" width="100%">
 </div>
 
 # Magenta
 Magenta is app build on flutter E-commerce app for trading parfums and other things
 Used Clean architecture with MVC Structure and clean code 
-
-
-## Authors
-
-- [@Abdo_Ka](https://www.github.com/Abdo-ka)
-
-
-
-## 🚀 About Me
-I'm a software Engineering specialist on Android and IOS app developer Using Flutter Freamwork
-Have over 4 years of expreiance and also have more than 5 apps on google play
-
-
 
 ## Run Locally
 
@@ -116,7 +109,7 @@ flutter build apk --release --flavor stag --dart-define-from-file=env/.env_stag.
 
 ## Support
 
-For support, [Email](mailto:kanawatiabdalrahman@gmail.com) or chat me on [telegram](https://t.me/Abdo_Ka),[LinkedIn](https://www.linkedin.com/in/abd-alrahman-kanawati-56322b228) .
+For support, [Email](mailto:kanawatiabdalrahman@gmail.com) or chat me on [telegram](https://t.me/Abdo_Ka),[LinkedIn](https://www.linkedin.com/in/abdo-ka) .
 
 
 ## Feedback
