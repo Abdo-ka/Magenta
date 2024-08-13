@@ -26,7 +26,6 @@ class AppColorScheme {
     shadow: Color(0xFF000000),
   );
   static const lightStage = ColorScheme.light(
-    
     primary: Color(0xFF9747FF),
     onPrimary: Color(0xFFFDFFFA),
     primaryContainer: Color(0xffFFECCC),
@@ -110,8 +109,8 @@ extension TextColorScheme on ColorScheme {
 
 extension ExtraColors on ColorScheme {
   Color get gray => brightness == Brightness.light
-      ? const Color(0xffEBEDF4)
-      : const Color(0xff534F5C);
+      ? const Color(0xfff1f1f1)
+      : const Color(0xfff1f1f1);
 
   Color get iconGray => brightness == Brightness.light
       ? const Color(0xff6C6E7B)

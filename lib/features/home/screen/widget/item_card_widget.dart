@@ -134,15 +134,15 @@ class _ItemCardWidgetState extends State<ItemCardWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           AppText('\$${widget.price}'),
-                          IconButtonWidget(
-                            widgetDimension: 32,
-                            buttonColor: context.colorScheme.primary,
-                            onPressed: () {},
-                            isCircle: true,
-                            child: AppImage.asset(
-                              Assets.icons.add,
-                            ),
-                          )
+                          // IconButtonWidget(
+                          //   widgetDimension: 32,
+                          //   buttonColor: context.colorScheme.primary,
+                          //   onPressed: () {},
+                          //   isCircle: true,
+                          //   child: AppImage.asset(
+                          //     Assets.icons.add,
+                          //   ),
+                          // )
                         ],
                       )
                     ],

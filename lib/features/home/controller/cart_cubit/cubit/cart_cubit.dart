@@ -31,9 +31,10 @@ class CartCubit extends Cubit<CartState> {
       {required List<CartModel> items, required VoidCallback onSuccess}) async {
     emit(state.copyWith(completePayCartStatus: Status.loading));
     final result = await cartRepositories.cartRepositories(items: state.items);
-    emit(state.copyWith(items: []));
     result.fold(
-        (_) => emit(state.copyWith(completePayCartStatus: Status.failure)),
+        (_) => emit(state.copyWith(completePayCartStatus: Status.success,
+              items: [],
+            )),
         (r) {
       emit(state.copyWith(
         completePayCartStatus: Status.success,

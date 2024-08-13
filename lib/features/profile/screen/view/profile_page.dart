@@ -11,6 +11,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/theme/color_scheme.dart';
+import 'package:magenta/core/di/di_container.dart';
+import 'package:magenta/core/repositories/token_repository.dart';
 import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
@@ -83,29 +85,42 @@ class ProfilePage extends StatelessWidget {
                 },
               ),
               35.verticalSpace,
-              ButtonProfile(
-                image: Assets.icons.location,
-                title: 'About Magenta',
-                onTap: () {},
-              ),
-              35.verticalSpace,
-              ButtonProfile(
-                image: Assets.icons.chat,
-                title: 'How To Use',
-                onTap: () {},
-              ),
-              35.verticalSpace,
               // ButtonProfile(
-              //   image: Assets.icons.changeLanguage,
-              //   title: 'Change Language',
+              //   image: Assets.icons.location,
+              //   title: 'About Magenta',
               //   onTap: () {},
               // ),
+              // 35.verticalSpace,
+              // ButtonProfile(
+              //   image: Assets.icons.chat,
+              //   title: 'How To Use',
+              //   onTap: () {},
+              // ),
+              // 35.verticalSpace,
+              ButtonProfile(
+                image: Assets.icons.changeLanguage,
+                title: 'Logout',
+                onTap: () {
+                  getIt<TokenRepository>().deleteToken();
+                  context.router.pushAll([SplashRoute()]);
+                },
+              ),
               // 35.verticalSpace,
               // ButtonProfile(
               //   image: Assets.icons.changeSkin,
               //   title: 'Change App Skin',
               //   onTap: () {},
               // ),
+              100.verticalSpace,
+              AppText.titleSmall(
+                'Feel free to tell us anything you want ',
+                color: context.colorScheme.primary,
+              ),
+              20.verticalSpace,
+              AppText.titleSmall(
+                'all data saved @Magenta.com ',
+                color: context.colorScheme.primary,
+              ),
             ],
           )
         ],

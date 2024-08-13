@@ -147,6 +147,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/test.png
   AssetGenImage get test => const AssetGenImage('assets/icons/test.png');
 
+  /// File path: assets/icons/test1.jpg
+  AssetGenImage get test1 => const AssetGenImage('assets/icons/test1.jpg');
+
+  /// File path: assets/icons/test2.jpg
+  AssetGenImage get test2 => const AssetGenImage('assets/icons/test2.jpg');
+
+  /// File path: assets/icons/test3.jpg
+  AssetGenImage get test3 => const AssetGenImage('assets/icons/test3.jpg');
+
+  /// File path: assets/icons/test4.jpg
+  AssetGenImage get test4 => const AssetGenImage('assets/icons/test4.jpg');
+
   /// File path: assets/icons/user.svg
   String get user => 'assets/icons/user.svg';
 
@@ -193,6 +205,10 @@ class $AssetsIconsGen {
         rose,
         search,
         test,
+        test1,
+        test2,
+        test3,
+        test4,
         user,
         vectorSplash
       ];

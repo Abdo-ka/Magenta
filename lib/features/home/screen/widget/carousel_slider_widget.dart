@@ -21,7 +21,7 @@ class CarouselSliderWidget extends StatelessWidget {
     super.key,
     required this.image,
     this.scroll = true,
-    this.infinityScroll=true,
+    this.infinityScroll = true,
   });
 
   ValueNotifier index = ValueNotifier(0);
@@ -50,7 +50,7 @@ class CarouselSliderWidget extends StatelessWidget {
               height: 190.h,
               viewportFraction: .9,
               initialPage: 0,
-              enableInfiniteScroll:infinityScroll?? true,
+              enableInfiniteScroll: infinityScroll ?? true,
               autoPlay: scroll ?? true,
               autoPlayInterval: const Duration(seconds: 3),
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
@@ -60,19 +60,19 @@ class CarouselSliderWidget extends StatelessWidget {
               scrollDirection: Axis.horizontal,
             ),
           ),
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: AnimatedSmoothIndicator(
-                activeIndex: index.value,
-                count: image.length,
-                effect: WormEffect(
-                  activeDotColor: context.colorScheme.primary,
-                  type: WormType.thinUnderground,
-                ),
-              ),
-            ),
-          ),
+          // Positioned.fill(
+          //   child: Align(
+          //     alignment: Alignment.bottomCenter,
+          //     child: AnimatedSmoothIndicator(
+          //       activeIndex: index.value,
+          //       count: image.length,
+          //       effect: WormEffect(
+          //         activeDotColor: context.colorScheme.primary,
+          //         type: WormType.thinUnderground,
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

@@ -35,6 +35,10 @@ import 'package:magenta/features/home/data/repositories/cart_repositories.dart'
     as _i375;
 import 'package:magenta/features/home/data/repositories/home_repositories.dart'
     as _i491;
+import 'package:magenta/features/notification/controller/cubit/notification_cubit.dart'
+    as _i629;
+import 'package:magenta/features/notification/repositories/notification_repositories.dart'
+    as _i380;
 import 'package:magenta/services/router/router.dart' as _i925;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
@@ -66,6 +70,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i491.HomeRepositories(gh<_i700.Client>()));
     gh.factory<_i375.CartRepositories>(
         () => _i375.CartRepositories(gh<_i700.Client>()));
+    gh.factory<_i380.NotificationRepositories>(
+        () => _i380.NotificationRepositories(gh<_i700.Client>()));
     gh.factory<_i192.TokenRepository>(() => _i192.TokenRepositoryImp());
     gh.factory<_i938.SignInCubit>(
         () => _i938.SignInCubit(gh<_i959.AuthRepositories>()));
@@ -75,6 +81,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i749.VerificationCubit(gh<_i959.AuthRepositories>()));
     gh.singleton<_i505.CartCubit>(
         () => _i505.CartCubit(gh<_i375.CartRepositories>()));
+    gh.factory<_i629.NotificationCubit>(
+        () => _i629.NotificationCubit(gh<_i380.NotificationRepositories>()));
     gh.singletonAsync<_i532.LocalStorage>(() async =>
         _i532.LocalStorage(await getAsync<_i460.SharedPreferences>()));
     gh.factory<_i953.FavoriteBloc>(

@@ -53,7 +53,7 @@ class _BasePageState extends State<BasePage> {
         builder: (BuildContext context, value, Widget? child) =>
             AutoTabsScaffold(
           resizeToAvoidBottomInset: false,
-          routes: const [
+          routes:  [
             HomeRoute(),
             FavoriteRoute(),
             NotificationRoute(),

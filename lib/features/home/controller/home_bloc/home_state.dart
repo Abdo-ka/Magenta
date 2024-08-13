@@ -8,6 +8,7 @@ class HomeState extends Equatable {
   final Status signalProductsStatus;
   final ProductsModel products;
   final CategoryModel category;
+  final OfferModel offerModel;
   final SignleProductModel signalProduct;
   final List<int> Favourite;
   const HomeState({
@@ -17,6 +18,7 @@ class HomeState extends Equatable {
     this.signalProductsStatus = Status.initial,
     this.products = const ProductsModel(),
     this.category = const CategoryModel(),
+    this.offerModel = const OfferModel(),
     this.Favourite = const [],
     this.signalProduct = const SignleProductModel.SignleProductModel(),
   });
@@ -31,6 +33,7 @@ class HomeState extends Equatable {
         signalProduct,
         signalProductsStatus,
         Favourite,
+        offerModel,
       ];
 
   HomeState copyWith({
@@ -40,6 +43,7 @@ class HomeState extends Equatable {
     Status? signalProductsStatus,
     ProductsModel? products,
     CategoryModel? category,
+    OfferModel ? offerModel,
     SignleProductModel? signalProduct,
     List<int>? Favourite,
   }) {
@@ -50,6 +54,7 @@ class HomeState extends Equatable {
       signalProductsStatus: signalProductsStatus ?? this.signalProductsStatus,
       products: products ?? this.products,
       category: category ?? this.category,
+      offerModel:  offerModel??this.offerModel,
       signalProduct: signalProduct ?? this.signalProduct,
       Favourite: Favourite ?? this.Favourite,
     );

@@ -21,4 +21,17 @@ class FavouriteRepositories {
           (json) => FavouriteModel.fromJson(json),
         ),
       );
+
+  FutureResult<bool> addToFavourite({required int id}) => _client.post(
+        ApiRoutes.favourites,
+        fromJson: (json) => true,
+        data: {"product_id": "$id"},
+      );
+  FutureResult<bool> removeFromFavourite({required int id}) => _client.post(
+        'favoritesDelete',
+        fromJson: (json) => true,
+        data: {
+          "product_id": "$id",
+        },
+      );
 }

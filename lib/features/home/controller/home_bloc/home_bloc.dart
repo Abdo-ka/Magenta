@@ -41,25 +41,42 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   FutureOr<void> _initialHomeEvent(
       InitialHomeEvent event, Emitter<HomeState> emit) async {
     add(GetCategoryEvent());
-    // add(GetFavouriteEvent());
+
     add(GetPopularEvent());
-    add(GetOfferEvent());
+    // add(GetOfferEvent());
   }
 
   FutureOr<void> _addFavouriteEvent(
-      AddFavouriteEvent event, Emitter<HomeState> emit) {
+      AddFavouriteEvent event, Emitter<HomeState> emit) async {
     List<int> favourite = List.from(state.Favourite);
     favourite.add(event.id);
-    // state.copyWith(Favourite: favourite);
     emit(state.copyWith(Favourite: favourite));
-    // print("Favourite updated: $favourite");
+    final result = await favouriteRepositories.addToFavourite(id: event.id);
+
+    result.fold(
+        (_) => {
+              favourite.where(
+                (element) => element == event.id,
+              ),
+              emit(state.copyWith(Favourite: favourite)),
+            },
+        (r) => {});
   }
 
   FutureOr<void> _removeFavouriteEvent(
-      RemoveFavouriteEvent evnet, Emitter<HomeState> emit) {
+      RemoveFavouriteEvent event, Emitter<HomeState> emit) async {
     List<int> favourite = List.from(state.Favourite);
-    favourite.remove(evnet.id);
+    favourite.remove(event.id);
     emit(state.copyWith(Favourite: favourite));
+    final result =
+        await favouriteRepositories.removeFromFavourite(id: event.id);
+    emit(state.copyWith(Favourite: favourite));
+    result.fold(
+        (_) => {
+              favourite.add(event.id),
+              emit(state.copyWith(Favourite: favourite)),
+            },
+        (r) => {});
     // result.fold((l) {
     //   favourite = state.Favourite;
     //   favourite.add(evnet.id);
@@ -89,7 +106,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       (l) => {emit(state.copyWith(offerStatus: Status.failure))},
       (r) => {
         emit(
-          state.copyWith(offerStatus: Status.success),
+          state.copyWith(offerStatus: Status.success, offerModel: r.data),
         ),
       },
     );

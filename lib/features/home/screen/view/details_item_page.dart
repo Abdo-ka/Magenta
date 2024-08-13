@@ -77,7 +77,8 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                               category: '',
                             ),
                           ),
-                          Toaster.showDefault('item add contuniue shopping'),
+                          Toaster.showDefault('item added contuniue shopping'),
+                          context.router.maybePop()
                         }
                       : Toaster.showDefault('Should add At Least one Item');
                 },
@@ -131,10 +132,6 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                                       ),
                                     ),
                                     AppImage.asset(Assets.icons.flowerVector),
-                                    AppImage.asset(
-                                      Assets.icons.favourite,
-                                      color: context.colorScheme.shadow,
-                                    ),
                                   ],
                                 ),
                                 15.verticalSpace,

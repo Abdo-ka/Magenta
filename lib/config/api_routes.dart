@@ -9,5 +9,7 @@ class ApiRoutes {
   static const products = 'products';
   static const categories = 'categories';
   static const favourites = 'favorites';
+  static const offers = 'offers';
+  static const notifications = 'notifications';
   static String signalProduct(int id) => 'products/$id';
 }

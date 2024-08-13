@@ -44,8 +44,8 @@ class _FavoritePageState extends State<FavoritePage> {
           ),
         ),
       ),
-      body: BlocProvider(
-        create: (context) => bloc,
+      body: BlocProvider.value(
+        value: bloc,
         child: BlocBuilder<FavoriteBloc, FavoriteState>(
           builder: (context, state) {
             if (state.FavouriteStatus == Status.loading) {

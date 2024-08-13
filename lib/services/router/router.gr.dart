@@ -73,9 +73,11 @@ abstract class $AppRouter extends _i14.RootStackRouter {
       );
     },
     NotificationRoute.name: (routeData) {
+      final args = routeData.argsAs<NotificationRouteArgs>(
+          orElse: () => const NotificationRouteArgs());
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.NotificationPage(),
+        child: _i7.NotificationPage(key: args.key),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -231,16 +233,31 @@ class IntroRoute extends _i14.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.NotificationPage]
-class NotificationRoute extends _i14.PageRouteInfo<void> {
-  const NotificationRoute({List<_i14.PageRouteInfo>? children})
-      : super(
+class NotificationRoute extends _i14.PageRouteInfo<NotificationRouteArgs> {
+  NotificationRoute({
+    _i15.Key? key,
+    List<_i14.PageRouteInfo>? children,
+  }) : super(
           NotificationRoute.name,
+          args: NotificationRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'NotificationRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static const _i14.PageInfo<NotificationRouteArgs> page =
+      _i14.PageInfo<NotificationRouteArgs>(name);
+}
+
+class NotificationRouteArgs {
+  const NotificationRouteArgs({this.key});
+
+  final _i15.Key? key;
+
+  @override
+  String toString() {
+    return 'NotificationRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

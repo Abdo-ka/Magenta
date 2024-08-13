@@ -26,7 +26,7 @@ class HomeRepositories {
       );
   FutureResult<BaseResponse<OfferModel>> offerRepositories({int? offerId}) =>
       _client.get(
-        ApiRoutes.categories,
+        ApiRoutes.offers,
         fromJson: (json) => BaseResponse.fromJson(
           json,
           (json) => OfferModel.fromJson(json),
