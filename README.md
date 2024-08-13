@@ -1,10 +1,5 @@
 
 ## Main photo
-<style>
-  .white-background {
-    background-color: white;
-  }
-</style>
 
 <div align="center" class="white-background">
   <img src="/images/logo.svg" alt="Abdo_ka" width="100%">
