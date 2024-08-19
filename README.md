@@ -49,6 +49,8 @@ and add inside these files important data like this image:
 
 on OTp Code you can add this code " 511834 " which is it static on server side 
 
+P.S : some of Future should rewrite cause backend doesn't deal with it correctly
+
 ## Run Application
 
 cause this application is using Flavor to run it should run this command on terminal as you need
