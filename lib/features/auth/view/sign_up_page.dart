@@ -147,9 +147,16 @@ class SignUpPage extends StatelessWidget {
                     AppTextFormField(
                       name: 'confirmPassword',
                       hintText: 'Confirm your Password',
-                      validator: FormBuilderValidators.equal(
-                          _formKey.fieldValue('password').toString(),
-                          errorText: 'Password must be match'),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Confirm password is required';
+                        }
+                        if (value !=
+                            _formKey.currentState?.fields['password']?.value) {
+                          return 'Password must match';
+                        }
+                        return null;
+                      },
                       textAlign: TextAlign.left,
                       obscureText: isHidden.value,
                       suffixIcon: AppImage.asset(Assets.icons.lock),
