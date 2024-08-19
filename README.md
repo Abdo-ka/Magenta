@@ -47,6 +47,7 @@ and add inside these files important data like this image:
 
 ![env_variable](/images/env_variables.png)
 
+on OTp Code you can add this code " 511834 " which is it static on server side 
 
 ## Run Application
 
