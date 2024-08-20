@@ -6,7 +6,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:loader_overlay/loader_overlay.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';

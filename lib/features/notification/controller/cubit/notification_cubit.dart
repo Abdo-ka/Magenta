@@ -9,16 +9,16 @@ part 'notification_state.dart';
 @injectable
 class NotificationCubit extends Cubit<NotificationState> {
   final NotificationRepositories notificationRepositories;
-  NotificationCubit(this.notificationRepositories) : super(NotificationState());
+  NotificationCubit(this.notificationRepositories) : super(const NotificationState());
   void getNotification() async {
     emit(state.copyWith(getNotificationStatus: Status.loading));
     final result = await notificationRepositories.getNotificationRepo();
     result.fold(
         (_) => emit(state.copyWith(getNotificationStatus: Status.failure)),
-        (r) => {
+        (r) {
               emit(
                 state.copyWith(getNotificationStatus: Status.success),
-              )
+              );
             });
   }
 }

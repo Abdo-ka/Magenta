@@ -184,8 +184,9 @@ class SignUpPage extends StatelessWidget {
                           height: 50.h,
                           radius: 32,
                           onPressed: () {
-                            if (!_formKey.currentState!.saveAndValidate())
+                            if (!_formKey.currentState!.saveAndValidate()) {
                               return;
+                            }
 
                             bloc.SignUp(
                               model: SignUpModel(
@@ -207,7 +208,6 @@ class SignUpPage extends StatelessWidget {
                         ),
                       );
                   }
-                  ;
                 },
               ),
               26.verticalSpace,

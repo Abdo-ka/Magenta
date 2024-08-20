@@ -7,12 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 
 // 🌎 Project imports:
-import 'package:magenta/config/common/enum/enums.dart';
-import 'package:magenta/config/common/environment_variables.dart';
-import 'package:magenta/config/theme/color_scheme.dart';
 import 'package:magenta/features/home/screen/widget/carousel_slider_widget.dart';
 import 'package:magenta/features/home/screen/widget/category_item.dart';
-import 'package:magenta/features/home/screen/widget/item_card_widget.dart';
 import 'package:magenta/gen/assets.gen.dart';
 
 class HomePageLoading extends StatelessWidget {

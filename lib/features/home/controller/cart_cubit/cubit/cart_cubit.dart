@@ -11,7 +11,7 @@ part 'cart_state.dart';
 @singleton
 class CartCubit extends Cubit<CartState> {
   final CartRepositories cartRepositories;
-  CartCubit(this.cartRepositories) : super(CartState());
+  CartCubit(this.cartRepositories) : super(const CartState());
   void addToCart({required CartModel item}) {
     final List<CartModel> items = List.from(state.items);
     items.add(item);

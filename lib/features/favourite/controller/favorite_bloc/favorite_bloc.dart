@@ -14,7 +14,7 @@ part 'favorite_state.dart';
 @injectable
 class FavoriteBloc extends Bloc<FavoriteEvent, FavoriteState> {
   final FavouriteRepositories favouriteRepositories;
-  FavoriteBloc(this.favouriteRepositories) : super(FavoriteState()) {
+  FavoriteBloc(this.favouriteRepositories) : super(const FavoriteState()) {
     on<GetFavouriteEvent>(_getFavouriteEvent);
   }
   FutureOr<void> _getFavouriteEvent(

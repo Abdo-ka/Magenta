@@ -8,7 +8,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get_it/get_it.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
@@ -23,10 +22,10 @@ import 'package:magenta/gen/assets.gen.dart';
 
 @RoutePage()
 class DetailsItemPage extends StatefulWidget {
-  DetailsItemPage({
-    Key? key,
+  const DetailsItemPage({
+    super.key,
     required this.id,
-  }) : super(key: key);
+  });
   final int id;
 
   @override

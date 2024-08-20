@@ -1,5 +1,4 @@
 import 'package:core/core.dart';
-import 'package:core/src/theme/extension.dart';
 import 'package:core/src/theme/extension_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -67,9 +66,9 @@ class AppTheme {
         height: 17.fromFigmaHeight(16),
         color: scheme.brandPrimary.shade300,
       ),
-      color: MaterialStateProperty.resolveWith(
+      color: WidgetStateProperty.resolveWith(
         (states) {
-          if (states.contains(MaterialState.selected)) {
+          if (states.contains(WidgetState.selected)) {
             return scheme.brandPrimary.shade25;
           }
           return scheme.systemGray.shade25;

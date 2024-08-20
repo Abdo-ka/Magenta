@@ -1,7 +1,5 @@
 // 🐦 Flutter imports:
 import 'package:core/core.dart';
-import 'package:core/src/extension/context_ext.dart';
-import 'package:core/src/extension/extensions.dart';
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:

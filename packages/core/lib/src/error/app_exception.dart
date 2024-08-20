@@ -33,15 +33,15 @@ class AppNetworkException<OriginalException extends Exception> extends AppExcept
   /// Create a network exception.
   AppNetworkException({
     required this.reason,
-    required OriginalException exception,
+    required super.exception,
     String? message,
-  }) : super(exception: exception, message: message ?? reason.name);
+  }) : super(message: message ?? reason.name);
 
   AppNetworkException._({
     required this.reason,
-    required OriginalException exception,
-    required String message,
-  }) : super(exception: exception, message: message);
+    required super.exception,
+    required super.message,
+  });
 
   /// The reason the network exception occurred.
   final AppNetworkExceptionReason reason;
@@ -56,8 +56,8 @@ class AppNetworkException<OriginalException extends Exception> extends AppExcept
 class AppNetworkResponseException<OriginalException extends Exception, DataType>
     extends AppNetworkException<OriginalException> {
   AppNetworkResponseException(
-      {required OriginalException exception, this.statusCode, this.data, String? message})
-      : super(reason: AppNetworkExceptionReason.responseError, exception: exception, message: message);
+      {required super.exception, this.statusCode, this.data, super.message})
+      : super(reason: AppNetworkExceptionReason.responseError);
 
   final DataType? data;
   final int? statusCode;

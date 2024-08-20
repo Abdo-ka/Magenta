@@ -6,7 +6,7 @@ class AppSwitch extends StatefulWidget {
   final bool value;
   final ValueChanged<bool>? onChanged;
 
-  const AppSwitch({Key? key, required this.value, required this.onChanged}) : super(key: key);
+  const AppSwitch({super.key, required this.value, required this.onChanged});
 
   @override
   createState() => _AppSwitchState();

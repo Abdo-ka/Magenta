@@ -54,10 +54,10 @@ class _BasePageState extends State<BasePage> {
             AutoTabsScaffold(
           resizeToAvoidBottomInset: false,
           routes:  [
-            HomeRoute(),
-            FavoriteRoute(),
+            const HomeRoute(),
+            const FavoriteRoute(),
             NotificationRoute(),
-            ProfileRoute(),
+            const ProfileRoute(),
           ],
           floatingActionButtonBuilder: (context, tabsRouter) {
             return Container(

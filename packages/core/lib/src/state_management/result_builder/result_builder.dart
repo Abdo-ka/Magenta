@@ -6,14 +6,14 @@ import '../../error/app_exception.dart';
 
 class ResultBuilder<B extends StateStreamable<CommonState>, T> extends StatelessWidget {
   const ResultBuilder({
-    Key? key,
+    super.key,
     required this.loaded,
     required this.emptyMessage,
     required this.empty,
     required this.initial,
     required this.loading,
     required this.fail,
-  }) : super(key: key);
+  });
 
   final Widget Function(T data) loaded;
   final Widget Function() initial;

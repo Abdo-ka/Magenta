@@ -7,7 +7,7 @@ import '../../error/app_exception.dart';
 class MultiStateResultBuilder<B extends StateStreamable<List<CommonState>>, T, R extends Helper>
     extends StatelessWidget {
   const MultiStateResultBuilder({
-    Key? key,
+    super.key,
     required this.loaded,
     required this.emptyMessage,
     required this.empty,
@@ -15,7 +15,7 @@ class MultiStateResultBuilder<B extends StateStreamable<List<CommonState>>, T, R
     required this.loading,
     required this.fail,
     required this.stateEnum,
-  }) : super(key: key);
+  });
 
   final Widget Function(T data) loaded;
   final Widget Function() initial;

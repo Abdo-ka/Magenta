@@ -90,7 +90,6 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
                       text: 'Verify Account',
                     );
                 }
-                ;
               }),
             ),
             35.verticalSpace,

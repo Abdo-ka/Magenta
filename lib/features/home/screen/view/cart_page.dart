@@ -47,7 +47,7 @@ class _CartPageState extends State<CartPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       LayoutTextBuy(
-                        price: state.items.length != 0
+                        price: state.items.isNotEmpty
                             ? state.items
                                 .map((item) =>
                                     int.parse((item.price).split('.')[0]))
@@ -60,7 +60,7 @@ class _CartPageState extends State<CartPage> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              state.items.length != 0
+                              state.items.isNotEmpty
                                   ? bloc.completePayCart(
                                       items: state.items,
                                       onSuccess: () {
@@ -69,7 +69,6 @@ class _CartPageState extends State<CartPage> {
                                                 const PaymentSuccessDialog());
                                       })
                                   : null;
-                              ;
                             },
                             child: Row(
                               children: [
@@ -99,7 +98,7 @@ class _CartPageState extends State<CartPage> {
                   ),
                 ),
               ),
-              body: state.items.length != 0
+              body: state.items.isNotEmpty
                   ? ListView(
                       children: List.generate(
                         state.items.length,

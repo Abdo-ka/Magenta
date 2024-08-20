@@ -13,8 +13,6 @@ import 'package:magenta/features/favourite/data/repositories/favourite_repositor
 import 'package:magenta/features/home/data/model/category_model.dart';
 import 'package:magenta/features/home/data/model/offer_model.dart';
 import 'package:magenta/features/home/data/model/products_model.dart';
-import 'package:magenta/features/home/data/model/products_model.dart';
-import 'package:magenta/features/home/data/model/products_model.dart';
 import 'package:magenta/features/home/data/model/signal_product_mode.dart';
 import 'package:magenta/features/home/data/repositories/home_repositories.dart';
 

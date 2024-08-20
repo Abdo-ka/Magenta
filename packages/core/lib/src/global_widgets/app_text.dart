@@ -5,7 +5,7 @@ import 'package:text_scroll/text_scroll.dart';
 class AppText extends StatelessWidget {
   AppText(
     this.text, {
-    Key? key,
+    super.key,
     this.strutStyle,
     this.textAlign,
     this.textDirection = TextDirection.ltr,
@@ -22,8 +22,7 @@ class AppText extends StatelessWidget {
     this.velocity,
     this.figmaLineHeight,
     this.scrollText = false,
-  })  : style = (style ?? const TextStyle()).copyWith(color: color),
-        super(key: key);
+  })  : style = (style ?? const TextStyle()).copyWith(color: color);
 
   final String text;
   final StrutStyle? strutStyle;

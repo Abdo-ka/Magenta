@@ -2,9 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:magenta/app.dart';
 import 'package:magenta/gen/assets.gen.dart';
-import 'package:magenta/services/router/router.gr.dart';
 
 class NoFavouriteWidget extends StatelessWidget {
   const NoFavouriteWidget({super.key});

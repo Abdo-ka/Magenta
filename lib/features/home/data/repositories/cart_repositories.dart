@@ -7,10 +7,7 @@ import 'package:magenta/config/types/types.dart';
 import 'package:magenta/core/network/client/client.dart';
 import 'package:magenta/core/utils/type_defs.dart';
 import 'package:magenta/features/home/data/model/cart_model.dart';
-import 'package:magenta/features/home/data/model/category_model.dart';
-import 'package:magenta/features/home/data/model/offer_model.dart';
 import 'package:magenta/features/home/data/model/products_model.dart';
-import 'package:magenta/features/home/data/model/signal_product_mode.dart';
 
 @injectable
 class CartRepositories {

@@ -3,8 +3,6 @@ import 'package:core/core.dart';
 import 'package:core/src/theme/extension_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:core/core.dart';
-import 'package:flutter/material.dart';
 
 class CustomDropDown extends StatefulWidget {
   /// https://medium.com/@aakashpp/flutters-overlay-widget-and-overlayentry-a-comprehensive-guide-9f82b019ba29

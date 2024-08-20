@@ -8,8 +8,6 @@ import 'package:flutter/foundation.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 // 🌎 Project imports:
-import 'package:magenta/config/common/enum/enums.dart';
-import 'package:magenta/config/common/environment_variables.dart';
 
 abstract class CrashlyticsService {
   static final _instance = FirebaseCrashlytics.instance;

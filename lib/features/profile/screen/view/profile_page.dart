@@ -81,7 +81,7 @@ class ProfilePage extends StatelessWidget {
                 image: Assets.icons.schedule,
                 title: 'My Orders',
                 onTap: () {
-                  context.router.push(CartRoute());
+                  context.router.push(const CartRoute());
                 },
               ),
               35.verticalSpace,
@@ -102,7 +102,7 @@ class ProfilePage extends StatelessWidget {
                 title: 'Logout',
                 onTap: () {
                   getIt<TokenRepository>().deleteToken();
-                  context.router.pushAll([SplashRoute()]);
+                  context.router.pushAll([const SplashRoute()]);
                 },
               ),
               // 35.verticalSpace,
