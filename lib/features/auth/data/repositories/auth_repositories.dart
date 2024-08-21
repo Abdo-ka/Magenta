@@ -34,7 +34,7 @@ class AuthRepositories {
       _client.post(
         ApiRoutes.login,
         fromJson: (json) => BaseResponse(
-            data: 'Bearer ${json['token']}',
+            data: 'Bearer ${json['data']['token']}',
             message: json['message'],
             code: 200,
             success: true),

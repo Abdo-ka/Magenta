@@ -25,6 +25,7 @@ class SignInCubit extends Cubit<SignInState> {
     result.fold(
         (l) => {emit(state.copyWith(SignInStatus: Status.failure))},
         (r) => {
+              print(r.data),
               emit(state.copyWith(SignInStatus: Status.success)),
               getIt<TokenRepository>().saveToken(r.data!),
               onSuccess.call(),

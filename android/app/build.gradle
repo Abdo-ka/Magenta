@@ -56,7 +56,7 @@ android {
         }
         stag {
           dimension "app"
-          applicationId "com.magenta.stag"          
+          applicationId "com.magenta.stage"          
         }
     }
     defaultConfig {
