@@ -3,11 +3,6 @@ workflows:
     name: Android Workflow
     instance_type: mac_mini
     max_build_duration: 120
-    environment:
-      vars:
-      flutter: stable
-      xcode: latest
-      cocoapods: default
     scripts:
       - name: run build_runner
         script: |
