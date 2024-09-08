@@ -1,8 +1,7 @@
 workflows:
   android-workflow:
     name: Android Workflow
-    instance_type: mac_mini
-    max_build_duration: 120
+    max_build_duration: 60
     scripts:
       - name: run build_runner
         script: |
