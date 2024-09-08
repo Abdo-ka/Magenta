@@ -1,0 +1,38 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    instance_type: mac_mini
+    max_build_duration: 120
+    environment:
+      vars:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: run build_runner
+        script: |
+          flutter packages pub run build_runner build --delete-conflicting-outputs
+      - name: Get Flutter packages  
+        script: |
+          cd . && flutter packages pub get
+      - name: Build APK with Flutter  
+        script: |
+          cd . && flutter build apk --release --flavor prod
+      - name: Create debug and test APK  
+        script: |
+          set -ex
+          cd android
+          ./gradlew app:assembleAndroidTest
+          ./gradlew app:assembleDebug -Ptarget="$FCI_BUILD_DIR/integration_test/app_test.dart" 
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
+      - build/**/outputs/**/mapping.txt
+      - flutter_drive.log
+    publishing:
+      email:
+        recipients:
+          - kanawatiabdalrahman@gmail.com
+      notify:
+        success: true     
+        failure: false    
