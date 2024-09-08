@@ -24,10 +24,5 @@ workflows:
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
-    publishing:
-      email:
-        recipients:
-          - kanawatiabdalrahman@gmail.com
-      notify:
         success: true     
         failure: false    
