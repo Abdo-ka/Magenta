@@ -9,12 +9,9 @@ workflows:
       - name: Build APK with Flutter  
         script: |
           cd . && flutter build apk --release --flavor prod
-      - name: Create debug and test APK  
+      - name: send apk to telegram channel  
         script: |
-          set -ex
-          cd android
-          ./gradlew app:assembleAndroidTest
-          ./gradlew app:assembleDebug -Ptarget="$FCI_BUILD_DIR/integration_test/app_test.dart" 
+          curl -F chat_id="-1001937005377" -F document=@"build\app\outputs\flutter-apk\app-release.apk" "https://api.telegram.org/bot7028718106:AAEGppBRRM_kdzivMWZT5ZGUnSi7gtpYSlk/sendDocument"
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/*.aab
