@@ -11,7 +11,7 @@ workflows:
           cd . && flutter build apk --release --flavor prod
       - name: send apk to telegram channel  
         script: |
-          curl -F chat_id="-1001937005377" -F document=@"build\app\outputs\flutter-apk\app-release.apk" "https://api.telegram.org/bot7028718106:AAEGppBRRM_kdzivMWZT5ZGUnSi7gtpYSlk/sendDocument"
+          curl -F chat_id="-1001937005377" -F document=@"build/**/outputs/**/*.apk" "https://api.telegram.org/bot7028718106:AAEGppBRRM_kdzivMWZT5ZGUnSi7gtpYSlk/sendDocument"
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/*.aab
