@@ -11,7 +11,10 @@ workflows:
           cd . && flutter build apk --release --flavor prod
       - name: send apk to telegram channel  
         script: |
-          curl -F chat_id="-1001937005377" -F document=@"build/**/outputs/**/*.apk" "https://api.telegram.org/bot7028718106:AAEGppBRRM_kdzivMWZT5ZGUnSi7gtpYSlk/sendDocument"
+          ARTIFACT_URL=$(echo $CM_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".apk")) | .url')
+          echo "CI Branch: $ARTIFACT_URL"
+          curl -o app-release.apk "$ARTIFACT_URL"
+          curl -F chat_id=956728447 -F document=@app-release.apk "https://api.telegram.org/bot6488535367:AAFhgmpCwbsb2MwuGgYI8HbYs5p3UK30nMY/sendDocument"
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/*.aab
