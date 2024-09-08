@@ -3,9 +3,6 @@ workflows:
     name: Android Workflow
     max_build_duration: 60
     scripts:
-      - name: run build_runner
-        script: |
-          flutter packages pub run build_runner build --delete-conflicting-outputs
       - name: Get Flutter packages  
         script: |
           cd . && flutter packages pub get
