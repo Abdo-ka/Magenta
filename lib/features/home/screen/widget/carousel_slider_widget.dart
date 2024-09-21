@@ -8,10 +8,6 @@ import 'package:core/core.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 📦 Package imports:
-
-// 🌎 Project imports:
-
 class CarouselSliderWidget extends StatelessWidget {
   final List<String> image;
   final bool scroll;

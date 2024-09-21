@@ -1,7 +1,10 @@
+// 📦 Package imports:
+import 'package:core/core.dart';
 import 'package:injectable/injectable.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/api_routes.dart';
 import 'package:magenta/config/types/base_response.dart';
-import 'package:core/core.dart';
 
 @injectable
 class NotificationRepositories {

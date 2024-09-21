@@ -38,13 +38,8 @@ class _MagentaAppState extends State<MagentaApp> {
             overlayColor:
                 const Color.fromARGB(255, 106, 106, 106).withOpacity(0.4),
             overlayWidgetBuilder: (progress) => Center(
-              child: Lottie.asset(
-                Assets.lottie.rose,
-                width: 600.w,
-                height: 600.h,
-                fit: BoxFit.fill,
-                repeat:  true
-              ),
+              child: Lottie.asset(Assets.lottie.rose,
+                  width: 600.w, height: 600.h, fit: BoxFit.fill, repeat: true),
             ),
             child: MediaQuery(
               data: MediaQuery.of(context)

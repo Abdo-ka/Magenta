@@ -1,12 +1,7 @@
-// 🐦 Flutter imports:
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-// 🌎 Project imports:
-
 
 class AppCheckbox extends StatelessWidget {
   const AppCheckbox({
@@ -95,7 +90,6 @@ class AppCheckbox extends StatelessWidget {
 
   bool get isDisabled => onChanged == null;
 }
-
 
 Color _shadowCard1(double opacity) {
   return Color.fromRGBO(16, 24, 40, opacity);

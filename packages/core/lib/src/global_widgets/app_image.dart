@@ -1,8 +1,6 @@
-// 🐦 Flutter imports:
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum Source { assets, network }

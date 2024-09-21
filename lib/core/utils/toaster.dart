@@ -6,9 +6,6 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:core/core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 🌎 Project imports:
-
-
 class Toaster {
   Toaster._();
 

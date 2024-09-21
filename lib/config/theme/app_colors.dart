@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:core/core.dart';
 
-// 🌎 Project imports:
-
 abstract class AppColors {
   static const lightSurfaceContainer = Color(0xffECEEEF);
   static const darkSurfaceContainer = Color(0xff1D2021);

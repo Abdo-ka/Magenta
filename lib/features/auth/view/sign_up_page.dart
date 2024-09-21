@@ -98,7 +98,7 @@ class SignUpPage extends StatelessWidget {
                 textAlign: TextAlign.left,
                 maxLength: 10,
                 keyboardType: TextInputType.phone,
-              validator: FormBuilderValidators.compose([
+                validator: FormBuilderValidators.compose([
                   FormBuilderValidators.required(),
                   FormBuilderValidators.numeric(),
                   FormBuilderValidators.maxLength(10),

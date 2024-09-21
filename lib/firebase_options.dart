@@ -71,5 +71,4 @@ class DefaultFirebaseOptions {
     storageBucket: EnvironmentVariables.storageBucket,
     iosBundleId: EnvironmentVariables.iosBundleId,
   );
-
 }

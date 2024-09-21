@@ -12,7 +12,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:magenta/core/di/di_container.config.dart';
 import '../../config/api_routes.dart';
 import '../../services/router/router.dart';
-
 import '../repositories/token_repository.dart';
 
 final GetIt getIt = GetIt.instance;
@@ -22,8 +21,6 @@ Future<GetIt> configureDependencies() async => getIt.init();
 
 @module
 abstract class AppModule {
-  
-
   @singleton
   Future<SharedPreferences> get sharedPreferences =>
       SharedPreferences.getInstance();

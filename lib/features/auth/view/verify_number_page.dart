@@ -69,7 +69,6 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
               ]),
               child: BlocBuilder<VerificationCubit, VerificationState>(
                   builder: (context, state) {
-                
                 switch (state.verifcationStatus) {
                   case Status.loading:
                     return const Center(child: CircularProgressIndicator());

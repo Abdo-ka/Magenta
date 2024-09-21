@@ -11,9 +11,6 @@ import 'package:magenta/core/utils/toaster.dart';
 import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
-// 🌎 Project imports:
-
-
 @RoutePage()
 class BasePage extends StatefulWidget {
   const BasePage({super.key});
@@ -53,7 +50,7 @@ class _BasePageState extends State<BasePage> {
         builder: (BuildContext context, value, Widget? child) =>
             AutoTabsScaffold(
           resizeToAvoidBottomInset: false,
-          routes:  [
+          routes: [
             const HomeRoute(),
             const FavoriteRoute(),
             NotificationRoute(),

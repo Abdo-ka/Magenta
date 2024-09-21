@@ -7,8 +7,6 @@ import 'package:flutter/foundation.dart';
 // 📦 Package imports:
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
-// 🌎 Project imports:
-
 abstract class CrashlyticsService {
   static final _instance = FirebaseCrashlytics.instance;
 
@@ -17,7 +15,7 @@ abstract class CrashlyticsService {
     //   return;
     // }
 
-  FlutterError.onError = _instance.recordFlutterFatalError;
+    FlutterError.onError = _instance.recordFlutterFatalError;
 
     PlatformDispatcher.instance.onError = (error, stack) {
       _instance.recordError(error, stack, fatal: true);
@@ -44,7 +42,6 @@ abstract class CrashlyticsService {
     // if (EnvironmentVariables.flavor==Flavor.Dev) {
     //   return;
     // }
-
 
     return _instance.recordError(
       exception,

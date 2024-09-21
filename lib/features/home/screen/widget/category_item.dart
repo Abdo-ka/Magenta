@@ -5,9 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:core/core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 🌎 Project imports:
-
-
 class CategoryItem extends StatelessWidget {
   const CategoryItem(
       {super.key,

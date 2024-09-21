@@ -1,10 +1,10 @@
 // 📦 Package imports:
+import 'package:core/core.dart';
 import 'package:injectable/injectable.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/api_routes.dart';
 import 'package:magenta/config/types/types.dart';
-import 'package:core/core.dart';
 import 'package:magenta/features/home/data/model/category_model.dart';
 import 'package:magenta/features/home/data/model/offer_model.dart';
 import 'package:magenta/features/home/data/model/products_model.dart';

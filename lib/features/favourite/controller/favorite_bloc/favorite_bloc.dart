@@ -1,9 +1,12 @@
-// 📦 Package imports:
+// 🎯 Dart imports:
 import 'dart:async';
 
+// 📦 Package imports:
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/features/favourite/data/model/favourite_model.dart';
 import 'package:magenta/features/favourite/data/repositories/favourite_repositories.dart';

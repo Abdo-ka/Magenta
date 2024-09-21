@@ -16,8 +16,6 @@ import 'package:magenta/features/home/data/model/products_model.dart';
 import 'package:magenta/features/home/data/model/signal_product_mode.dart';
 import 'package:magenta/features/home/data/repositories/home_repositories.dart';
 
-// 🌎 Project imports:
-
 part 'home_event.dart';
 part 'home_state.dart';
 

@@ -9,8 +9,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:magenta/features/home/screen/view/cart_page.dart';
 import 'package:magenta/gen/assets.gen.dart';
 
-// 🌎 Project imports:
-
 class CartWidget extends StatelessWidget {
   final String image;
   final String category;

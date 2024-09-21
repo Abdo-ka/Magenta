@@ -1,12 +1,11 @@
 // 📦 Package imports:
 import 'package:core/core.dart';
+import 'package:core/core.dart';
 import 'package:injectable/injectable.dart';
 
 // 🌎 Project imports:
 import 'package:magenta/config/api_routes.dart';
 import 'package:magenta/config/types/base_response.dart';
-import 'package:core/core.dart';
-
 import 'package:magenta/features/auth/data/models/sign_in_model.dart';
 import 'package:magenta/features/auth/data/models/sign_up_model.dart';
 import 'package:magenta/features/auth/data/models/verification_model.dart';

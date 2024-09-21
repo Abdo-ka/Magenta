@@ -1,7 +1,7 @@
-// 📦 Package imports:
+ 
 import 'package:injectable/injectable.dart';
 
-// 🌎 Project imports:
+ 
 import 'package:core/core.dart';
 import 'package:magenta/core/utils/type_defs.dart';
 

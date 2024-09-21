@@ -1,15 +1,10 @@
 // 🎯 Dart imports:
 import 'dart:ui';
 
-// 🐦 Flutter imports:
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-// 🌎 Project imports:
-
 
 class AnimatedDialog extends StatelessWidget {
   const AnimatedDialog._(

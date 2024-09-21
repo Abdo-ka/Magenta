@@ -1,13 +1,8 @@
-// 🐦 Flutter imports:
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-// 🌎 Project imports:
-
 
 class AppDropDown<T> extends StatefulWidget {
   final String? title;

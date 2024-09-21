@@ -2,6 +2,7 @@
 //
 //     final offerModel = offerModelFromJson(jsonString);
 
+// 🎯 Dart imports:
 import 'dart:convert';
 
 OfferModel offerModelFromJson(String str) =>

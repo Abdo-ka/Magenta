@@ -6,15 +6,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:magenta/core/di/di_container.dart';
-import 'package:magenta/features/home/controller/cart_cubit/cubit/cart_cubit.dart';
 
 // 🌎 Project imports:
+import 'package:magenta/core/di/di_container.dart';
+import 'package:magenta/features/home/controller/cart_cubit/cubit/cart_cubit.dart';
 import 'package:magenta/features/home/screen/widget/cart_widget.dart';
 import 'package:magenta/features/home/screen/widget/payment_success_dialog.dart';
 import 'package:magenta/gen/assets.gen.dart';
-
-// 🌎 Project imports:
 
 @RoutePage()
 class CartPage extends StatefulWidget {

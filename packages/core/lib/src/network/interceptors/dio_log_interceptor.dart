@@ -1,16 +1,11 @@
 // 🎯 Dart imports:
 import 'dart:convert';
 
-// 🐦 Flutter imports:
 import 'package:core/src/enums.dart';
 import 'package:flutter/foundation.dart';
 
-// 📦 Package imports:
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
-
-// 🌎 Project imports:
-
 
 // � Package imports:
 // � Flutter imports:

@@ -11,9 +11,6 @@ import 'package:lottie/lottie.dart';
 import 'package:magenta/gen/assets.gen.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
-// 🌎 Project imports:
-
-
 class PaymentSuccessDialog extends StatelessWidget {
   const PaymentSuccessDialog({super.key});
 

@@ -1,9 +1,5 @@
-// 🐦 Flutter imports:
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
-
-// 🌎 Project imports:
-
 
 class ButtonWidget extends StatelessWidget {
   static Color surfaceContainer(BuildContext context) =>

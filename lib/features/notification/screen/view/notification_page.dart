@@ -6,14 +6,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/core/di/di_container.dart';
 import 'package:magenta/features/notification/controller/cubit/notification_cubit.dart';
-
-// 🌎 Project imports:
 import 'package:magenta/features/notification/screen/widget/list_tile_notification_widget.dart';
-
-// 🌎 Project imports:
 
 @RoutePage()
 class NotificationPage extends StatelessWidget {
@@ -35,8 +33,8 @@ class NotificationPage extends StatelessWidget {
         ),
         body: BlocBuilder<NotificationCubit, NotificationState>(
           builder: (context, state) {
-           return state.getNotificationStatus == Status.loading
-                ?  const Center(
+            return state.getNotificationStatus == Status.loading
+                ? const Center(
                     child: CircularProgressIndicator(),
                   )
                 : ListView(padding: const EdgeInsets.all(16), children: [

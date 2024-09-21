@@ -6,16 +6,14 @@ import 'package:auto_route/auto_route.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:magenta/config/common/enum/enums.dart';
 import 'package:magenta/core/di/di_container.dart';
 import 'package:magenta/features/favourite/controller/favorite_bloc/favorite_bloc.dart';
 import 'package:magenta/features/favourite/screen/widget/no_favourite.dart';
 import 'package:magenta/features/home/screen/view/home_page_loading.dart';
-
-// 🌎 Project imports:
 import 'package:magenta/features/home/screen/widget/item_card_widget.dart';
-
-// 🌎 Project imports:
 
 @RoutePage()
 class FavoritePage extends StatefulWidget {

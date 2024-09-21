@@ -1,13 +1,13 @@
 // 🎯 Dart imports:
 import 'dart:async';
 
-// 📦 Package imports:
+ 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 
-// 🌎 Project imports:
+ 
 import '../../repositories/{{feature_name.snakeCase()}}_repository.dart';
 
 part '{{feature_name.snakeCase()}}_event.dart';

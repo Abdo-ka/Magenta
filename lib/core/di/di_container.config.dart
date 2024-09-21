@@ -8,12 +8,19 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+
+// 📦 Package imports:
 import 'package:core/core.dart' as _i494;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:shared_preferences/shared_preferences.dart' as _i460;
+
+// 🌎 Project imports:
 import 'package:magenta/core/di/di_container.dart' as _i363;
 import 'package:magenta/core/repositories/local_storage.dart' as _i532;
 import 'package:magenta/core/repositories/token_repository.dart' as _i192;
+import 'package:magenta/services/router/router.dart' as _i925;
+
 import 'package:magenta/features/auth/controller/sign_in_cubit/cubit/sign_in_cubit.dart'
     as _i938;
 import 'package:magenta/features/auth/controller/sign_up_cubit/cubit/sign_up_cubit.dart'
@@ -38,8 +45,6 @@ import 'package:magenta/features/notification/controller/cubit/notification_cubi
     as _i629;
 import 'package:magenta/features/notification/repositories/notification_repositories.dart'
     as _i380;
-import 'package:magenta/services/router/router.dart' as _i925;
-import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt

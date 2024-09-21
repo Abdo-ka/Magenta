@@ -7,10 +7,6 @@ import 'package:core/core.dart';
 // 🌎 Project imports:
 import 'package:magenta/gen/assets.gen.dart';
 
-// 🌎 Project imports:
-
-
-
 class ListTileNotification extends StatelessWidget {
   const ListTileNotification({super.key});
 

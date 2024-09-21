@@ -1,8 +1,6 @@
-// 🐦 Flutter imports:
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -55,19 +53,13 @@ extension BoolExtension on bool {
   int toInt() => this ? 1 : 0;
 }
 
-
-
 extension BuildContextExt on BuildContext {
-
   ThemeData get theme => Theme.of(this);
-
-  
 
   Color get primaryColor => colorScheme.primary;
 
   MediaQueryData get mediaQuery => MediaQuery.of(this);
 
-  
   /// Calculates the available height for the body content.
   /// It takes into account the device size, status bar height, toolbar height, bottom bar height, and bottom padding.
   double get bodyHeight {
