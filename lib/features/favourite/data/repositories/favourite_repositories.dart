@@ -4,8 +4,7 @@ import 'package:magenta/config/api_routes.dart';
 import 'package:magenta/config/types/base_response.dart';
 
 // 🌎 Project imports:
-import 'package:magenta/core/network/client/client.dart';
-import 'package:magenta/core/utils/type_defs.dart';
+import 'package:core/core.dart';
 import 'package:magenta/features/favourite/data/model/favourite_model.dart';
 
 @injectable
@@ -13,25 +12,37 @@ class FavouriteRepositories {
   final Client _client;
 
   FavouriteRepositories(this._client);
-  FutureResult<BaseResponse<FavouriteModel>> getFavouriteRepositories() =>
-      _client.get(
+  FutureResultType<BaseResponse<FavouriteModel>>
+      getFavouriteRepositories() async {
+    return throwAppException(() async {
+      final result = await _client.get(
         ApiRoutes.favourites,
-        fromJson: (json) => BaseResponse.fromJson(
-          json,
-          (json) => FavouriteModel.fromJson(json),
-        ),
       );
+      return result.data.BaseResponse.fromJson(
+        result,
+        (json) => FavouriteModel.fromJson(json),
+      );
+    });
+  }
 
-  FutureResult<bool> addToFavourite({required int id}) => _client.post(
-        ApiRoutes.favourites,
-        fromJson: (json) => true,
-        data: {"product_id": "$id"},
-      );
-  FutureResult<bool> removeFromFavourite({required int id}) => _client.post(
+  FutureResultType<bool> addToFavourite({required int id}) async {
+    return throwAppException(() async {
+      final result = await _client.post(ApiRoutes.favourites, data: {
+        'product_id': '$id',
+      });
+      return result.data['success'];
+    });
+  }
+
+  FutureResultType<bool> removeFromFavourite({required int id}) async {
+    return throwAppException(() async {
+      final result = await _client.post(
         'favoritesDelete',
-        fromJson: (json) => true,
         data: {
           "product_id": "$id",
         },
       );
+      return result.data['success'];
+    });
+  }
 }

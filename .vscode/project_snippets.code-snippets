@@ -76,7 +76,7 @@
 		"  ${TM_FILENAME_BASE/^(.*)/${1:/pascalcase}/}(this._repository);",
 		"",
 		"@override",
-		"FutureResult<${1:returnType}> call(${2:paramType} params) => _repository.${TM_FILENAME_BASE/^(.+)_usecase/${1:/camelcase}/}(params);",
+		"Future<${1:returnType}> call(${2:paramType} params) => _repository.${TM_FILENAME_BASE/^(.+)_usecase/${1:/camelcase}/}(params);",
 		"}"
 	  ],
 	  "description": "Generate a usecase"

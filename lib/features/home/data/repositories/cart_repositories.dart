@@ -4,8 +4,7 @@ import 'package:injectable/injectable.dart';
 // 🌎 Project imports:
 import 'package:magenta/config/api_routes.dart';
 import 'package:magenta/config/types/types.dart';
-import 'package:magenta/core/network/client/client.dart';
-import 'package:magenta/core/utils/type_defs.dart';
+import 'package:core/core.dart';
 import 'package:magenta/features/home/data/model/cart_model.dart';
 import 'package:magenta/features/home/data/model/products_model.dart';
 
@@ -14,14 +13,15 @@ class CartRepositories {
   final Client _client;
 
   CartRepositories(this._client);
-  FutureResult<BaseResponse<ProductsModel>> cartRepositories(
-          {required List<CartModel> items}) =>
-      _client.post(
+  FutureResultType<BaseResponse<ProductsModel>> cartRepositories(
+      {required List<CartModel> items}) async {
+    return throwAppException(() async {
+      final result = await _client.post(
         ApiRoutes.products,
         data: items.map((e) => e.toJson()).toList(),
-        fromJson: (json) => BaseResponse.fromJson(
-          json,
-          (json) => ProductsModel.fromJson(json),
-        ),
       );
+      return result.data.BaseResponse
+          .fromJson(result, (json) => ProductsModel.fromJson(json));
+    });
+  }
 }

@@ -7,7 +7,6 @@ import 'package:auto_route/auto_route.dart';
 
 // 🌎 Project imports:
 
-
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({
     super.key,
@@ -43,7 +42,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
               color: context.colorScheme.primary,
               size: 18,
             ),
-            onPressed: () => context.router.pop(),
+            onPressed: () => context.router.maybePop(),
             padding: EdgeInsets.zero,
           ),
       actions: actions,

@@ -8,7 +8,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:magenta/services/router/router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
-class AppRouter extends $AppRouter {
+class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
         CustomRoute(page: SplashRoute.page, initial: true),

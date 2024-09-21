@@ -29,10 +29,10 @@ dependencies:
   flutter_gen: ^5.3.2
   dropdown_button2: ^2.3.9
   just_the_tooltip: ^0.0.12
-
+  fluttertoast: ^8.2.8
   #?################# Image handling
   flutter_image_compress: ^2.1.0
-  image_cropper: ^7.0.5
+  image_cropper: ^8.0.2
   image_picker: ^1.0.4
   flutter_blurhash: ^0.8.2
   mime: ^1.0.4 # for file type lookup
@@ -40,8 +40,8 @@ dependencies:
   logger: ^2.0.2+1
   flutter_launcher_icons: ^0.13.1
   cached_network_image: ^3.4.0
-# router
-  auto_route: ^8.0.2  
+  # router
+  auto_route: ^9.2.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

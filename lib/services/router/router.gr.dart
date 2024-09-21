@@ -27,102 +27,6 @@ import 'package:magenta/features/notification/screen/view/notification_page.dart
 import 'package:magenta/features/profile/screen/view/profile_page.dart' as _i8;
 import 'package:magenta/features/splash/splash_page.dart' as _i12;
 
-abstract class $AppRouter extends _i14.RootStackRouter {
-  $AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, _i14.PageFactory> pagesMap = {
-    BaseRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i1.BasePage(),
-      );
-    },
-    CartRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i2.CartPage(),
-      );
-    },
-    DetailsItemRoute.name: (routeData) {
-      final args = routeData.argsAs<DetailsItemRouteArgs>();
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i3.DetailsItemPage(
-          key: args.key,
-          id: args.id,
-        ),
-      );
-    },
-    FavoriteRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i4.FavoritePage(),
-      );
-    },
-    HomeRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i5.HomePage(),
-      );
-    },
-    IntroRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i6.IntroPage(),
-      );
-    },
-    NotificationRoute.name: (routeData) {
-      final args = routeData.argsAs<NotificationRouteArgs>(
-          orElse: () => const NotificationRouteArgs());
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i7.NotificationPage(key: args.key),
-      );
-    },
-    ProfileRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i8.ProfilePage(),
-      );
-    },
-    ResetPasswordRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i9.ResetPasswordPage(),
-      );
-    },
-    SignInRoute.name: (routeData) {
-      final args = routeData.argsAs<SignInRouteArgs>(
-          orElse: () => const SignInRouteArgs());
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i10.SignInPage(key: args.key),
-      );
-    },
-    SignUpRoute.name: (routeData) {
-      final args = routeData.argsAs<SignUpRouteArgs>(
-          orElse: () => const SignUpRouteArgs());
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i11.SignUpPage(key: args.key),
-      );
-    },
-    SplashRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i12.SplashPage(),
-      );
-    },
-    VerifyNumberRoute.name: (routeData) {
-      return _i14.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i13.VerifyNumberPage(),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [_i1.BasePage]
 class BaseRoute extends _i14.PageRouteInfo<void> {
@@ -134,7 +38,12 @@ class BaseRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'BaseRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i1.BasePage();
+    },
+  );
 }
 
 /// generated route for
@@ -148,7 +57,12 @@ class CartRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'CartRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i2.CartPage();
+    },
+  );
 }
 
 /// generated route for
@@ -169,8 +83,16 @@ class DetailsItemRoute extends _i14.PageRouteInfo<DetailsItemRouteArgs> {
 
   static const String name = 'DetailsItemRoute';
 
-  static const _i14.PageInfo<DetailsItemRouteArgs> page =
-      _i14.PageInfo<DetailsItemRouteArgs>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<DetailsItemRouteArgs>();
+      return _i3.DetailsItemPage(
+        key: args.key,
+        id: args.id,
+      );
+    },
+  );
 }
 
 class DetailsItemRouteArgs {
@@ -200,7 +122,12 @@ class FavoriteRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'FavoriteRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i4.FavoritePage();
+    },
+  );
 }
 
 /// generated route for
@@ -214,7 +141,12 @@ class HomeRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i5.HomePage();
+    },
+  );
 }
 
 /// generated route for
@@ -228,7 +160,12 @@ class IntroRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'IntroRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i6.IntroPage();
+    },
+  );
 }
 
 /// generated route for
@@ -245,8 +182,14 @@ class NotificationRoute extends _i14.PageRouteInfo<NotificationRouteArgs> {
 
   static const String name = 'NotificationRoute';
 
-  static const _i14.PageInfo<NotificationRouteArgs> page =
-      _i14.PageInfo<NotificationRouteArgs>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<NotificationRouteArgs>(
+          orElse: () => const NotificationRouteArgs());
+      return _i7.NotificationPage(key: args.key);
+    },
+  );
 }
 
 class NotificationRouteArgs {
@@ -271,7 +214,12 @@ class ProfileRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i8.ProfilePage();
+    },
+  );
 }
 
 /// generated route for
@@ -285,7 +233,12 @@ class ResetPasswordRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'ResetPasswordRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i9.ResetPasswordPage();
+    },
+  );
 }
 
 /// generated route for
@@ -302,8 +255,14 @@ class SignInRoute extends _i14.PageRouteInfo<SignInRouteArgs> {
 
   static const String name = 'SignInRoute';
 
-  static const _i14.PageInfo<SignInRouteArgs> page =
-      _i14.PageInfo<SignInRouteArgs>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      final args =
+          data.argsAs<SignInRouteArgs>(orElse: () => const SignInRouteArgs());
+      return _i10.SignInPage(key: args.key);
+    },
+  );
 }
 
 class SignInRouteArgs {
@@ -331,8 +290,14 @@ class SignUpRoute extends _i14.PageRouteInfo<SignUpRouteArgs> {
 
   static const String name = 'SignUpRoute';
 
-  static const _i14.PageInfo<SignUpRouteArgs> page =
-      _i14.PageInfo<SignUpRouteArgs>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      final args =
+          data.argsAs<SignUpRouteArgs>(orElse: () => const SignUpRouteArgs());
+      return _i11.SignUpPage(key: args.key);
+    },
+  );
 }
 
 class SignUpRouteArgs {
@@ -357,7 +322,12 @@ class SplashRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i12.SplashPage();
+    },
+  );
 }
 
 /// generated route for
@@ -371,5 +341,10 @@ class VerifyNumberRoute extends _i14.PageRouteInfo<void> {
 
   static const String name = 'VerifyNumberRoute';
 
-  static const _i14.PageInfo<void> page = _i14.PageInfo<void>(name);
+  static _i14.PageInfo page = _i14.PageInfo(
+    name,
+    builder: (data) {
+      return const _i13.VerifyNumberPage();
+    },
+  );
 }

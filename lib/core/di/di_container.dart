@@ -2,9 +2,9 @@
 import 'dart:async';
 
 // 📦 Package imports:
+import 'package:core/core.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,7 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:magenta/core/di/di_container.config.dart';
 import '../../config/api_routes.dart';
 import '../../services/router/router.dart';
-import '../network/client/client.dart';
+
 import '../repositories/token_repository.dart';
 
 final GetIt getIt = GetIt.instance;
@@ -22,9 +22,7 @@ Future<GetIt> configureDependencies() async => getIt.init();
 
 @module
 abstract class AppModule {
-  @preResolve
-  @singleton
-  Future<GoogleSignIn> get googleSignIn async => GoogleSignIn();
+  
 
   @singleton
   Future<SharedPreferences> get sharedPreferences =>

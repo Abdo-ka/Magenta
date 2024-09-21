@@ -1,27 +1,35 @@
+// 🎯 Dart imports:
 import 'dart:convert';
 
-import 'package:core/src/utils/helper_functions.dart';
-import 'package:dio/dio.dart';
+// 🐦 Flutter imports:
+import 'package:core/src/enums.dart';
 import 'package:flutter/foundation.dart';
+
+// 📦 Package imports:
+import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
-import '../../enums.dart';
+// 🌎 Project imports:
+
+
+// � Package imports:
+// � Flutter imports:
+
+extension OptionsExtension on RequestOptions {}
 
 enum _StatusType { succeed, failed }
 
 class DioLogInterceptor extends Interceptor {
   JsonEncoder encoder = const JsonEncoder.withIndent('  ');
-  final Logger logger = Logger();
+  final Logger logger = Logger(printer: PrettyPrinter(methodCount: 0));
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     if (kDebugMode) {
       logger.i(
-        "***|| INFO Request ${options.method} ${options.path} ||***"
+        "***|| ${options.method} ${options.uri} ||***"
         "\n param : ${options.queryParameters}"
-        "\n data : ${options.data}"
-        "\n Header: ${encoder.convert(options.headers)}"
-        "\n timeout: ${options.connectTimeout ?? 0 ~/ 1000}s"
-        "\n curl command: ${HelperFunctions.getCurlCommandFromRequest(options)}s",
+        "\n token : ${options.headers['Authorization']}"
+        "\n data : ${options.data}",
       );
     }
 
@@ -38,14 +46,6 @@ class DioLogInterceptor extends Interceptor {
         statusType = _StatusType.failed;
       }
 
-      if (statusType == _StatusType.failed) {
-        logger.e(
-            '***|| ${statusType.name.toUpperCase()} Response into -> ${response.requestOptions.uri.path} ||***');
-      } else {
-        logger.t(
-            '***|| ${statusType.name.toUpperCase()} Response into -> ${response.requestOptions.uri.path} ||***');
-      }
-
       logger.f(
         "***|| INFO Response Request ${response.requestOptions.uri.path} ${statusType == _StatusType.succeed ? '✊' : ''} ||***"
         "\n Status code: ${response.statusCode}"
@@ -60,13 +60,13 @@ class DioLogInterceptor extends Interceptor {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
     if (kDebugMode) {
-      logger.e(
-        "***|| SOMETHING WENT WRONG 💔 ||***"
-        "\n error: ${err.error}"
+      Logger(printer: PrettyPrinter(methodCount: 8)).e(
+        "***|| ${err.requestOptions.uri.path} ||***"
         "\n response: ${err.response}"
         "\n message: ${err.message}"
-        "\n type: ${err.type}"
-        "\n stackTrace: ${err.stackTrace}",
+        "\n type: ${err.type}",
+        error: err.error,
+        stackTrace: err.stackTrace,
       );
     }
     handler.next(err);

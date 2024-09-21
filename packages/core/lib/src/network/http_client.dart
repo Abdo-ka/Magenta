@@ -16,9 +16,9 @@ typedef HttpLibraryMethod<T> = Future<Response<T>> Function();
 /// instance of [AppHttpClientException].
 typedef ResponseExceptionMapper = AppException? Function(Response response, Exception e);
 
-class DioClient with DioMixin implements Dio {
+class Client with DioMixin implements Dio {
   ///this is locale for testing purpose
-  DioClient({required this.baseUrl, List<Interceptor>? interceptors}) {
+  Client({required this.baseUrl, List<Interceptor>? interceptors}) {
     httpClientAdapter = IOHttpClientAdapter();
     options = BaseOptions();
     options
