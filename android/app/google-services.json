@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:836729890591:android:8f247c2ffcd3100fb8f22a",
         "android_client_info": {
-          "package_name": "com.magenta.dev"
+          "package_name": "com.magenta.repo.dev"
         }
       },
       "oauth_client": [],
@@ -28,7 +28,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:836729890591:android:3bdef5bc81d4bbe1b8f22a",
         "android_client_info": {
-          "package_name": "com.magenta.prod"
+          "package_name": "com.magenta.repo"
         }
       },
       "oauth_client": [],
@@ -47,7 +47,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:836729890591:android:dd0eed1f1c862de1b8f22a",
         "android_client_info": {
-          "package_name": "com.magenta.stage"
+          "package_name": "com.magenta.repo.stage"
         }
       },
       "oauth_client": [],
