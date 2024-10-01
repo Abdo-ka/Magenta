@@ -79,7 +79,9 @@ dev_dependencies:
   freezed_annotation: ^2.2.0
   auto_route_generator: ^9.0.0
   flutter_lints: ^4.0.0
+  # testing
   patrol: ^3.11.0
+  faker: ^2.2.0
 flutter:
   uses-material-design: true
   assets:
