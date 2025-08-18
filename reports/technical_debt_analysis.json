@@ -1,0 +1,88 @@
+{
+  "analysisDate": "2025-08-18 18:14:45",
+  "timestamp": 1755530085,
+  "riskLevel": "LOW",
+  "summary": {
+    "totalIssues": 0
+2025,
+    "errors": 0
+0,
+    "warnings": 22,
+    "info": 2003,
+    "riskAssessment": "LOW"
+  },
+  "costs": {
+    "hourlyRate": 75,
+    "immediate": {
+      "totalMinutes": 0
+24696,
+      "totalHours": 0
+411.60,
+      "totalCost": 0
+30870.00,
+      "breakdown": {
+        "errors": {
+          "count": 0
+0,
+          "minutes": 0
+0,
+          "cost": 0
+0
+        },
+        "warnings": {
+          "count": 22,
+          "minutes": 660,
+          "cost": 825.00
+        },
+        "info": {
+          "count": 2003,
+          "minutes": 24036,
+          "cost": 30045.00
+        }
+      }
+    }
+  },
+  "technicalDebt": {
+    "interestRate": 0.08,
+    "projections": {
+      "month1": 0
+33339.60,
+      "month3": 0
+38896.20,
+      "month6": 0
+49083.30,
+      "month12": 0
+77792.40,
+      "year2": 0
+195715.80
+    },
+    "compoundFactors": {
+      "month1": 1.08,
+      "month3": 1.26,
+      "month6": 1.59,
+      "month12": 2.52,
+      "year2": 6.34
+    }
+  },
+  "issueBreakdown": {
+    "performance": 8,
+    "security": 1,
+    "documentation": 597,
+    "style": 920,
+    "deprecated": 3
+  },
+  "roi": {
+    "ratio": ,
+    "annualSavings": 93000.00,
+    "productivityImprovement": 0.35,
+    "bugReduction": 0.60,
+    "maintenanceReduction": 0.50
+  },
+  "recommendations": {
+    "immediate": "Fix 0
+0 critical errors",
+    "shortTerm": "Address 22 warnings in next 2-3 weeks",
+    "longTerm": "Implement automated quality gates",
+    "urgency": "High - Technical debt compounds at 8% monthly"
+  }
+}

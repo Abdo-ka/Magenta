@@ -1,0 +1,233 @@
+# DCM Technical Debt Configuration
+# Specialized configuration focused on technical debt calculation and costing
+
+analyzer:
+  exclude:
+    - 'build/**'
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+    - '**/*.gr.dart'
+
+# Technical Debt Metrics Configuration
+dart_code_metrics:
+  # Advanced metrics with technical debt focus
+  metrics:
+    cyclomatic-complexity: 15          # Lower threshold for better maintainability
+    number-of-parameters: 4            # Maximum parameters before complexity penalty
+    maximum-nesting-level: 4           # Reduced nesting for readability
+    source-lines-of-code: 40           # Smaller methods for better maintenance
+    maintainability-index: 60          # Higher standard for maintainability
+    number-of-methods: 8               # Class complexity threshold
+    weight-of-class: 0.25              # Stricter class weight limits
+    
+    # Technical debt specific metrics
+    technical-debt:
+      threshold: 0.5                   # Lower threshold for debt detection
+      todo-cost: 250                   # Increased cost for TODO items
+      ignore-cost: 500                 # High cost for ignore statements
+      ignore-for-file-cost: 750        # Very high cost for file-level ignores
+      as-dynamic-cost: 600             # High cost for dynamic usage
+      deprecated-annotations-cost: 400  # Cost for deprecated API usage
+      file-nullsafety-migration-cost: 300 # Migration debt cost
+      unit-type: "USD"
+      
+      # Advanced debt calculation factors
+      compound-interest: 0.08          # 8% monthly compound interest
+      risk-multipliers:
+        critical: 3.0                  # Critical issues multiply debt by 3x
+        high: 2.0                      # High issues multiply debt by 2x
+        medium: 1.5                    # Medium issues multiply debt by 1.5x
+        low: 1.0                       # Low issues have no multiplier
+      
+      # Business impact factors
+      business-impact-costs:
+        user-experience: 1000          # UX issues cost more
+        performance: 800               # Performance issues are expensive
+        security: 1200                 # Security issues are most expensive
+        maintainability: 400           # Maintenance issues
+        code-style: 100                # Style issues least expensive
+
+  # Anti-patterns with technical debt implications
+  anti-patterns:
+    - long-method                      # Methods > 40 lines
+    - long-parameter-list              # More than 4 parameters
+    - complex-method                   # High cyclomatic complexity
+    - god-object                       # Classes with too many responsibilities
+    - duplicate-code                   # Code duplication
+    - dead-code                        # Unused code
+    - feature-envy                     # Methods using too many external classes
+    - data-clumps                      # Groups of data that travel together
+
+  # Technical debt rules with specific costing
+  rules:
+    # Critical technical debt rules (highest cost)
+    - avoid-global-state:
+        severity: error
+        technical-debt-minutes: 120    # 2 hours to refactor global state
+        compound-factor: 2.5           # Compounds quickly
+        business-impact: critical
+        
+    - avoid-dynamic:
+        severity: error
+        technical-debt-minutes: 90     # 1.5 hours to add proper typing
+        compound-factor: 2.0
+        business-impact: high
+        
+    - always-remove-listener:
+        severity: error
+        technical-debt-minutes: 60     # 1 hour to fix memory leaks
+        compound-factor: 3.0           # Memory leaks compound very quickly
+        business-impact: critical
+        
+    # High technical debt rules
+    - avoid-unnecessary-setstate:
+        severity: warning
+        technical-debt-minutes: 45     # 45 minutes to optimize setState
+        compound-factor: 1.8
+        business-impact: high
+        
+    - avoid-late-keyword:
+        severity: warning
+        technical-debt-minutes: 30     # 30 minutes to refactor late usage
+        compound-factor: 1.5
+        business-impact: medium
+        
+    - prefer-single-widget-per-file:
+        severity: warning
+        technical-debt-minutes: 25     # 25 minutes to split widgets
+        compound-factor: 1.3
+        business-impact: medium
+        
+    # Medium technical debt rules
+    - no-empty-block:
+        severity: warning
+        technical-debt-minutes: 15     # 15 minutes to implement or remove
+        compound-factor: 1.2
+        business-impact: low
+        
+    - prefer-extracting-callbacks:
+        severity: info
+        technical-debt-minutes: 20     # 20 minutes to extract callbacks
+        compound-factor: 1.1
+        business-impact: low
+        
+    # Documentation debt (affects maintainability)
+    - public-member-api-docs:
+        severity: info
+        technical-debt-minutes: 10     # 10 minutes per missing doc
+        compound-factor: 1.4           # Documentation debt compounds for teams
+        business-impact: medium
+        
+    # Style debt (low individual cost, high cumulative cost)
+    - require-trailing-commas:
+        severity: info
+        technical-debt-minutes: 2      # 2 minutes to add comma
+        compound-factor: 1.05          # Small compound factor
+        business-impact: low
+        
+    - prefer-final-parameters:
+        severity: info
+        technical-debt-minutes: 3      # 3 minutes to add final
+        compound-factor: 1.1
+        business-impact: low
+
+  # Technical debt calculation engine
+  technical-debt-engine:
+    # Base calculation parameters
+    base-hourly-rate: 75               # USD per hour
+    
+    # Compound interest calculation
+    interest-calculation:
+      frequency: monthly               # How often debt compounds
+      base-rate: 0.08                 # 8% monthly base rate
+      
+    # Team size impact on technical debt
+    team-factors:
+      solo-developer: 1.0             # Base rate for solo dev
+      small-team: 1.3                 # 2-3 developers
+      medium-team: 1.6                # 4-8 developers  
+      large-team: 2.0                 # 9+ developers
+      enterprise: 2.5                 # Large enterprise teams
+      
+    # Project complexity factors
+    complexity-factors:
+      startup: 1.0                    # Simple projects
+      small-business: 1.2             # Small business apps
+      enterprise: 1.5                 # Enterprise applications
+      mission-critical: 2.0           # High-stakes applications
+      
+    # Urgency multipliers based on business needs
+    urgency-multipliers:
+      maintenance: 1.0                # Regular maintenance
+      feature-development: 1.2        # New feature development
+      performance-critical: 1.5       # Performance requirements
+      pre-launch: 2.0                 # Pre-launch cleanup
+      post-incident: 3.0              # After production issues
+
+  # ROI calculation for technical debt reduction
+  roi-calculation:
+    # Benefits of reducing technical debt
+    productivity-gains:
+      developer-velocity: 0.35        # 35% faster development
+      bug-reduction: 0.60             # 60% fewer bugs
+      onboarding-time: 0.40           # 40% faster new developer onboarding
+      code-review-time: 0.30          # 30% faster code reviews
+      
+    # Cost savings
+    cost-savings:
+      maintenance-reduction: 0.50     # 50% less maintenance time
+      support-reduction: 0.40         # 40% less support time
+      testing-efficiency: 0.25        # 25% more efficient testing
+      deployment-reliability: 0.60    # 60% fewer deployment issues
+      
+    # Risk reduction
+    risk-reduction:
+      production-incidents: 0.70      # 70% fewer incidents
+      security-vulnerabilities: 0.80  # 80% fewer security issues
+      performance-problems: 0.50      # 50% fewer performance issues
+      compatibility-issues: 0.60      # 60% fewer compatibility problems
+
+  # Reporting configuration
+  reports:
+    include-technical-debt: true
+    include-compound-projections: true
+    include-roi-analysis: true
+    include-team-impact: true
+    include-business-case: true
+    
+    # Time horizons for projections
+    projection-periods: [1, 3, 6, 12, 24, 36] # months
+    
+    # Output formats
+    formats:
+      - html
+      - json
+      - csv
+      - markdown
+      
+    # Breakdown granularity
+    breakdowns:
+      by-file: true
+      by-rule: true
+      by-severity: true
+      by-category: true
+      by-business-impact: true
+
+# Integration with CI/CD
+ci-integration:
+  # Technical debt gates
+  debt-gates:
+    max-debt-per-pr: 500             # Max debt increase per PR (USD)
+    max-compound-debt: 10000         # Max total compound debt (USD)
+    
+  # Quality gates
+  quality-gates:
+    max-critical-issues: 0           # No critical issues allowed
+    max-high-issues: 5               # Max 5 high-severity issues
+    max-debt-ratio: 0.05             # Max 5% debt ratio
+    
+  # Alerts and notifications
+  alerts:
+    debt-threshold: 5000             # Alert when debt exceeds $5000
+    compound-rate-threshold: 0.10    # Alert when compound rate > 10%
+    critical-issue-alert: true       # Immediate alert for critical issues

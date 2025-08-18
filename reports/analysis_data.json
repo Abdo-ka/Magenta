@@ -1,0 +1,40 @@
+{
+  "analysisDate": "2025-08-18 18:14:48",
+  "summary": {
+    "errors": 0
+0,
+    "warnings": 22,
+    "info": 2003,
+    "totalIssues": 0
+2025
+  },
+  "costs": {
+    "hourlyRate": 75,
+    "totalMinutes": 0
+20470,
+    "totalHours": 0
+341.16,
+    "totalCost": 0
+25587.00,
+    "breakdown": {
+      "errors": {
+        "count": 0
+0,
+        "minutes": 0
+0,
+        "cost": 0
+0
+      },
+      "warnings": {
+        "count": 22,
+        "minutes": 440,
+        "cost": 549.75
+      },
+      "info": {
+        "count": 2003,
+        "minutes": 20030,
+        "cost": 25037.25
+      }
+    }
+  }
+}

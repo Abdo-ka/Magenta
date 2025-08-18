@@ -1,0 +1,326 @@
+# Dart Code Metrics Configuration with Advanced Technical Debt Costing
+# This file provides detailed configuration for code quality analysis and pricing
+
+# Global settings
+extends: []
+
+# Enhanced Technical Debt Costing Model
+pricing:
+  # Base hourly rate for development (USD)
+  hourly_rate: 75
+  
+  # Currency and location factors
+  currency: "USD"
+  location_multiplier: 1.0  # Adjust based on geographic location
+  
+  # Issue severity multipliers with technical debt compounding
+  severity_multipliers:
+    error: 4.0      # Critical issues: 4x base cost (increased due to technical debt)
+    warning: 2.0    # Important issues: 2x base cost 
+    info: 0.8       # Minor issues: 0.8x base cost
+    style: 0.4      # Style issues: 0.4x base cost
+
+  # Technical Debt Interest Calculation
+  technical_debt:
+    # Monthly compound interest rate for unresolved issues
+    monthly_interest_rate: 0.08  # 8% monthly compound interest
+    
+    # Debt aging multipliers (how much debt grows over time)
+    aging_multipliers:
+      month_1: 1.0    # No additional cost in first month
+      month_2: 1.08   # 8% increase in second month
+      month_3: 1.17   # Compound effect
+      month_6: 1.59   # Significant debt accumulation
+      month_12: 2.52  # Major technical debt burden
+      year_2: 6.34    # Exponential debt growth
+    
+    # Issue type technical debt factors
+    debt_factors:
+      performance_issues: 2.5     # High compound rate for performance
+      security_vulnerabilities: 3.0  # Highest debt factor
+      memory_leaks: 2.8           # Critical for mobile apps
+      deprecated_api_usage: 2.2   # Future maintenance burden
+      code_duplication: 1.8       # Maintenance multiplier
+      complex_methods: 1.6        # Readability and maintainability
+      missing_documentation: 1.4  # Knowledge transfer cost
+      style_inconsistencies: 1.2  # Team coordination overhead
+
+  # Category-based pricing with technical debt consideration
+  categories:
+    performance:
+      base_minutes: 45
+      multiplier: 2.5
+      debt_acceleration: 2.0  # How fast debt compounds for this category
+      description: "Performance-related issues that affect app responsiveness"
+      business_impact: "high"  # User experience and retention impact
+    
+    security:
+      base_minutes: 60
+      multiplier: 3.0
+      debt_acceleration: 2.5
+      description: "Security vulnerabilities and potential data exposure"
+      business_impact: "critical"  # Legal and compliance risks
+    
+    memory_management:
+      base_minutes: 40
+      multiplier: 2.3
+      debt_acceleration: 2.2
+      description: "Memory leaks and resource management issues"
+      business_impact: "high"  # App stability and performance
+    
+    maintainability:
+      base_minutes: 25
+      multiplier: 1.5
+      debt_acceleration: 1.8
+      description: "Code readability and maintenance issues"
+      business_impact: "medium"  # Developer productivity
+    
+    best_practices:
+      base_minutes: 20
+      multiplier: 1.2
+      debt_acceleration: 1.5
+      description: "Flutter and Dart best practice violations"
+      business_impact: "medium"  # Code quality standards
+    
+    code_style:
+      base_minutes: 12
+      multiplier: 0.7
+      debt_acceleration: 1.2
+      description: "Code formatting and style inconsistencies"
+      business_impact: "low"  # Team coordination
+
+# Enhanced rule pricing with technical debt projections
+rule_pricing:
+  # Critical rules (60-120 minutes to fix + high technical debt)
+  always-remove-listener: 
+    fix_minutes: 60
+    debt_multiplier: 3.0
+    business_impact: "critical"
+    technical_debt_monthly_growth: 0.12  # 12% monthly growth
+  
+  avoid-global-state: 
+    fix_minutes: 90
+    debt_multiplier: 2.8
+    business_impact: "high"
+    technical_debt_monthly_growth: 0.10
+  
+  avoid-dynamic: 
+    fix_minutes: 45
+    debt_multiplier: 2.5
+    business_impact: "high"
+    technical_debt_monthly_growth: 0.09
+  
+  avoid-missing-enum-constant-in-map: 
+    fix_minutes: 50
+    debt_multiplier: 2.6
+    business_impact: "high"
+    technical_debt_monthly_growth: 0.08
+  
+  avoid-non-null-assertion: 
+    fix_minutes: 35
+    debt_multiplier: 2.4
+    business_impact: "high"
+    technical_debt_monthly_growth: 0.08
+  
+  # High-impact rules (30-60 minutes to fix + medium technical debt)
+  avoid-unnecessary-setstate: 
+    fix_minutes: 40
+    debt_multiplier: 2.0
+    business_impact: "medium"
+    technical_debt_monthly_growth: 0.06
+  
+  avoid-late-keyword: 
+    fix_minutes: 30
+    debt_multiplier: 1.8
+    business_impact: "medium"
+    technical_debt_monthly_growth: 0.05
+  
+  avoid-returning-widgets: 
+    fix_minutes: 35
+    debt_multiplier: 1.9
+    business_impact: "medium"
+    technical_debt_monthly_growth: 0.05
+  
+  no-empty-block: 
+    fix_minutes: 20
+    debt_multiplier: 1.5
+    business_impact: "medium"
+    technical_debt_monthly_growth: 0.04
+  
+  prefer-extracting-callbacks: 
+    fix_minutes: 25
+    debt_multiplier: 1.6
+    business_impact: "medium"
+    technical_debt_monthly_growth: 0.04
+  
+  # Medium-impact rules (15-30 minutes to fix + low technical debt)
+  prefer-single-widget-per-file: 
+    fix_minutes: 22
+    debt_multiplier: 1.3
+    business_impact: "low"
+    technical_debt_monthly_growth: 0.03
+  
+  avoid-duplicate-exports: 
+    fix_minutes: 15
+    debt_multiplier: 1.2
+    business_impact: "low"
+    technical_debt_monthly_growth: 0.02
+  
+  # Style rules (5-15 minutes to fix + minimal technical debt)
+  newline-before-return: 
+    fix_minutes: 5
+    debt_multiplier: 0.5
+    business_impact: "minimal"
+    technical_debt_monthly_growth: 0.01
+  
+  no-boolean-literal-compare: 
+    fix_minutes: 8
+    debt_multiplier: 0.7
+    business_impact: "minimal"
+    technical_debt_monthly_growth: 0.01
+  
+  prefer-conditional-expressions: 
+    fix_minutes: 12
+    debt_multiplier: 0.8
+    business_impact: "low"
+    technical_debt_monthly_growth: 0.01
+  
+  require_trailing_commas:
+    fix_minutes: 3
+    debt_multiplier: 0.3
+    business_impact: "minimal"
+    technical_debt_monthly_growth: 0.005
+  
+  public_member_api_docs:
+    fix_minutes: 8
+    debt_multiplier: 1.1
+    business_impact: "low"
+    technical_debt_monthly_growth: 0.02
+  
+  prefer_final_parameters:
+    fix_minutes: 4
+    debt_multiplier: 0.6
+    business_impact: "minimal"
+    technical_debt_monthly_growth: 0.01
+
+# Advanced Technical Debt Calculation Engine
+technical_debt_engine:
+  # Compound interest calculation
+  compound_frequency: "monthly"  # How often interest compounds
+  
+  # Project complexity impact on technical debt
+  complexity_factors:
+    lines_of_code:
+      small: 1.0      # < 10,000 LOC
+      medium: 1.3     # 10,000 - 50,000 LOC
+      large: 1.6      # 50,000 - 100,000 LOC
+      enterprise: 2.0 # > 100,000 LOC
+    
+    team_size:
+      solo: 1.0       # 1 developer
+      small: 1.2      # 2-3 developers
+      medium: 1.5     # 4-8 developers
+      large: 2.0      # 9+ developers
+    
+    project_age:
+      new: 1.0        # < 6 months
+      young: 1.1      # 6-12 months
+      mature: 1.3     # 1-3 years
+      legacy: 1.8     # > 3 years
+  
+  # Business impact multipliers
+  business_impact_multipliers:
+    critical: 5.0   # Revenue-affecting, security issues
+    high: 3.0       # User experience, performance
+    medium: 1.8     # Developer productivity
+    low: 1.2        # Code organization
+    minimal: 1.0    # Cosmetic changes
+  
+  # Technical debt reduction strategies and costs
+  debt_reduction_strategies:
+    immediate_fix:
+      cost_multiplier: 1.0
+      debt_reduction: 1.0
+      timeframe: "immediate"
+    
+    sprint_planning:
+      cost_multiplier: 0.8  # Batch processing efficiency
+      debt_reduction: 0.95
+      timeframe: "1-2 weeks"
+    
+    technical_debt_sprint:
+      cost_multiplier: 0.6  # Dedicated time allocation
+      debt_reduction: 0.9
+      timeframe: "1 month"
+    
+    gradual_refactoring:
+      cost_multiplier: 0.4  # Spread over time
+      debt_reduction: 0.7
+      timeframe: "3-6 months"
+
+# Advanced Reporting Configuration
+reporting:
+  include_pricing: true
+  include_technical_debt_projection: true
+  include_business_impact_analysis: true
+  include_roi_calculation: true
+  
+  # Projection timeframes
+  projection_months: [1, 3, 6, 12, 24]
+  
+  # Cost breakdown details
+  cost_breakdown:
+    by_severity: true
+    by_category: true
+    by_file: true
+    by_rule: true
+    technical_debt_timeline: true
+  
+  # Business metrics
+  business_metrics:
+    developer_velocity_impact: true
+    maintenance_cost_projection: true
+    risk_assessment: true
+    recommendation_priority: true
+
+# Risk Assessment Matrix
+risk_matrix:
+  # Risk calculation based on issue count and severity
+  risk_levels:
+    low: 
+      max_errors: 5
+      max_warnings: 20
+      max_info: 100
+    
+    medium:
+      max_errors: 15
+      max_warnings: 50
+      max_info: 300
+    
+    high:
+      max_errors: 30
+      max_warnings: 100
+      max_info: 500
+    
+    critical:
+      max_errors: 50
+      max_warnings: 200
+      max_info: 1000
+
+# ROI Calculation Parameters
+roi_calculation:
+  # Benefits of fixing technical debt
+  productivity_improvement: 0.35  # 35% productivity increase
+  bug_reduction: 0.60            # 60% fewer bugs
+  onboarding_time_reduction: 0.40 # 40% faster new developer onboarding
+  maintenance_cost_reduction: 0.50 # 50% lower maintenance costs
+  
+  # Time horizons for ROI calculation
+  roi_timeframes: [6, 12, 24, 36]  # months
+  
+  # Average developer costs (used for ROI calculations)
+  developer_costs:
+    junior: 50     # USD per hour
+    mid: 75        # USD per hour
+    senior: 100    # USD per hour
+    lead: 125      # USD per hour
